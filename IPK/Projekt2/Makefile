@@ -1,0 +1,15 @@
+CXX=g++
+PRJ=ipk-scan
+#
+PROGS=$(PRJ)
+CXXFLAGS= -pedantic -Wall -Wextra
+
+FILES= ipk-scan.cpp
+
+all: $(PROGS)
+
+$(PRJ): $(FILES)
+	$(CXX)	$(CXXFLAGS)	-o	$@	$(FILES)
+
+clean:
+	rm -f	*.o	*.out	$(PROGS)
