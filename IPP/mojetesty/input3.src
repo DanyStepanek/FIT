@@ -1,0 +1,41 @@
+.IPPcode19   #ss
+
+DEFVAR GF@counter
+
+CREATEFRAME
+PUSHFRAME
+createframe
+DEFVAR TF@tmp
+pushframe
+DEFVAR LF@counter
+Defvar GF@sum
+defvar GF@op1
+defvar GF@ss
+MOVE GF@counter string@     #Inicializace proměnné na prázdný řetězec
+# Jednoduchá iterace, dokud nebude splněna zadaná podmínka
+LABEL while
+
+move GF@sum int@1
+move GF@op1 int@2
+add GF@sum GF@op1 int@2
+JUMPIFEQ end GF@counter string@aaa
+WRITE string@counter\032ob<>sahuje\032\031
+WRITE GF@counter
+WRITE string@afd\032
+Write int@10
+CONCAT GF@counter GF@counter string@a
+JUMP while
+
+
+move GF@ss int@0
+read GF@ss int
+write GF@ss
+PUSHS int@3
+POPS GF@ss
+POPFRAME
+PUSHFRAME
+POPFRAME
+write int@-22
+write GF@ss
+Jump end
+LABEL end

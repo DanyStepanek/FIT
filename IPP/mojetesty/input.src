@@ -1,0 +1,23 @@
+.IPPcode19   #ss
+
+DEFVAR GF@counter
+
+MOVE GF@counter string@     #Inicializace proměnné na prázdný řetězec
+# Jednoduchá iterace, dokud nebude splněna zadaná podmínka
+LABEL while
+JUMPIFEQ end GF@counter string@aaa
+WRITE string@counter\032ob<>sahuje\031
+WRITE GF@counter
+WRITE string@afd
+Write int@10
+CONCAT GF@counter GF@counter string@a
+JUMP while
+LABEL end
+read GF@ss int
+Defvar GF@sum
+defvar gf@op1
+move gf@sum int@1
+move gf@op1 int@2
+add gf@sum gf@op1 int@2
+write int@-22
+Jump 6451end
