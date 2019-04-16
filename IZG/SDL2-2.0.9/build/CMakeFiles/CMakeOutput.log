@@ -1,0 +1,2056 @@
+The system is: Linux - 4.15.0-47-generic - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/3.10.2/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d9e2a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d9e2a.dir/build.make CMakeFiles/cmTC_d9e2a.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d9e2a.dir/testCCompiler.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_d9e2a.dir/testCCompiler.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_d9e2a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d9e2a.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_d9e2a.dir/testCCompiler.c.o  -o cmTC_d9e2a 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_00d79/fast"
+/usr/bin/make -f CMakeFiles/cmTC_00d79.dir/build.make CMakeFiles/cmTC_00d79.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_00d79.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_00d79.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_00d79
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00d79.dir/link.txt --verbose=1
+/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_00d79.dir/CMakeCCompilerABI.c.o  -o cmTC_00d79 
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper
+OFFLOAD_TARGET_NAMES=nvptx-none
+OFFLOAD_TARGET_DEFAULT=1
+Target: x86_64-linux-gnu
+Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu
+Thread model: posix
+gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) 
+COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_00d79' '-mtune=generic' '-march=x86-64'
+ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQEvgqr.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_00d79 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_00d79.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o
+COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_00d79' '-mtune=generic' '-march=x86-64'
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_00d79/fast"]
+  ignore line: [/usr/bin/make -f CMakeFiles/cmTC_00d79.dir/build.make CMakeFiles/cmTC_00d79.dir/build]
+  ignore line: [make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_00d79.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc    -o CMakeFiles/cmTC_00d79.dir/CMakeCCompilerABI.c.o   -c /usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_00d79]
+  ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00d79.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc     -v -rdynamic CMakeFiles/cmTC_00d79.dir/CMakeCCompilerABI.c.o  -o cmTC_00d79 ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper]
+  ignore line: [OFFLOAD_TARGET_NAMES=nvptx-none]
+  ignore line: [OFFLOAD_TARGET_DEFAULT=1]
+  ignore line: [Target: x86_64-linux-gnu]
+  ignore line: [Configured with: ../src/configure -v --with-pkgversion='Ubuntu 7.3.0-27ubuntu1~18.04' --with-bugurl=file:///usr/share/doc/gcc-7/README.Bugs --enable-languages=c,ada,c++,go,brig,d,fortran,objc,obj-c++ --prefix=/usr --with-gcc-major-version-only --program-suffix=-7 --program-prefix=x86_64-linux-gnu- --enable-shared --enable-linker-build-id --libexecdir=/usr/lib --without-included-gettext --enable-threads=posix --libdir=/usr/lib --enable-nls --with-sysroot=/ --enable-clocale=gnu --enable-libstdcxx-debug --enable-libstdcxx-time=yes --with-default-libstdcxx-abi=new --enable-gnu-unique-object --disable-vtable-verify --enable-libmpx --enable-plugin --enable-default-pie --with-system-zlib --with-target-system-zlib --enable-objc-gc=auto --enable-multiarch --disable-werror --with-arch-32=i686 --with-abi=m64 --with-multilib-list=m32,m64,mx32 --enable-multilib --with-tune=generic --enable-offload-targets=nvptx-none --without-cuda-driver --enable-checking=release --build=x86_64-linux-gnu --host=x86_64-linux-gnu --target=x86_64-linux-gnu]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 7.3.0 (Ubuntu 7.3.0-27ubuntu1~18.04) ]
+  ignore line: [COMPILER_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-linux-gnu/7/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib/:/lib/x86_64-linux-gnu/:/lib/../lib/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib/:/usr/lib/gcc/x86_64-linux-gnu/7/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-rdynamic' '-o' 'cmTC_00d79' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/lib/gcc/x86_64-linux-gnu/7/collect2 -plugin /usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so -plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper -plugin-opt=-fresolution=/tmp/ccQEvgqr.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --sysroot=/ --build-id --eh-frame-hdr -m elf_x86_64 --hash-style=gnu --as-needed -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie -z now -z relro -o cmTC_00d79 /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o -L/usr/lib/gcc/x86_64-linux-gnu/7 -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib -L/lib/x86_64-linux-gnu -L/lib/../lib -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib -L/usr/lib/gcc/x86_64-linux-gnu/7/../../.. CMakeFiles/cmTC_00d79.dir/CMakeCCompilerABI.c.o -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o /usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o]
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/collect2] ==> ignore
+    arg [-plugin] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so] ==> ignore
+    arg [-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper] ==> ignore
+    arg [-plugin-opt=-fresolution=/tmp/ccQEvgqr.res] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [-plugin-opt=-pass-through=-lc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc] ==> ignore
+    arg [-plugin-opt=-pass-through=-lgcc_s] ==> ignore
+    arg [--sysroot=/] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-pie] ==> ignore
+    arg [-znow] ==> ignore
+    arg [-zrelro] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_00d79] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib]
+    arg [-L/lib/x86_64-linux-gnu] ==> dir [/lib/x86_64-linux-gnu]
+    arg [-L/lib/../lib] ==> dir [/lib/../lib]
+    arg [-L/usr/lib/x86_64-linux-gnu] ==> dir [/usr/lib/x86_64-linux-gnu]
+    arg [-L/usr/lib/../lib] ==> dir [/usr/lib/../lib]
+    arg [-L/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..]
+    arg [CMakeFiles/cmTC_00d79.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--push-state] ==> ignore
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--pop-state] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o] ==> ignore
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7] ==> [/usr/lib/gcc/x86_64-linux-gnu/7]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib] ==> [/usr/lib]
+  collapse library dir [/lib/x86_64-linux-gnu] ==> [/lib/x86_64-linux-gnu]
+  collapse library dir [/lib/../lib] ==> [/lib]
+  collapse library dir [/usr/lib/x86_64-linux-gnu] ==> [/usr/lib/x86_64-linux-gnu]
+  collapse library dir [/usr/lib/../lib] ==> [/usr/lib]
+  collapse library dir [/usr/lib/gcc/x86_64-linux-gnu/7/../../..] ==> [/usr/lib]
+  implicit libs: [gcc;gcc_s;c;gcc;gcc_s]
+  implicit dirs: [/usr/lib/gcc/x86_64-linux-gnu/7;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0e2ed/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0e2ed.dir/build.make CMakeFiles/cmTC_0e2ed.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0e2ed.dir/feature_tests.c.o
+/usr/bin/cc   -std=c11 -o CMakeFiles/cmTC_0e2ed.dir/feature_tests.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_0e2ed
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0e2ed.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_0e2ed.dir/feature_tests.c.o  -o cmTC_0e2ed 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5d791/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5d791.dir/build.make CMakeFiles/cmTC_5d791.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5d791.dir/feature_tests.c.o
+/usr/bin/cc   -std=c99 -o CMakeFiles/cmTC_5d791.dir/feature_tests.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_5d791
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5d791.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_5d791.dir/feature_tests.c.o  -o cmTC_5d791 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_470bf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_470bf.dir/build.make CMakeFiles/cmTC_470bf.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_470bf.dir/feature_tests.c.o
+/usr/bin/cc   -std=c90 -o CMakeFiles/cmTC_470bf.dir/feature_tests.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/feature_tests.c
+Linking C executable cmTC_470bf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_470bf.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_470bf.dir/feature_tests.c.o  -o cmTC_470bf 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Performing C SOURCE FILE Test HAVE_GCC_WALL succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0823f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0823f.dir/build.make CMakeFiles/cmTC_0823f.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0823f.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_GCC_WALL   -Wall -o CMakeFiles/cmTC_0823f.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_0823f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0823f.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_GCC_WALL    -rdynamic CMakeFiles/cmTC_0823f.dir/src.c.o  -o cmTC_0823f 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_GCC_WDECLARATION_AFTER_STATEMENT succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9d200/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9d200.dir/build.make CMakeFiles/cmTC_9d200.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9d200.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_GCC_WDECLARATION_AFTER_STATEMENT   -Wdeclaration-after-statement -o CMakeFiles/cmTC_9d200.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9d200
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d200.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_GCC_WDECLARATION_AFTER_STATEMENT    -rdynamic CMakeFiles/cmTC_9d200.dir/src.c.o  -o cmTC_9d200 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_GCC_WERROR_DECLARATION_AFTER_STATEMENT succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f8a5b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f8a5b.dir/build.make CMakeFiles/cmTC_f8a5b.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f8a5b.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_GCC_WERROR_DECLARATION_AFTER_STATEMENT   -Werror=declaration-after-statement -o CMakeFiles/cmTC_f8a5b.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_f8a5b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f8a5b.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_GCC_WERROR_DECLARATION_AFTER_STATEMENT    -rdynamic CMakeFiles/cmTC_f8a5b.dir/src.c.o  -o cmTC_f8a5b 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_GCC_ATOMICS succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b3a24/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b3a24.dir/build.make CMakeFiles/cmTC_b3a24.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b3a24.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_GCC_ATOMICS   -o CMakeFiles/cmTC_b3a24.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b3a24
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b3a24.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_GCC_ATOMICS    -rdynamic CMakeFiles/cmTC_b3a24.dir/src.c.o  -o cmTC_b3a24 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(int argc, char **argv) {
+        int a;
+        void *x, *y, *z;
+        __sync_lock_test_and_set(&a, 4);
+        __sync_lock_test_and_set(&x, y);
+        __sync_fetch_and_add(&a, 1);
+        __sync_bool_compare_and_swap(&a, 5, 10);
+        __sync_bool_compare_and_swap(&x, y, z); }
+Performing C SOURCE FILE Test HAVE_GCC_FVISIBILITY succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b1952/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b1952.dir/build.make CMakeFiles/cmTC_b1952.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b1952.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_GCC_FVISIBILITY -fvisibility=hidden -Werror   -o CMakeFiles/cmTC_b1952.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_b1952
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b1952.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_GCC_FVISIBILITY -fvisibility=hidden -Werror    -rdynamic CMakeFiles/cmTC_b1952.dir/src.c.o  -o cmTC_b1952 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+      #if !defined(__GNUC__) || __GNUC__ < 4
+      #error SDL only uses visibility attributes in GCC 4 or newer
+      #endif
+      int main(int argc, char **argv) {}
+Performing C SOURCE FILE Test HAVE_GCC_WSHADOW succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c3a25/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c3a25.dir/build.make CMakeFiles/cmTC_c3a25.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c3a25.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_GCC_WSHADOW   -Wshadow -o CMakeFiles/cmTC_c3a25.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c3a25
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c3a25.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_GCC_WSHADOW    -rdynamic CMakeFiles/cmTC_c3a25.dir/src.c.o  -o cmTC_c3a25 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_NO_UNDEFINED succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9a4b4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9a4b4.dir/build.make CMakeFiles/cmTC_9a4b4.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9a4b4.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_NO_UNDEFINED -Wl,--no-undefined   -o CMakeFiles/cmTC_9a4b4.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9a4b4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9a4b4.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_NO_UNDEFINED -Wl,--no-undefined    -rdynamic CMakeFiles/cmTC_9a4b4.dir/src.c.o  -o cmTC_9a4b4 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
+Performing C SOURCE FILE Test HAVE_MMX succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_196dc/fast"
+/usr/bin/make -f CMakeFiles/cmTC_196dc.dir/build.make CMakeFiles/cmTC_196dc.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_196dc.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_MMX -mmmx   -o CMakeFiles/cmTC_196dc.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_196dc
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_196dc.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_MMX -mmmx    -rdynamic CMakeFiles/cmTC_196dc.dir/src.c.o  -o cmTC_196dc 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+          #ifdef __MINGW32__
+          #include <_mingw.h>
+          #ifdef __MINGW64_VERSION_MAJOR
+          #include <intrin.h>
+          #else
+          #include <mmintrin.h>
+          #endif
+          #else
+          #include <mmintrin.h>
+          #endif
+          #ifndef __MMX__
+          #error Assembler CPP flag not enabled
+          #endif
+          int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test HAVE_3DNOW succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_16000/fast"
+/usr/bin/make -f CMakeFiles/cmTC_16000.dir/build.make CMakeFiles/cmTC_16000.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_16000.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_3DNOW -m3dnow   -o CMakeFiles/cmTC_16000.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_16000
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16000.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_3DNOW -m3dnow    -rdynamic CMakeFiles/cmTC_16000.dir/src.c.o  -o cmTC_16000 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+          #include <mm3dnow.h>
+          #ifndef __3dNOW__
+          #error Assembler CPP flag not enabled
+          #endif
+          int main(int argc, char **argv) {
+            void *p = 0;
+            _m_prefetch(p);
+          }
+Performing C SOURCE FILE Test HAVE_SSE succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fdf9e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fdf9e.dir/build.make CMakeFiles/cmTC_fdf9e.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fdf9e.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_SSE -msse   -o CMakeFiles/cmTC_fdf9e.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_fdf9e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fdf9e.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_SSE -msse    -rdynamic CMakeFiles/cmTC_fdf9e.dir/src.c.o  -o cmTC_fdf9e 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+          #ifdef __MINGW32__
+          #include <_mingw.h>
+          #ifdef __MINGW64_VERSION_MAJOR
+          #include <intrin.h>
+          #else
+          #include <xmmintrin.h>
+          #endif
+          #else
+          #include <xmmintrin.h>
+          #endif
+          #ifndef __SSE__
+          #error Assembler CPP flag not enabled
+          #endif
+          int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test HAVE_SSE2 succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9f3c4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9f3c4.dir/build.make CMakeFiles/cmTC_9f3c4.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9f3c4.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_SSE2 -msse2   -o CMakeFiles/cmTC_9f3c4.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_9f3c4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f3c4.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_SSE2 -msse2    -rdynamic CMakeFiles/cmTC_9f3c4.dir/src.c.o  -o cmTC_9f3c4 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+          #ifdef __MINGW32__
+          #include <_mingw.h>
+          #ifdef __MINGW64_VERSION_MAJOR
+          #include <intrin.h>
+          #else
+          #include <emmintrin.h>
+          #endif
+          #else
+          #include <emmintrin.h>
+          #endif
+          #ifndef __SSE2__
+          #error Assembler CPP flag not enabled
+          #endif
+          int main(int argc, char **argv) { }
+Performing C SOURCE FILE Test HAVE_SSE3 succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_23bc6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_23bc6.dir/build.make CMakeFiles/cmTC_23bc6.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_23bc6.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_SSE3 -msse3   -o CMakeFiles/cmTC_23bc6.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_23bc6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_23bc6.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_SSE3 -msse3    -rdynamic CMakeFiles/cmTC_23bc6.dir/src.c.o  -o cmTC_23bc6 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+          #ifdef __MINGW32__
+          #include <_mingw.h>
+          #ifdef __MINGW64_VERSION_MAJOR
+          #include <intrin.h>
+          #else
+          #include <pmmintrin.h>
+          #endif
+          #else
+          #include <pmmintrin.h>
+          #endif
+          #ifndef __SSE3__
+          #error Assembler CPP flag not enabled
+          #endif
+          int main(int argc, char **argv) { }
+Determining if the include file immintrin.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9c3d6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9c3d6.dir/build.make CMakeFiles/cmTC_9c3d6.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9c3d6.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_9c3d6.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_9c3d6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9c3d6.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_9c3d6.dir/CheckIncludeFile.c.o  -o cmTC_9c3d6 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/types.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e472a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e472a.dir/build.make CMakeFiles/cmTC_e472a.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e472a.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_e472a.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e472a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e472a.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_e472a.dir/CheckIncludeFile.c.o  -o cmTC_e472a 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdio.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b2cb6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b2cb6.dir/build.make CMakeFiles/cmTC_b2cb6.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b2cb6.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_b2cb6.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_b2cb6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2cb6.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_b2cb6.dir/CheckIncludeFile.c.o  -o cmTC_b2cb6 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdlib.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_adfc0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_adfc0.dir/build.make CMakeFiles/cmTC_adfc0.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_adfc0.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_adfc0.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_adfc0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_adfc0.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_adfc0.dir/CheckIncludeFile.c.o  -o cmTC_adfc0 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stddef.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_74a2c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_74a2c.dir/build.make CMakeFiles/cmTC_74a2c.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_74a2c.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_74a2c.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_74a2c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74a2c.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_74a2c.dir/CheckIncludeFile.c.o  -o cmTC_74a2c 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdarg.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9ffec/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9ffec.dir/build.make CMakeFiles/cmTC_9ffec.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9ffec.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_9ffec.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_9ffec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9ffec.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_9ffec.dir/CheckIncludeFile.c.o  -o cmTC_9ffec 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file malloc.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f6c4c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f6c4c.dir/build.make CMakeFiles/cmTC_f6c4c.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f6c4c.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_f6c4c.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_f6c4c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6c4c.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_f6c4c.dir/CheckIncludeFile.c.o  -o cmTC_f6c4c 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file memory.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ef5f6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ef5f6.dir/build.make CMakeFiles/cmTC_ef5f6.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ef5f6.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_ef5f6.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_ef5f6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ef5f6.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_ef5f6.dir/CheckIncludeFile.c.o  -o cmTC_ef5f6 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file string.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2670d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2670d.dir/build.make CMakeFiles/cmTC_2670d.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2670d.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_2670d.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_2670d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2670d.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_2670d.dir/CheckIncludeFile.c.o  -o cmTC_2670d 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file limits.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a348d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a348d.dir/build.make CMakeFiles/cmTC_a348d.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a348d.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_a348d.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_a348d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a348d.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_a348d.dir/CheckIncludeFile.c.o  -o cmTC_a348d 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file strings.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b5a57/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b5a57.dir/build.make CMakeFiles/cmTC_b5a57.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b5a57.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_b5a57.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_b5a57
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5a57.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_b5a57.dir/CheckIncludeFile.c.o  -o cmTC_b5a57 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file wchar.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_44fd2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_44fd2.dir/build.make CMakeFiles/cmTC_44fd2.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_44fd2.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_44fd2.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_44fd2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44fd2.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_44fd2.dir/CheckIncludeFile.c.o  -o cmTC_44fd2 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file inttypes.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_37e0f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_37e0f.dir/build.make CMakeFiles/cmTC_37e0f.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_37e0f.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_37e0f.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_37e0f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_37e0f.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_37e0f.dir/CheckIncludeFile.c.o  -o cmTC_37e0f 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file stdint.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_25955/fast"
+/usr/bin/make -f CMakeFiles/cmTC_25955.dir/build.make CMakeFiles/cmTC_25955.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_25955.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_25955.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_25955
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_25955.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_25955.dir/CheckIncludeFile.c.o  -o cmTC_25955 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file ctype.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_196cb/fast"
+/usr/bin/make -f CMakeFiles/cmTC_196cb.dir/build.make CMakeFiles/cmTC_196cb.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_196cb.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_196cb.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_196cb
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_196cb.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_196cb.dir/CheckIncludeFile.c.o  -o cmTC_196cb 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file math.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cafa6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cafa6.dir/build.make CMakeFiles/cmTC_cafa6.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cafa6.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_cafa6.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_cafa6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cafa6.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_cafa6.dir/CheckIncludeFile.c.o  -o cmTC_cafa6 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file iconv.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e7a9e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e7a9e.dir/build.make CMakeFiles/cmTC_e7a9e.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e7a9e.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_e7a9e.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_e7a9e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7a9e.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_e7a9e.dir/CheckIncludeFile.c.o  -o cmTC_e7a9e 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file signal.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4960a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4960a.dir/build.make CMakeFiles/cmTC_4960a.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4960a.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_4960a.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_4960a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4960a.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_4960a.dir/CheckIncludeFile.c.o  -o cmTC_4960a 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if files dlfcn.h;stdint.h;stddef.h;inttypes.h;stdlib.h;strings.h;string.h;float.h exist passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9574f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9574f.dir/build.make CMakeFiles/cmTC_9574f.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9574f.dir/CheckIncludeFiles.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_9574f.dir/CheckIncludeFiles.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_9574f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9574f.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_9574f.dir/CheckIncludeFiles.c.o  -o cmTC_9574f 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining size of size_t passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7f089/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7f089.dir/build.make CMakeFiles/cmTC_7f089.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7f089.dir/SIZEOF_SIZE_T.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_7f089.dir/SIZEOF_SIZE_T.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CheckTypeSize/SIZEOF_SIZE_T.c
+Linking C executable cmTC_7f089
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7f089.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_7f089.dir/SIZEOF_SIZE_T.c.o  -o cmTC_7f089 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the M_PI exist passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a6db0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a6db0.dir/build.make CMakeFiles/cmTC_a6db0.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a6db0.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_a6db0.dir/CheckSymbolExists.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_a6db0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a6db0.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_a6db0.dir/CheckSymbolExists.c.o  -o cmTC_a6db0 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+File /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef M_PI
+  return ((int*)(&M_PI))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Performing C SOURCE FILE Test HAVE_MPROTECT succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_44a3a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_44a3a.dir/build.make CMakeFiles/cmTC_44a3a.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_44a3a.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_MPROTECT   -o CMakeFiles/cmTC_44a3a.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_44a3a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_44a3a.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_MPROTECT    -rdynamic CMakeFiles/cmTC_44a3a.dir/src.c.o  -o cmTC_44a3a 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <sys/types.h>
+                             #include <sys/mman.h>
+                             int main() { }
+Determining if the function strtod exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7a549/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7a549.dir/build.make CMakeFiles/cmTC_7a549.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7a549.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strtod   -o CMakeFiles/cmTC_7a549.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7a549
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a549.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strtod    -rdynamic CMakeFiles/cmTC_7a549.dir/CheckFunctionExists.c.o  -o cmTC_7a549 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function malloc exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1a74d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1a74d.dir/build.make CMakeFiles/cmTC_1a74d.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1a74d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=malloc   -o CMakeFiles/cmTC_1a74d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘malloc’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_1a74d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a74d.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=malloc    -rdynamic CMakeFiles/cmTC_1a74d.dir/CheckFunctionExists.c.o  -o cmTC_1a74d 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function calloc exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0a6be/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0a6be.dir/build.make CMakeFiles/cmTC_0a6be.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0a6be.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=calloc   -o CMakeFiles/cmTC_0a6be.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘calloc’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_0a6be
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0a6be.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=calloc    -rdynamic CMakeFiles/cmTC_0a6be.dir/CheckFunctionExists.c.o  -o cmTC_0a6be 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function realloc exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3469f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3469f.dir/build.make CMakeFiles/cmTC_3469f.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3469f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=realloc   -o CMakeFiles/cmTC_3469f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘realloc’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_3469f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3469f.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=realloc    -rdynamic CMakeFiles/cmTC_3469f.dir/CheckFunctionExists.c.o  -o cmTC_3469f 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function free exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f9065/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f9065.dir/build.make CMakeFiles/cmTC_f9065.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f9065.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=free   -o CMakeFiles/cmTC_f9065.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘free’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_f9065
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f9065.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=free    -rdynamic CMakeFiles/cmTC_f9065.dir/CheckFunctionExists.c.o  -o cmTC_f9065 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function getenv exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_191ba/fast"
+/usr/bin/make -f CMakeFiles/cmTC_191ba.dir/build.make CMakeFiles/cmTC_191ba.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_191ba.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=getenv   -o CMakeFiles/cmTC_191ba.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_191ba
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_191ba.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=getenv    -rdynamic CMakeFiles/cmTC_191ba.dir/CheckFunctionExists.c.o  -o cmTC_191ba 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function setenv exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_93d2a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_93d2a.dir/build.make CMakeFiles/cmTC_93d2a.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_93d2a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=setenv   -o CMakeFiles/cmTC_93d2a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_93d2a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93d2a.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=setenv    -rdynamic CMakeFiles/cmTC_93d2a.dir/CheckFunctionExists.c.o  -o cmTC_93d2a 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function putenv exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b7370/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b7370.dir/build.make CMakeFiles/cmTC_b7370.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b7370.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=putenv   -o CMakeFiles/cmTC_b7370.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b7370
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b7370.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=putenv    -rdynamic CMakeFiles/cmTC_b7370.dir/CheckFunctionExists.c.o  -o cmTC_b7370 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function unsetenv exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_db48d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_db48d.dir/build.make CMakeFiles/cmTC_db48d.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_db48d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=unsetenv   -o CMakeFiles/cmTC_db48d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_db48d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_db48d.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=unsetenv    -rdynamic CMakeFiles/cmTC_db48d.dir/CheckFunctionExists.c.o  -o cmTC_db48d 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function qsort exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c5809/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c5809.dir/build.make CMakeFiles/cmTC_c5809.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c5809.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=qsort   -o CMakeFiles/cmTC_c5809.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_c5809
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c5809.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=qsort    -rdynamic CMakeFiles/cmTC_c5809.dir/CheckFunctionExists.c.o  -o cmTC_c5809 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function abs exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_83185/fast"
+/usr/bin/make -f CMakeFiles/cmTC_83185.dir/build.make CMakeFiles/cmTC_83185.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_83185.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=abs   -o CMakeFiles/cmTC_83185.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘abs’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_83185
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_83185.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=abs    -rdynamic CMakeFiles/cmTC_83185.dir/CheckFunctionExists.c.o  -o cmTC_83185 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function bcopy exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_54d1f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_54d1f.dir/build.make CMakeFiles/cmTC_54d1f.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_54d1f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=bcopy   -o CMakeFiles/cmTC_54d1f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘bcopy’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_54d1f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_54d1f.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=bcopy    -rdynamic CMakeFiles/cmTC_54d1f.dir/CheckFunctionExists.c.o  -o cmTC_54d1f 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function memset exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3b8b8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3b8b8.dir/build.make CMakeFiles/cmTC_3b8b8.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3b8b8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=memset   -o CMakeFiles/cmTC_3b8b8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘memset’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_3b8b8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3b8b8.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=memset    -rdynamic CMakeFiles/cmTC_3b8b8.dir/CheckFunctionExists.c.o  -o cmTC_3b8b8 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function memcpy exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5eae2/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5eae2.dir/build.make CMakeFiles/cmTC_5eae2.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5eae2.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=memcpy   -o CMakeFiles/cmTC_5eae2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘memcpy’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_5eae2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5eae2.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=memcpy    -rdynamic CMakeFiles/cmTC_5eae2.dir/CheckFunctionExists.c.o  -o cmTC_5eae2 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function memmove exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a3b53/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a3b53.dir/build.make CMakeFiles/cmTC_a3b53.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a3b53.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=memmove   -o CMakeFiles/cmTC_a3b53.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘memmove’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_a3b53
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3b53.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=memmove    -rdynamic CMakeFiles/cmTC_a3b53.dir/CheckFunctionExists.c.o  -o cmTC_a3b53 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function memcmp exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d62a0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d62a0.dir/build.make CMakeFiles/cmTC_d62a0.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d62a0.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=memcmp   -o CMakeFiles/cmTC_d62a0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘memcmp’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_d62a0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d62a0.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=memcmp    -rdynamic CMakeFiles/cmTC_d62a0.dir/CheckFunctionExists.c.o  -o cmTC_d62a0 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strlen exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_45493/fast"
+/usr/bin/make -f CMakeFiles/cmTC_45493.dir/build.make CMakeFiles/cmTC_45493.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_45493.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strlen   -o CMakeFiles/cmTC_45493.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘strlen’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_45493
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_45493.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strlen    -rdynamic CMakeFiles/cmTC_45493.dir/CheckFunctionExists.c.o  -o cmTC_45493 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strchr exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3d49d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3d49d.dir/build.make CMakeFiles/cmTC_3d49d.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3d49d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strchr   -o CMakeFiles/cmTC_3d49d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘strchr’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_3d49d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3d49d.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strchr    -rdynamic CMakeFiles/cmTC_3d49d.dir/CheckFunctionExists.c.o  -o cmTC_3d49d 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strrchr exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_345b7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_345b7.dir/build.make CMakeFiles/cmTC_345b7.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_345b7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strrchr   -o CMakeFiles/cmTC_345b7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘strrchr’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_345b7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_345b7.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strrchr    -rdynamic CMakeFiles/cmTC_345b7.dir/CheckFunctionExists.c.o  -o cmTC_345b7 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strstr exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_c4cd0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_c4cd0.dir/build.make CMakeFiles/cmTC_c4cd0.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c4cd0.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strstr   -o CMakeFiles/cmTC_c4cd0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘strstr’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_c4cd0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c4cd0.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strstr    -rdynamic CMakeFiles/cmTC_c4cd0.dir/CheckFunctionExists.c.o  -o cmTC_c4cd0 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strtol exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_89ed3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_89ed3.dir/build.make CMakeFiles/cmTC_89ed3.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_89ed3.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strtol   -o CMakeFiles/cmTC_89ed3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_89ed3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89ed3.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strtol    -rdynamic CMakeFiles/cmTC_89ed3.dir/CheckFunctionExists.c.o  -o cmTC_89ed3 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strtoul exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e342b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e342b.dir/build.make CMakeFiles/cmTC_e342b.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e342b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strtoul   -o CMakeFiles/cmTC_e342b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_e342b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e342b.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strtoul    -rdynamic CMakeFiles/cmTC_e342b.dir/CheckFunctionExists.c.o  -o cmTC_e342b 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strtoll exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a7669/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a7669.dir/build.make CMakeFiles/cmTC_a7669.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a7669.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strtoll   -o CMakeFiles/cmTC_a7669.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a7669
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7669.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strtoll    -rdynamic CMakeFiles/cmTC_a7669.dir/CheckFunctionExists.c.o  -o cmTC_a7669 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strtoull exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_075f5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_075f5.dir/build.make CMakeFiles/cmTC_075f5.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_075f5.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strtoull   -o CMakeFiles/cmTC_075f5.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_075f5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_075f5.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strtoull    -rdynamic CMakeFiles/cmTC_075f5.dir/CheckFunctionExists.c.o  -o cmTC_075f5 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function atoi exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_af2d4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_af2d4.dir/build.make CMakeFiles/cmTC_af2d4.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_af2d4.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=atoi   -o CMakeFiles/cmTC_af2d4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_af2d4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_af2d4.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=atoi    -rdynamic CMakeFiles/cmTC_af2d4.dir/CheckFunctionExists.c.o  -o cmTC_af2d4 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function atof exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_aa5b3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_aa5b3.dir/build.make CMakeFiles/cmTC_aa5b3.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aa5b3.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=atof   -o CMakeFiles/cmTC_aa5b3.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_aa5b3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa5b3.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=atof    -rdynamic CMakeFiles/cmTC_aa5b3.dir/CheckFunctionExists.c.o  -o cmTC_aa5b3 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strcmp exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_178f7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_178f7.dir/build.make CMakeFiles/cmTC_178f7.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_178f7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strcmp   -o CMakeFiles/cmTC_178f7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘strcmp’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_178f7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_178f7.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strcmp    -rdynamic CMakeFiles/cmTC_178f7.dir/CheckFunctionExists.c.o  -o cmTC_178f7 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strncmp exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bb30c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_bb30c.dir/build.make CMakeFiles/cmTC_bb30c.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bb30c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strncmp   -o CMakeFiles/cmTC_bb30c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘strncmp’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_bb30c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bb30c.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strncmp    -rdynamic CMakeFiles/cmTC_bb30c.dir/CheckFunctionExists.c.o  -o cmTC_bb30c 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strcasecmp exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1c12d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_1c12d.dir/build.make CMakeFiles/cmTC_1c12d.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1c12d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strcasecmp   -o CMakeFiles/cmTC_1c12d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘strcasecmp’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_1c12d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1c12d.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strcasecmp    -rdynamic CMakeFiles/cmTC_1c12d.dir/CheckFunctionExists.c.o  -o cmTC_1c12d 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function strncasecmp exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_96e99/fast"
+/usr/bin/make -f CMakeFiles/cmTC_96e99.dir/build.make CMakeFiles/cmTC_96e99.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_96e99.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strncasecmp   -o CMakeFiles/cmTC_96e99.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘strncasecmp’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_96e99
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_96e99.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=strncasecmp    -rdynamic CMakeFiles/cmTC_96e99.dir/CheckFunctionExists.c.o  -o cmTC_96e99 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function vsscanf exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_dad97/fast"
+/usr/bin/make -f CMakeFiles/cmTC_dad97.dir/build.make CMakeFiles/cmTC_dad97.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dad97.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=vsscanf   -o CMakeFiles/cmTC_dad97.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘vsscanf’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_dad97
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dad97.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=vsscanf    -rdynamic CMakeFiles/cmTC_dad97.dir/CheckFunctionExists.c.o  -o cmTC_dad97 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function vsnprintf exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_85ac6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_85ac6.dir/build.make CMakeFiles/cmTC_85ac6.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_85ac6.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=vsnprintf   -o CMakeFiles/cmTC_85ac6.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘vsnprintf’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_85ac6
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_85ac6.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=vsnprintf    -rdynamic CMakeFiles/cmTC_85ac6.dir/CheckFunctionExists.c.o  -o cmTC_85ac6 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function fopen64 exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7e302/fast"
+/usr/bin/make -f CMakeFiles/cmTC_7e302.dir/build.make CMakeFiles/cmTC_7e302.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7e302.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=fopen64   -o CMakeFiles/cmTC_7e302.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7e302
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7e302.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=fopen64    -rdynamic CMakeFiles/cmTC_7e302.dir/CheckFunctionExists.c.o  -o cmTC_7e302 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function fseeko exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8616d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8616d.dir/build.make CMakeFiles/cmTC_8616d.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8616d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=fseeko   -o CMakeFiles/cmTC_8616d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8616d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8616d.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=fseeko    -rdynamic CMakeFiles/cmTC_8616d.dir/CheckFunctionExists.c.o  -o cmTC_8616d 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function fseeko64 exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_64d52/fast"
+/usr/bin/make -f CMakeFiles/cmTC_64d52.dir/build.make CMakeFiles/cmTC_64d52.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_64d52.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=fseeko64   -o CMakeFiles/cmTC_64d52.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_64d52
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_64d52.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=fseeko64    -rdynamic CMakeFiles/cmTC_64d52.dir/CheckFunctionExists.c.o  -o cmTC_64d52 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function sigaction exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fedf7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fedf7.dir/build.make CMakeFiles/cmTC_fedf7.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fedf7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=sigaction   -o CMakeFiles/cmTC_fedf7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_fedf7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fedf7.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=sigaction    -rdynamic CMakeFiles/cmTC_fedf7.dir/CheckFunctionExists.c.o  -o cmTC_fedf7 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function setjmp exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_366bf/fast"
+/usr/bin/make -f CMakeFiles/cmTC_366bf.dir/build.make CMakeFiles/cmTC_366bf.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_366bf.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=setjmp   -o CMakeFiles/cmTC_366bf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_366bf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_366bf.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=setjmp    -rdynamic CMakeFiles/cmTC_366bf.dir/CheckFunctionExists.c.o  -o cmTC_366bf 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function nanosleep exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_009fd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_009fd.dir/build.make CMakeFiles/cmTC_009fd.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_009fd.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=nanosleep   -o CMakeFiles/cmTC_009fd.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_009fd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_009fd.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=nanosleep    -rdynamic CMakeFiles/cmTC_009fd.dir/CheckFunctionExists.c.o  -o cmTC_009fd 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function sysconf exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_63283/fast"
+/usr/bin/make -f CMakeFiles/cmTC_63283.dir/build.make CMakeFiles/cmTC_63283.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_63283.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=sysconf   -o CMakeFiles/cmTC_63283.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_63283
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_63283.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=sysconf    -rdynamic CMakeFiles/cmTC_63283.dir/CheckFunctionExists.c.o  -o cmTC_63283 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function getauxval exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b9bc8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b9bc8.dir/build.make CMakeFiles/cmTC_b9bc8.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b9bc8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=getauxval   -o CMakeFiles/cmTC_b9bc8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_b9bc8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b9bc8.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=getauxval    -rdynamic CMakeFiles/cmTC_b9bc8.dir/CheckFunctionExists.c.o  -o cmTC_b9bc8 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function poll exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2c820/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2c820.dir/build.make CMakeFiles/cmTC_2c820.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2c820.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=poll   -o CMakeFiles/cmTC_2c820.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2c820
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2c820.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=poll    -rdynamic CMakeFiles/cmTC_2c820.dir/CheckFunctionExists.c.o  -o cmTC_2c820 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pow exists in the m passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8540b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8540b.dir/build.make CMakeFiles/cmTC_8540b.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8540b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=pow   -o CMakeFiles/cmTC_8540b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘pow’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_8540b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8540b.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=pow    -rdynamic CMakeFiles/cmTC_8540b.dir/CheckFunctionExists.c.o  -o cmTC_8540b -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function atan exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b061b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b061b.dir/build.make CMakeFiles/cmTC_b061b.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b061b.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=atan   -o CMakeFiles/cmTC_b061b.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘atan’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_b061b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b061b.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=atan    -rdynamic CMakeFiles/cmTC_b061b.dir/CheckFunctionExists.c.o  -o cmTC_b061b -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function atan2 exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_28ff9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_28ff9.dir/build.make CMakeFiles/cmTC_28ff9.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_28ff9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=atan2   -o CMakeFiles/cmTC_28ff9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘atan2’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_28ff9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_28ff9.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=atan2    -rdynamic CMakeFiles/cmTC_28ff9.dir/CheckFunctionExists.c.o  -o cmTC_28ff9 -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function ceil exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_91a00/fast"
+/usr/bin/make -f CMakeFiles/cmTC_91a00.dir/build.make CMakeFiles/cmTC_91a00.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_91a00.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=ceil   -o CMakeFiles/cmTC_91a00.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘ceil’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_91a00
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91a00.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=ceil    -rdynamic CMakeFiles/cmTC_91a00.dir/CheckFunctionExists.c.o  -o cmTC_91a00 -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function copysign exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_59c33/fast"
+/usr/bin/make -f CMakeFiles/cmTC_59c33.dir/build.make CMakeFiles/cmTC_59c33.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_59c33.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=copysign   -o CMakeFiles/cmTC_59c33.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘copysign’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_59c33
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_59c33.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=copysign    -rdynamic CMakeFiles/cmTC_59c33.dir/CheckFunctionExists.c.o  -o cmTC_59c33 -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function cos exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cf899/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cf899.dir/build.make CMakeFiles/cmTC_cf899.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cf899.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=cos   -o CMakeFiles/cmTC_cf899.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘cos’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_cf899
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf899.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=cos    -rdynamic CMakeFiles/cmTC_cf899.dir/CheckFunctionExists.c.o  -o cmTC_cf899 -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function cosf exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e64df/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e64df.dir/build.make CMakeFiles/cmTC_e64df.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e64df.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=cosf   -o CMakeFiles/cmTC_e64df.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘cosf’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_e64df
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e64df.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=cosf    -rdynamic CMakeFiles/cmTC_e64df.dir/CheckFunctionExists.c.o  -o cmTC_e64df -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function fabs exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3491f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3491f.dir/build.make CMakeFiles/cmTC_3491f.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3491f.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=fabs   -o CMakeFiles/cmTC_3491f.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘fabs’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_3491f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3491f.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=fabs    -rdynamic CMakeFiles/cmTC_3491f.dir/CheckFunctionExists.c.o  -o cmTC_3491f -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function floor exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_65c4d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_65c4d.dir/build.make CMakeFiles/cmTC_65c4d.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_65c4d.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=floor   -o CMakeFiles/cmTC_65c4d.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘floor’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_65c4d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_65c4d.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=floor    -rdynamic CMakeFiles/cmTC_65c4d.dir/CheckFunctionExists.c.o  -o cmTC_65c4d -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function log exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ee160/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ee160.dir/build.make CMakeFiles/cmTC_ee160.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ee160.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=log   -o CMakeFiles/cmTC_ee160.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘log’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_ee160
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee160.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=log    -rdynamic CMakeFiles/cmTC_ee160.dir/CheckFunctionExists.c.o  -o cmTC_ee160 -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function pow exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3e7b8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3e7b8.dir/build.make CMakeFiles/cmTC_3e7b8.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3e7b8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=pow   -o CMakeFiles/cmTC_3e7b8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘pow’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_3e7b8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3e7b8.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=pow    -rdynamic CMakeFiles/cmTC_3e7b8.dir/CheckFunctionExists.c.o  -o cmTC_3e7b8 -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function scalbn exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e7bf8/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e7bf8.dir/build.make CMakeFiles/cmTC_e7bf8.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e7bf8.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=scalbn   -o CMakeFiles/cmTC_e7bf8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘scalbn’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_e7bf8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e7bf8.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=scalbn    -rdynamic CMakeFiles/cmTC_e7bf8.dir/CheckFunctionExists.c.o  -o cmTC_e7bf8 -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function sin exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_d04f9/fast"
+/usr/bin/make -f CMakeFiles/cmTC_d04f9.dir/build.make CMakeFiles/cmTC_d04f9.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d04f9.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=sin   -o CMakeFiles/cmTC_d04f9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘sin’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_d04f9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d04f9.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=sin    -rdynamic CMakeFiles/cmTC_d04f9.dir/CheckFunctionExists.c.o  -o cmTC_d04f9 -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function sinf exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3260c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3260c.dir/build.make CMakeFiles/cmTC_3260c.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3260c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=sinf   -o CMakeFiles/cmTC_3260c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘sinf’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_3260c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3260c.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=sinf    -rdynamic CMakeFiles/cmTC_3260c.dir/CheckFunctionExists.c.o  -o cmTC_3260c -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function sqrt exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_abb92/fast"
+/usr/bin/make -f CMakeFiles/cmTC_abb92.dir/build.make CMakeFiles/cmTC_abb92.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_abb92.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=sqrt   -o CMakeFiles/cmTC_abb92.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘sqrt’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_abb92
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_abb92.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=sqrt    -rdynamic CMakeFiles/cmTC_abb92.dir/CheckFunctionExists.c.o  -o cmTC_abb92 -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function sqrtf exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a3fe7/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a3fe7.dir/build.make CMakeFiles/cmTC_a3fe7.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a3fe7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=sqrtf   -o CMakeFiles/cmTC_a3fe7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘sqrtf’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_a3fe7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3fe7.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=sqrtf    -rdynamic CMakeFiles/cmTC_a3fe7.dir/CheckFunctionExists.c.o  -o cmTC_a3fe7 -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function tan exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_caaee/fast"
+/usr/bin/make -f CMakeFiles/cmTC_caaee.dir/build.make CMakeFiles/cmTC_caaee.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_caaee.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=tan   -o CMakeFiles/cmTC_caaee.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘tan’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_caaee
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_caaee.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=tan    -rdynamic CMakeFiles/cmTC_caaee.dir/CheckFunctionExists.c.o  -o cmTC_caaee -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function tanf exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_60a78/fast"
+/usr/bin/make -f CMakeFiles/cmTC_60a78.dir/build.make CMakeFiles/cmTC_60a78.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_60a78.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=tanf   -o CMakeFiles/cmTC_60a78.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘tanf’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_60a78
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_60a78.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=tanf    -rdynamic CMakeFiles/cmTC_60a78.dir/CheckFunctionExists.c.o  -o cmTC_60a78 -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function acos exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_75c6a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_75c6a.dir/build.make CMakeFiles/cmTC_75c6a.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_75c6a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=acos   -o CMakeFiles/cmTC_75c6a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘acos’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_75c6a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_75c6a.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=acos    -rdynamic CMakeFiles/cmTC_75c6a.dir/CheckFunctionExists.c.o  -o cmTC_75c6a -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the function asin exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b5189/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b5189.dir/build.make CMakeFiles/cmTC_b5189.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b5189.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=asin   -o CMakeFiles/cmTC_b5189.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+<command-line>:0:23: warning: conflicting types for built-in function ‘asin’ [-Wbuiltin-declaration-mismatch]
+/usr/share/cmake-3.10/Modules/CheckFunctionExists.c:7:3: note: in expansion of macro ‘CHECK_FUNCTION_EXISTS’
+   CHECK_FUNCTION_EXISTS(void);
+   ^~~~~~~~~~~~~~~~~~~~~
+Linking C executable cmTC_b5189
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b5189.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=asin    -rdynamic CMakeFiles/cmTC_b5189.dir/CheckFunctionExists.c.o  -o cmTC_b5189 -lm 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file alloca.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a7f32/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a7f32.dir/build.make CMakeFiles/cmTC_a7f32.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a7f32.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos    -o CMakeFiles/cmTC_a7f32.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_a7f32
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a7f32.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -rdynamic CMakeFiles/cmTC_a7f32.dir/CheckIncludeFile.c.o  -o cmTC_a7f32 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test HAVE_SA_SIGACTION succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_0d20d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_0d20d.dir/build.make CMakeFiles/cmTC_0d20d.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0d20d.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_SA_SIGACTION   -o CMakeFiles/cmTC_0d20d.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_0d20d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0d20d.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_SA_SIGACTION    -rdynamic CMakeFiles/cmTC_0d20d.dir/src.c.o  -o cmTC_0d20d 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+#include <signal.h>
+
+int main()
+{
+   (void)sizeof(((struct sigaction *)0)->sa_sigaction);
+   return 0;
+}
+
+Determining if the function dlopen exists in the dl passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3ee51/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3ee51.dir/build.make CMakeFiles/cmTC_3ee51.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3ee51.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=dlopen   -o CMakeFiles/cmTC_3ee51.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3ee51
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3ee51.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=dlopen    -rdynamic CMakeFiles/cmTC_3ee51.dir/CheckFunctionExists.c.o  -o cmTC_3ee51 -ldl 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test OSS_FOUND succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6dde3/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6dde3.dir/build.make CMakeFiles/cmTC_6dde3.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6dde3.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DOSS_FOUND   -o CMakeFiles/cmTC_6dde3.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6dde3
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6dde3.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DOSS_FOUND    -rdynamic CMakeFiles/cmTC_6dde3.dir/src.c.o  -o cmTC_6dde3 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+        #include <sys/soundcard.h>
+        int main() { int arg = SNDCTL_DSP_SETFRAGMENT; }
+Performing C SOURCE FILE Test HAVE_VIDEO_OPENGLES_V2 succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fb7d5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fb7d5.dir/build.make CMakeFiles/cmTC_fb7d5.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fb7d5.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_VIDEO_OPENGLES_V2   -o CMakeFiles/cmTC_fb7d5.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_fb7d5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fb7d5.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_VIDEO_OPENGLES_V2    -rdynamic CMakeFiles/cmTC_fb7d5.dir/src.c.o  -o cmTC_fb7d5 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+      #include <GLES2/gl2.h>
+      #include <GLES2/gl2ext.h>
+      int main (int argc, char** argv) {}
+Performing C SOURCE FILE Test HAVE_INPUT_EVENTS succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fd25f/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fd25f.dir/build.make CMakeFiles/cmTC_fd25f.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fd25f.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_INPUT_EVENTS   -o CMakeFiles/cmTC_fd25f.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_fd25f
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fd25f.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_INPUT_EVENTS    -rdynamic CMakeFiles/cmTC_fd25f.dir/src.c.o  -o cmTC_fd25f 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+        #include <linux/input.h>
+        #ifndef EVIOCGNAME
+        #error EVIOCGNAME() ioctl not available
+        #endif
+        int main(int argc, char** argv) {}
+Performing C SOURCE FILE Test HAVE_INPUT_KD succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_55530/fast"
+/usr/bin/make -f CMakeFiles/cmTC_55530.dir/build.make CMakeFiles/cmTC_55530.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_55530.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_INPUT_KD   -o CMakeFiles/cmTC_55530.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c: In function ‘main’:
+/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c:9:13: warning: implicit declaration of function ‘ioctl’ [-Wimplicit-function-declaration]
+             ioctl(0, KDGKBENT, &kbe);
+             ^~~~~
+Linking C executable cmTC_55530
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_55530.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_INPUT_KD    -rdynamic CMakeFiles/cmTC_55530.dir/src.c.o  -o cmTC_55530 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+        #include <linux/kd.h>
+        #include <linux/keyboard.h>
+
+        int main(int argc, char **argv)
+        {
+            struct kbentry kbe;
+            kbe.kb_table = KG_CTRL;
+            ioctl(0, KDGKBENT, &kbe);
+        }
+Performing C SOURCE FILE Test HAVE_PTHREADS succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a4a7c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a4a7c.dir/build.make CMakeFiles/cmTC_a4a7c.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a4a7c.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_PTHREADS   -D_REENTRANT -pthread   -o CMakeFiles/cmTC_a4a7c.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a4a7c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a4a7c.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_PTHREADS   -D_REENTRANT -pthread    -rdynamic CMakeFiles/cmTC_a4a7c.dir/src.c.o  -o cmTC_a4a7c 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Return value: 1
+Source file was:
+
+        #include <pthread.h>
+        int main(int argc, char** argv) {
+          pthread_attr_t type;
+          pthread_attr_init(&type);
+          return 0;
+        }
+Performing C SOURCE FILE Test HAVE_RECURSIVE_MUTEXES succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_33f67/fast"
+/usr/bin/make -f CMakeFiles/cmTC_33f67.dir/build.make CMakeFiles/cmTC_33f67.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_33f67.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_RECURSIVE_MUTEXES   -D_REENTRANT -pthread   -o CMakeFiles/cmTC_33f67.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_33f67
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_33f67.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_RECURSIVE_MUTEXES   -D_REENTRANT -pthread    -rdynamic CMakeFiles/cmTC_33f67.dir/src.c.o  -o cmTC_33f67 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+        #include <pthread.h>
+        int main(int argc, char **argv) {
+          pthread_mutexattr_t attr;
+          pthread_mutexattr_settype(&attr, PTHREAD_MUTEX_RECURSIVE);
+          return 0;
+        }
+Performing C SOURCE FILE Test HAVE_PTHREADS_SEM succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5b68c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_5b68c.dir/build.make CMakeFiles/cmTC_5b68c.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5b68c.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_PTHREADS_SEM   -D_REENTRANT -pthread   -o CMakeFiles/cmTC_5b68c.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_5b68c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5b68c.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_PTHREADS_SEM   -D_REENTRANT -pthread    -rdynamic CMakeFiles/cmTC_5b68c.dir/src.c.o  -o cmTC_5b68c 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+#include <pthread.h>
+                                 #include <semaphore.h>
+                                 int main(int argc, char **argv) { return 0; }
+Performing C SOURCE FILE Test HAVE_SEM_TIMEDWAIT succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_a2e97/fast"
+/usr/bin/make -f CMakeFiles/cmTC_a2e97.dir/build.make CMakeFiles/cmTC_a2e97.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a2e97.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_SEM_TIMEDWAIT   -D_REENTRANT -pthread   -o CMakeFiles/cmTC_a2e97.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_a2e97
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a2e97.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_SEM_TIMEDWAIT   -D_REENTRANT -pthread    -rdynamic CMakeFiles/cmTC_a2e97.dir/src.c.o  -o cmTC_a2e97 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+
+              #include <pthread.h>
+              #include <semaphore.h>
+              int main(int argc, char **argv) {
+                  sem_timedwait(NULL, NULL);
+                  return 0;
+              }
+Determining if the function pthread_setname_np exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cf62e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cf62e.dir/build.make CMakeFiles/cmTC_cf62e.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cf62e.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=pthread_setname_np   -D_REENTRANT -pthread   -o CMakeFiles/cmTC_cf62e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_cf62e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cf62e.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DCHECK_FUNCTION_EXISTS=pthread_setname_np   -D_REENTRANT -pthread    -rdynamic CMakeFiles/cmTC_cf62e.dir/CheckFunctionExists.c.o  -o cmTC_cf62e 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file linux/version.h exists passed with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_79809/fast"
+/usr/bin/make -f CMakeFiles/cmTC_79809.dir/build.make CMakeFiles/cmTC_79809.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_79809.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos     -o CMakeFiles/cmTC_79809.dir/CheckIncludeFile.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+Linking C executable cmTC_79809
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_79809.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos      -rdynamic CMakeFiles/cmTC_79809.dir/CheckIncludeFile.c.o  -o cmTC_79809 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+
+Performing C SOURCE FILE Test HAVE_ENABLE_NEW_DTAGS succeeded with the following output:
+Change Dir: /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_ae63b/fast"
+/usr/bin/make -f CMakeFiles/cmTC_ae63b.dir/build.make CMakeFiles/cmTC_ae63b.dir/build
+make[1]: Entering directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ae63b.dir/src.c.o
+/usr/bin/cc   -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_LINUX_VERSION_H -DHAVE_ENABLE_NEW_DTAGS -Wl,--enable-new-dtags   -o CMakeFiles/cmTC_ae63b.dir/src.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_ae63b
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae63b.dir/link.txt --verbose=1
+/usr/bin/cc -g -O3 -idirafter /home/danny/FIT/IZG/SDL2-2.0.9/src/video/khronos -DHAVE_LINUX_VERSION_H -DHAVE_ENABLE_NEW_DTAGS -Wl,--enable-new-dtags    -rdynamic CMakeFiles/cmTC_ae63b.dir/src.c.o  -o cmTC_ae63b 
+make[1]: Leaving directory '/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles/CMakeTmp'
+
+Source file was:
+int main(void) { return 0; }
