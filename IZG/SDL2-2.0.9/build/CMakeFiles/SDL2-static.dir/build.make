@@ -2673,9 +2673,441 @@ CMakeFiles/SDL2-static.dir/src/audio/dsp/SDL_dspaudio.c.o.provides: CMakeFiles/S
 CMakeFiles/SDL2-static.dir/src/audio/dsp/SDL_dspaudio.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/audio/dsp/SDL_dspaudio.c.o
 
 
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o: ../src/video/x11/SDL_x11clipboard.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11clipboard.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11clipboard.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11clipboard.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o: ../src/video/x11/SDL_x11dyn.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11dyn.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11dyn.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11dyn.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o: ../src/video/x11/SDL_x11events.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11events.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11events.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11events.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o: ../src/video/x11/SDL_x11framebuffer.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11framebuffer.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11framebuffer.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11framebuffer.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o: ../src/video/x11/SDL_x11keyboard.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11keyboard.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11keyboard.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11keyboard.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o: ../src/video/x11/SDL_x11messagebox.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11messagebox.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11messagebox.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11messagebox.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o: ../src/video/x11/SDL_x11modes.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11modes.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11modes.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11modes.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o: ../src/video/x11/SDL_x11mouse.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11mouse.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11mouse.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11mouse.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o: ../src/video/x11/SDL_x11opengl.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11opengl.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11opengl.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11opengl.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o: ../src/video/x11/SDL_x11opengles.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11opengles.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11opengles.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11opengles.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o: ../src/video/x11/SDL_x11shape.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11shape.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11shape.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11shape.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o: ../src/video/x11/SDL_x11touch.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11touch.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11touch.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11touch.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o: ../src/video/x11/SDL_x11video.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11video.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11video.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11video.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o: ../src/video/x11/SDL_x11vulkan.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11vulkan.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11vulkan.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11vulkan.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o: ../src/video/x11/SDL_x11window.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11window.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11window.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11window.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o: ../src/video/x11/SDL_x11xinput2.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11xinput2.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11xinput2.c > CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/SDL_x11xinput2.c -o CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o: ../src/video/x11/edid-parse.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/edid-parse.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/edid-parse.c > CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/edid-parse.c -o CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o
+
+
+CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o: CMakeFiles/SDL2-static.dir/flags.make
+CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o: ../src/video/x11/imKStoUCS.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/imKStoUCS.c
+
+CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/imKStoUCS.c > CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.i
+
+CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/danny/FIT/IZG/SDL2-2.0.9/src/video/x11/imKStoUCS.c -o CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.s
+
+CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o.requires:
+
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o.requires
+
+CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o.provides: CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o.requires
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o.provides.build
+.PHONY : CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o.provides
+
+CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o.provides.build: CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o
+
+
 CMakeFiles/SDL2-static.dir/src/core/unix/SDL_poll.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/core/unix/SDL_poll.c.o: ../src/core/unix/SDL_poll.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_110) "Building C object CMakeFiles/SDL2-static.dir/src/core/unix/SDL_poll.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/SDL2-static.dir/src/core/unix/SDL_poll.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/core/unix/SDL_poll.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/core/unix/SDL_poll.c
 
 CMakeFiles/SDL2-static.dir/src/core/unix/SDL_poll.c.i: cmake_force
@@ -2699,7 +3131,7 @@ CMakeFiles/SDL2-static.dir/src/core/unix/SDL_poll.c.o.provides.build: CMakeFiles
 
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_dbus.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_dbus.c.o: ../src/core/linux/SDL_dbus.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_111) "Building C object CMakeFiles/SDL2-static.dir/src/core/linux/SDL_dbus.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/SDL2-static.dir/src/core/linux/SDL_dbus.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/core/linux/SDL_dbus.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/core/linux/SDL_dbus.c
 
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_dbus.c.i: cmake_force
@@ -2723,7 +3155,7 @@ CMakeFiles/SDL2-static.dir/src/core/linux/SDL_dbus.c.o.provides.build: CMakeFile
 
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev.c.o: ../src/core/linux/SDL_evdev.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_112) "Building C object CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Building C object CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/core/linux/SDL_evdev.c
 
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev.c.i: cmake_force
@@ -2747,7 +3179,7 @@ CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev.c.o.provides.build: CMakeFil
 
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev_kbd.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev_kbd.c.o: ../src/core/linux/SDL_evdev_kbd.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_113) "Building C object CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev_kbd.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_131) "Building C object CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev_kbd.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev_kbd.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/core/linux/SDL_evdev_kbd.c
 
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev_kbd.c.i: cmake_force
@@ -2771,7 +3203,7 @@ CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev_kbd.c.o.provides.build: CMak
 
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_fcitx.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_fcitx.c.o: ../src/core/linux/SDL_fcitx.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_114) "Building C object CMakeFiles/SDL2-static.dir/src/core/linux/SDL_fcitx.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_132) "Building C object CMakeFiles/SDL2-static.dir/src/core/linux/SDL_fcitx.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/core/linux/SDL_fcitx.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/core/linux/SDL_fcitx.c
 
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_fcitx.c.i: cmake_force
@@ -2795,7 +3227,7 @@ CMakeFiles/SDL2-static.dir/src/core/linux/SDL_fcitx.c.o.provides.build: CMakeFil
 
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_ibus.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_ibus.c.o: ../src/core/linux/SDL_ibus.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_115) "Building C object CMakeFiles/SDL2-static.dir/src/core/linux/SDL_ibus.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_133) "Building C object CMakeFiles/SDL2-static.dir/src/core/linux/SDL_ibus.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/core/linux/SDL_ibus.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/core/linux/SDL_ibus.c
 
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_ibus.c.i: cmake_force
@@ -2819,7 +3251,7 @@ CMakeFiles/SDL2-static.dir/src/core/linux/SDL_ibus.c.o.provides.build: CMakeFile
 
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_ime.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_ime.c.o: ../src/core/linux/SDL_ime.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_116) "Building C object CMakeFiles/SDL2-static.dir/src/core/linux/SDL_ime.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_134) "Building C object CMakeFiles/SDL2-static.dir/src/core/linux/SDL_ime.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/core/linux/SDL_ime.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/core/linux/SDL_ime.c
 
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_ime.c.i: cmake_force
@@ -2843,7 +3275,7 @@ CMakeFiles/SDL2-static.dir/src/core/linux/SDL_ime.c.o.provides.build: CMakeFiles
 
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_udev.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_udev.c.o: ../src/core/linux/SDL_udev.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_117) "Building C object CMakeFiles/SDL2-static.dir/src/core/linux/SDL_udev.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_135) "Building C object CMakeFiles/SDL2-static.dir/src/core/linux/SDL_udev.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/core/linux/SDL_udev.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/core/linux/SDL_udev.c
 
 CMakeFiles/SDL2-static.dir/src/core/linux/SDL_udev.c.i: cmake_force
@@ -2867,7 +3299,7 @@ CMakeFiles/SDL2-static.dir/src/core/linux/SDL_udev.c.o.provides.build: CMakeFile
 
 CMakeFiles/SDL2-static.dir/src/haptic/linux/SDL_syshaptic.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/haptic/linux/SDL_syshaptic.c.o: ../src/haptic/linux/SDL_syshaptic.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_118) "Building C object CMakeFiles/SDL2-static.dir/src/haptic/linux/SDL_syshaptic.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_136) "Building C object CMakeFiles/SDL2-static.dir/src/haptic/linux/SDL_syshaptic.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/haptic/linux/SDL_syshaptic.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/haptic/linux/SDL_syshaptic.c
 
 CMakeFiles/SDL2-static.dir/src/haptic/linux/SDL_syshaptic.c.i: cmake_force
@@ -2891,7 +3323,7 @@ CMakeFiles/SDL2-static.dir/src/haptic/linux/SDL_syshaptic.c.o.provides.build: CM
 
 CMakeFiles/SDL2-static.dir/src/joystick/linux/SDL_sysjoystick.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/joystick/linux/SDL_sysjoystick.c.o: ../src/joystick/linux/SDL_sysjoystick.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_119) "Building C object CMakeFiles/SDL2-static.dir/src/joystick/linux/SDL_sysjoystick.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_137) "Building C object CMakeFiles/SDL2-static.dir/src/joystick/linux/SDL_sysjoystick.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/joystick/linux/SDL_sysjoystick.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/joystick/linux/SDL_sysjoystick.c
 
 CMakeFiles/SDL2-static.dir/src/joystick/linux/SDL_sysjoystick.c.i: cmake_force
@@ -2915,7 +3347,7 @@ CMakeFiles/SDL2-static.dir/src/joystick/linux/SDL_sysjoystick.c.o.provides.build
 
 CMakeFiles/SDL2-static.dir/src/joystick/steam/SDL_steamcontroller.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/joystick/steam/SDL_steamcontroller.c.o: ../src/joystick/steam/SDL_steamcontroller.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_120) "Building C object CMakeFiles/SDL2-static.dir/src/joystick/steam/SDL_steamcontroller.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_138) "Building C object CMakeFiles/SDL2-static.dir/src/joystick/steam/SDL_steamcontroller.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/joystick/steam/SDL_steamcontroller.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/joystick/steam/SDL_steamcontroller.c
 
 CMakeFiles/SDL2-static.dir/src/joystick/steam/SDL_steamcontroller.c.i: cmake_force
@@ -2939,7 +3371,7 @@ CMakeFiles/SDL2-static.dir/src/joystick/steam/SDL_steamcontroller.c.o.provides.b
 
 CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systhread.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systhread.c.o: ../src/thread/pthread/SDL_systhread.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_121) "Building C object CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systhread.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_139) "Building C object CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systhread.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systhread.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/thread/pthread/SDL_systhread.c
 
 CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systhread.c.i: cmake_force
@@ -2963,7 +3395,7 @@ CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systhread.c.o.provides.build: 
 
 CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_sysmutex.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_sysmutex.c.o: ../src/thread/pthread/SDL_sysmutex.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_122) "Building C object CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_sysmutex.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_140) "Building C object CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_sysmutex.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_sysmutex.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/thread/pthread/SDL_sysmutex.c
 
 CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_sysmutex.c.i: cmake_force
@@ -2987,7 +3419,7 @@ CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_sysmutex.c.o.provides.build: C
 
 CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syscond.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syscond.c.o: ../src/thread/pthread/SDL_syscond.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_123) "Building C object CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syscond.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_141) "Building C object CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syscond.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syscond.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/thread/pthread/SDL_syscond.c
 
 CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syscond.c.i: cmake_force
@@ -3011,7 +3443,7 @@ CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syscond.c.o.provides.build: CM
 
 CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systls.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systls.c.o: ../src/thread/pthread/SDL_systls.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_124) "Building C object CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systls.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_142) "Building C object CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systls.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systls.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/thread/pthread/SDL_systls.c
 
 CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systls.c.i: cmake_force
@@ -3035,7 +3467,7 @@ CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_systls.c.o.provides.build: CMa
 
 CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syssem.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syssem.c.o: ../src/thread/pthread/SDL_syssem.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_125) "Building C object CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syssem.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_143) "Building C object CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syssem.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syssem.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/thread/pthread/SDL_syssem.c
 
 CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syssem.c.i: cmake_force
@@ -3059,7 +3491,7 @@ CMakeFiles/SDL2-static.dir/src/thread/pthread/SDL_syssem.c.o.provides.build: CMa
 
 CMakeFiles/SDL2-static.dir/src/power/linux/SDL_syspower.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/power/linux/SDL_syspower.c.o: ../src/power/linux/SDL_syspower.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_126) "Building C object CMakeFiles/SDL2-static.dir/src/power/linux/SDL_syspower.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_144) "Building C object CMakeFiles/SDL2-static.dir/src/power/linux/SDL_syspower.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/power/linux/SDL_syspower.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/power/linux/SDL_syspower.c
 
 CMakeFiles/SDL2-static.dir/src/power/linux/SDL_syspower.c.i: cmake_force
@@ -3083,7 +3515,7 @@ CMakeFiles/SDL2-static.dir/src/power/linux/SDL_syspower.c.o.provides.build: CMak
 
 CMakeFiles/SDL2-static.dir/src/filesystem/unix/SDL_sysfilesystem.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/filesystem/unix/SDL_sysfilesystem.c.o: ../src/filesystem/unix/SDL_sysfilesystem.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_127) "Building C object CMakeFiles/SDL2-static.dir/src/filesystem/unix/SDL_sysfilesystem.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_145) "Building C object CMakeFiles/SDL2-static.dir/src/filesystem/unix/SDL_sysfilesystem.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/filesystem/unix/SDL_sysfilesystem.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/filesystem/unix/SDL_sysfilesystem.c
 
 CMakeFiles/SDL2-static.dir/src/filesystem/unix/SDL_sysfilesystem.c.i: cmake_force
@@ -3107,7 +3539,7 @@ CMakeFiles/SDL2-static.dir/src/filesystem/unix/SDL_sysfilesystem.c.o.provides.bu
 
 CMakeFiles/SDL2-static.dir/src/timer/unix/SDL_systimer.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/timer/unix/SDL_systimer.c.o: ../src/timer/unix/SDL_systimer.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_128) "Building C object CMakeFiles/SDL2-static.dir/src/timer/unix/SDL_systimer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_146) "Building C object CMakeFiles/SDL2-static.dir/src/timer/unix/SDL_systimer.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/timer/unix/SDL_systimer.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/timer/unix/SDL_systimer.c
 
 CMakeFiles/SDL2-static.dir/src/timer/unix/SDL_systimer.c.i: cmake_force
@@ -3131,7 +3563,7 @@ CMakeFiles/SDL2-static.dir/src/timer/unix/SDL_systimer.c.o.provides.build: CMake
 
 CMakeFiles/SDL2-static.dir/src/sensor/dummy/SDL_dummysensor.c.o: CMakeFiles/SDL2-static.dir/flags.make
 CMakeFiles/SDL2-static.dir/src/sensor/dummy/SDL_dummysensor.c.o: ../src/sensor/dummy/SDL_dummysensor.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_129) "Building C object CMakeFiles/SDL2-static.dir/src/sensor/dummy/SDL_dummysensor.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_147) "Building C object CMakeFiles/SDL2-static.dir/src/sensor/dummy/SDL_dummysensor.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/SDL2-static.dir/src/sensor/dummy/SDL_dummysensor.c.o   -c /home/danny/FIT/IZG/SDL2-2.0.9/src/sensor/dummy/SDL_dummysensor.c
 
 CMakeFiles/SDL2-static.dir/src/sensor/dummy/SDL_dummysensor.c.i: cmake_force
@@ -3264,6 +3696,24 @@ SDL2__static_OBJECTS = \
 "CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullframebuffer.c.o" \
 "CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullvideo.c.o" \
 "CMakeFiles/SDL2-static.dir/src/audio/dsp/SDL_dspaudio.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o" \
+"CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o" \
 "CMakeFiles/SDL2-static.dir/src/core/unix/SDL_poll.c.o" \
 "CMakeFiles/SDL2-static.dir/src/core/linux/SDL_dbus.c.o" \
 "CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev.c.o" \
@@ -3397,6 +3847,24 @@ libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullevents.c.o
 libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullframebuffer.c.o
 libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullvideo.c.o
 libSDL2.a: CMakeFiles/SDL2-static.dir/src/audio/dsp/SDL_dspaudio.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o
+libSDL2.a: CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o
 libSDL2.a: CMakeFiles/SDL2-static.dir/src/core/unix/SDL_poll.c.o
 libSDL2.a: CMakeFiles/SDL2-static.dir/src/core/linux/SDL_dbus.c.o
 libSDL2.a: CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev.c.o
@@ -3419,7 +3887,7 @@ libSDL2.a: CMakeFiles/SDL2-static.dir/src/timer/unix/SDL_systimer.c.o
 libSDL2.a: CMakeFiles/SDL2-static.dir/src/sensor/dummy/SDL_dummysensor.c.o
 libSDL2.a: CMakeFiles/SDL2-static.dir/build.make
 libSDL2.a: CMakeFiles/SDL2-static.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_130) "Linking C static library libSDL2.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/danny/FIT/IZG/SDL2-2.0.9/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_148) "Linking C static library libSDL2.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/SDL2-static.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SDL2-static.dir/link.txt --verbose=$(VERBOSE)
 
@@ -3537,6 +4005,24 @@ CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/dummy/
 CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullframebuffer.c.o.requires
 CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullvideo.c.o.requires
 CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/audio/dsp/SDL_dspaudio.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o.requires
+CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o.requires
 CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/core/unix/SDL_poll.c.o.requires
 CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/core/linux/SDL_dbus.c.o.requires
 CMakeFiles/SDL2-static.dir/requires: CMakeFiles/SDL2-static.dir/src/core/linux/SDL_evdev.c.o.requires

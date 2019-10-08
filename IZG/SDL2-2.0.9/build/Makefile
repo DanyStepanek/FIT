@@ -4075,6 +4075,546 @@ src/video/dummy/SDL_nullvideo.c.s:
 	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/dummy/SDL_nullvideo.c.s
 .PHONY : src/video/dummy/SDL_nullvideo.c.s
 
+src/video/x11/SDL_x11clipboard.o: src/video/x11/SDL_x11clipboard.c.o
+
+.PHONY : src/video/x11/SDL_x11clipboard.o
+
+# target to build an object file
+src/video/x11/SDL_x11clipboard.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11clipboard.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.o
+.PHONY : src/video/x11/SDL_x11clipboard.c.o
+
+src/video/x11/SDL_x11clipboard.i: src/video/x11/SDL_x11clipboard.c.i
+
+.PHONY : src/video/x11/SDL_x11clipboard.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11clipboard.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11clipboard.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.i
+.PHONY : src/video/x11/SDL_x11clipboard.c.i
+
+src/video/x11/SDL_x11clipboard.s: src/video/x11/SDL_x11clipboard.c.s
+
+.PHONY : src/video/x11/SDL_x11clipboard.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11clipboard.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11clipboard.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11clipboard.c.s
+.PHONY : src/video/x11/SDL_x11clipboard.c.s
+
+src/video/x11/SDL_x11dyn.o: src/video/x11/SDL_x11dyn.c.o
+
+.PHONY : src/video/x11/SDL_x11dyn.o
+
+# target to build an object file
+src/video/x11/SDL_x11dyn.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11dyn.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.o
+.PHONY : src/video/x11/SDL_x11dyn.c.o
+
+src/video/x11/SDL_x11dyn.i: src/video/x11/SDL_x11dyn.c.i
+
+.PHONY : src/video/x11/SDL_x11dyn.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11dyn.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11dyn.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.i
+.PHONY : src/video/x11/SDL_x11dyn.c.i
+
+src/video/x11/SDL_x11dyn.s: src/video/x11/SDL_x11dyn.c.s
+
+.PHONY : src/video/x11/SDL_x11dyn.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11dyn.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11dyn.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11dyn.c.s
+.PHONY : src/video/x11/SDL_x11dyn.c.s
+
+src/video/x11/SDL_x11events.o: src/video/x11/SDL_x11events.c.o
+
+.PHONY : src/video/x11/SDL_x11events.o
+
+# target to build an object file
+src/video/x11/SDL_x11events.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11events.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.o
+.PHONY : src/video/x11/SDL_x11events.c.o
+
+src/video/x11/SDL_x11events.i: src/video/x11/SDL_x11events.c.i
+
+.PHONY : src/video/x11/SDL_x11events.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11events.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11events.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.i
+.PHONY : src/video/x11/SDL_x11events.c.i
+
+src/video/x11/SDL_x11events.s: src/video/x11/SDL_x11events.c.s
+
+.PHONY : src/video/x11/SDL_x11events.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11events.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11events.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11events.c.s
+.PHONY : src/video/x11/SDL_x11events.c.s
+
+src/video/x11/SDL_x11framebuffer.o: src/video/x11/SDL_x11framebuffer.c.o
+
+.PHONY : src/video/x11/SDL_x11framebuffer.o
+
+# target to build an object file
+src/video/x11/SDL_x11framebuffer.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11framebuffer.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.o
+.PHONY : src/video/x11/SDL_x11framebuffer.c.o
+
+src/video/x11/SDL_x11framebuffer.i: src/video/x11/SDL_x11framebuffer.c.i
+
+.PHONY : src/video/x11/SDL_x11framebuffer.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11framebuffer.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11framebuffer.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.i
+.PHONY : src/video/x11/SDL_x11framebuffer.c.i
+
+src/video/x11/SDL_x11framebuffer.s: src/video/x11/SDL_x11framebuffer.c.s
+
+.PHONY : src/video/x11/SDL_x11framebuffer.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11framebuffer.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11framebuffer.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11framebuffer.c.s
+.PHONY : src/video/x11/SDL_x11framebuffer.c.s
+
+src/video/x11/SDL_x11keyboard.o: src/video/x11/SDL_x11keyboard.c.o
+
+.PHONY : src/video/x11/SDL_x11keyboard.o
+
+# target to build an object file
+src/video/x11/SDL_x11keyboard.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11keyboard.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.o
+.PHONY : src/video/x11/SDL_x11keyboard.c.o
+
+src/video/x11/SDL_x11keyboard.i: src/video/x11/SDL_x11keyboard.c.i
+
+.PHONY : src/video/x11/SDL_x11keyboard.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11keyboard.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11keyboard.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.i
+.PHONY : src/video/x11/SDL_x11keyboard.c.i
+
+src/video/x11/SDL_x11keyboard.s: src/video/x11/SDL_x11keyboard.c.s
+
+.PHONY : src/video/x11/SDL_x11keyboard.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11keyboard.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11keyboard.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11keyboard.c.s
+.PHONY : src/video/x11/SDL_x11keyboard.c.s
+
+src/video/x11/SDL_x11messagebox.o: src/video/x11/SDL_x11messagebox.c.o
+
+.PHONY : src/video/x11/SDL_x11messagebox.o
+
+# target to build an object file
+src/video/x11/SDL_x11messagebox.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11messagebox.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.o
+.PHONY : src/video/x11/SDL_x11messagebox.c.o
+
+src/video/x11/SDL_x11messagebox.i: src/video/x11/SDL_x11messagebox.c.i
+
+.PHONY : src/video/x11/SDL_x11messagebox.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11messagebox.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11messagebox.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.i
+.PHONY : src/video/x11/SDL_x11messagebox.c.i
+
+src/video/x11/SDL_x11messagebox.s: src/video/x11/SDL_x11messagebox.c.s
+
+.PHONY : src/video/x11/SDL_x11messagebox.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11messagebox.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11messagebox.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11messagebox.c.s
+.PHONY : src/video/x11/SDL_x11messagebox.c.s
+
+src/video/x11/SDL_x11modes.o: src/video/x11/SDL_x11modes.c.o
+
+.PHONY : src/video/x11/SDL_x11modes.o
+
+# target to build an object file
+src/video/x11/SDL_x11modes.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11modes.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.o
+.PHONY : src/video/x11/SDL_x11modes.c.o
+
+src/video/x11/SDL_x11modes.i: src/video/x11/SDL_x11modes.c.i
+
+.PHONY : src/video/x11/SDL_x11modes.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11modes.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11modes.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.i
+.PHONY : src/video/x11/SDL_x11modes.c.i
+
+src/video/x11/SDL_x11modes.s: src/video/x11/SDL_x11modes.c.s
+
+.PHONY : src/video/x11/SDL_x11modes.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11modes.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11modes.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11modes.c.s
+.PHONY : src/video/x11/SDL_x11modes.c.s
+
+src/video/x11/SDL_x11mouse.o: src/video/x11/SDL_x11mouse.c.o
+
+.PHONY : src/video/x11/SDL_x11mouse.o
+
+# target to build an object file
+src/video/x11/SDL_x11mouse.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11mouse.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.o
+.PHONY : src/video/x11/SDL_x11mouse.c.o
+
+src/video/x11/SDL_x11mouse.i: src/video/x11/SDL_x11mouse.c.i
+
+.PHONY : src/video/x11/SDL_x11mouse.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11mouse.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11mouse.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.i
+.PHONY : src/video/x11/SDL_x11mouse.c.i
+
+src/video/x11/SDL_x11mouse.s: src/video/x11/SDL_x11mouse.c.s
+
+.PHONY : src/video/x11/SDL_x11mouse.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11mouse.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11mouse.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11mouse.c.s
+.PHONY : src/video/x11/SDL_x11mouse.c.s
+
+src/video/x11/SDL_x11opengl.o: src/video/x11/SDL_x11opengl.c.o
+
+.PHONY : src/video/x11/SDL_x11opengl.o
+
+# target to build an object file
+src/video/x11/SDL_x11opengl.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengl.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.o
+.PHONY : src/video/x11/SDL_x11opengl.c.o
+
+src/video/x11/SDL_x11opengl.i: src/video/x11/SDL_x11opengl.c.i
+
+.PHONY : src/video/x11/SDL_x11opengl.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11opengl.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengl.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.i
+.PHONY : src/video/x11/SDL_x11opengl.c.i
+
+src/video/x11/SDL_x11opengl.s: src/video/x11/SDL_x11opengl.c.s
+
+.PHONY : src/video/x11/SDL_x11opengl.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11opengl.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengl.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengl.c.s
+.PHONY : src/video/x11/SDL_x11opengl.c.s
+
+src/video/x11/SDL_x11opengles.o: src/video/x11/SDL_x11opengles.c.o
+
+.PHONY : src/video/x11/SDL_x11opengles.o
+
+# target to build an object file
+src/video/x11/SDL_x11opengles.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengles.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.o
+.PHONY : src/video/x11/SDL_x11opengles.c.o
+
+src/video/x11/SDL_x11opengles.i: src/video/x11/SDL_x11opengles.c.i
+
+.PHONY : src/video/x11/SDL_x11opengles.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11opengles.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengles.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.i
+.PHONY : src/video/x11/SDL_x11opengles.c.i
+
+src/video/x11/SDL_x11opengles.s: src/video/x11/SDL_x11opengles.c.s
+
+.PHONY : src/video/x11/SDL_x11opengles.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11opengles.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11opengles.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11opengles.c.s
+.PHONY : src/video/x11/SDL_x11opengles.c.s
+
+src/video/x11/SDL_x11shape.o: src/video/x11/SDL_x11shape.c.o
+
+.PHONY : src/video/x11/SDL_x11shape.o
+
+# target to build an object file
+src/video/x11/SDL_x11shape.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11shape.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.o
+.PHONY : src/video/x11/SDL_x11shape.c.o
+
+src/video/x11/SDL_x11shape.i: src/video/x11/SDL_x11shape.c.i
+
+.PHONY : src/video/x11/SDL_x11shape.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11shape.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11shape.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.i
+.PHONY : src/video/x11/SDL_x11shape.c.i
+
+src/video/x11/SDL_x11shape.s: src/video/x11/SDL_x11shape.c.s
+
+.PHONY : src/video/x11/SDL_x11shape.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11shape.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11shape.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11shape.c.s
+.PHONY : src/video/x11/SDL_x11shape.c.s
+
+src/video/x11/SDL_x11touch.o: src/video/x11/SDL_x11touch.c.o
+
+.PHONY : src/video/x11/SDL_x11touch.o
+
+# target to build an object file
+src/video/x11/SDL_x11touch.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11touch.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.o
+.PHONY : src/video/x11/SDL_x11touch.c.o
+
+src/video/x11/SDL_x11touch.i: src/video/x11/SDL_x11touch.c.i
+
+.PHONY : src/video/x11/SDL_x11touch.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11touch.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11touch.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.i
+.PHONY : src/video/x11/SDL_x11touch.c.i
+
+src/video/x11/SDL_x11touch.s: src/video/x11/SDL_x11touch.c.s
+
+.PHONY : src/video/x11/SDL_x11touch.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11touch.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11touch.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11touch.c.s
+.PHONY : src/video/x11/SDL_x11touch.c.s
+
+src/video/x11/SDL_x11video.o: src/video/x11/SDL_x11video.c.o
+
+.PHONY : src/video/x11/SDL_x11video.o
+
+# target to build an object file
+src/video/x11/SDL_x11video.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11video.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.o
+.PHONY : src/video/x11/SDL_x11video.c.o
+
+src/video/x11/SDL_x11video.i: src/video/x11/SDL_x11video.c.i
+
+.PHONY : src/video/x11/SDL_x11video.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11video.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11video.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.i
+.PHONY : src/video/x11/SDL_x11video.c.i
+
+src/video/x11/SDL_x11video.s: src/video/x11/SDL_x11video.c.s
+
+.PHONY : src/video/x11/SDL_x11video.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11video.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11video.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11video.c.s
+.PHONY : src/video/x11/SDL_x11video.c.s
+
+src/video/x11/SDL_x11vulkan.o: src/video/x11/SDL_x11vulkan.c.o
+
+.PHONY : src/video/x11/SDL_x11vulkan.o
+
+# target to build an object file
+src/video/x11/SDL_x11vulkan.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11vulkan.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.o
+.PHONY : src/video/x11/SDL_x11vulkan.c.o
+
+src/video/x11/SDL_x11vulkan.i: src/video/x11/SDL_x11vulkan.c.i
+
+.PHONY : src/video/x11/SDL_x11vulkan.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11vulkan.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11vulkan.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.i
+.PHONY : src/video/x11/SDL_x11vulkan.c.i
+
+src/video/x11/SDL_x11vulkan.s: src/video/x11/SDL_x11vulkan.c.s
+
+.PHONY : src/video/x11/SDL_x11vulkan.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11vulkan.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11vulkan.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11vulkan.c.s
+.PHONY : src/video/x11/SDL_x11vulkan.c.s
+
+src/video/x11/SDL_x11window.o: src/video/x11/SDL_x11window.c.o
+
+.PHONY : src/video/x11/SDL_x11window.o
+
+# target to build an object file
+src/video/x11/SDL_x11window.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11window.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.o
+.PHONY : src/video/x11/SDL_x11window.c.o
+
+src/video/x11/SDL_x11window.i: src/video/x11/SDL_x11window.c.i
+
+.PHONY : src/video/x11/SDL_x11window.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11window.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11window.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.i
+.PHONY : src/video/x11/SDL_x11window.c.i
+
+src/video/x11/SDL_x11window.s: src/video/x11/SDL_x11window.c.s
+
+.PHONY : src/video/x11/SDL_x11window.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11window.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11window.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11window.c.s
+.PHONY : src/video/x11/SDL_x11window.c.s
+
+src/video/x11/SDL_x11xinput2.o: src/video/x11/SDL_x11xinput2.c.o
+
+.PHONY : src/video/x11/SDL_x11xinput2.o
+
+# target to build an object file
+src/video/x11/SDL_x11xinput2.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xinput2.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.o
+.PHONY : src/video/x11/SDL_x11xinput2.c.o
+
+src/video/x11/SDL_x11xinput2.i: src/video/x11/SDL_x11xinput2.c.i
+
+.PHONY : src/video/x11/SDL_x11xinput2.i
+
+# target to preprocess a source file
+src/video/x11/SDL_x11xinput2.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xinput2.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.i
+.PHONY : src/video/x11/SDL_x11xinput2.c.i
+
+src/video/x11/SDL_x11xinput2.s: src/video/x11/SDL_x11xinput2.c.s
+
+.PHONY : src/video/x11/SDL_x11xinput2.s
+
+# target to generate assembly for a file
+src/video/x11/SDL_x11xinput2.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/SDL_x11xinput2.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/SDL_x11xinput2.c.s
+.PHONY : src/video/x11/SDL_x11xinput2.c.s
+
+src/video/x11/edid-parse.o: src/video/x11/edid-parse.c.o
+
+.PHONY : src/video/x11/edid-parse.o
+
+# target to build an object file
+src/video/x11/edid-parse.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/edid-parse.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.o
+.PHONY : src/video/x11/edid-parse.c.o
+
+src/video/x11/edid-parse.i: src/video/x11/edid-parse.c.i
+
+.PHONY : src/video/x11/edid-parse.i
+
+# target to preprocess a source file
+src/video/x11/edid-parse.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/edid-parse.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.i
+.PHONY : src/video/x11/edid-parse.c.i
+
+src/video/x11/edid-parse.s: src/video/x11/edid-parse.c.s
+
+.PHONY : src/video/x11/edid-parse.s
+
+# target to generate assembly for a file
+src/video/x11/edid-parse.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/edid-parse.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/edid-parse.c.s
+.PHONY : src/video/x11/edid-parse.c.s
+
+src/video/x11/imKStoUCS.o: src/video/x11/imKStoUCS.c.o
+
+.PHONY : src/video/x11/imKStoUCS.o
+
+# target to build an object file
+src/video/x11/imKStoUCS.c.o:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/imKStoUCS.c.o
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.o
+.PHONY : src/video/x11/imKStoUCS.c.o
+
+src/video/x11/imKStoUCS.i: src/video/x11/imKStoUCS.c.i
+
+.PHONY : src/video/x11/imKStoUCS.i
+
+# target to preprocess a source file
+src/video/x11/imKStoUCS.c.i:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/imKStoUCS.c.i
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.i
+.PHONY : src/video/x11/imKStoUCS.c.i
+
+src/video/x11/imKStoUCS.s: src/video/x11/imKStoUCS.c.s
+
+.PHONY : src/video/x11/imKStoUCS.s
+
+# target to generate assembly for a file
+src/video/x11/imKStoUCS.c.s:
+	$(MAKE) -f CMakeFiles/SDL2.dir/build.make CMakeFiles/SDL2.dir/src/video/x11/imKStoUCS.c.s
+	$(MAKE) -f CMakeFiles/SDL2-static.dir/build.make CMakeFiles/SDL2-static.dir/src/video/x11/imKStoUCS.c.s
+.PHONY : src/video/x11/imKStoUCS.c.s
+
 src/video/yuv2rgb/yuv_rgb.o: src/video/yuv2rgb/yuv_rgb.c.o
 
 .PHONY : src/video/yuv2rgb/yuv_rgb.o
@@ -4508,6 +5048,60 @@ help:
 	@echo "... src/video/dummy/SDL_nullvideo.o"
 	@echo "... src/video/dummy/SDL_nullvideo.i"
 	@echo "... src/video/dummy/SDL_nullvideo.s"
+	@echo "... src/video/x11/SDL_x11clipboard.o"
+	@echo "... src/video/x11/SDL_x11clipboard.i"
+	@echo "... src/video/x11/SDL_x11clipboard.s"
+	@echo "... src/video/x11/SDL_x11dyn.o"
+	@echo "... src/video/x11/SDL_x11dyn.i"
+	@echo "... src/video/x11/SDL_x11dyn.s"
+	@echo "... src/video/x11/SDL_x11events.o"
+	@echo "... src/video/x11/SDL_x11events.i"
+	@echo "... src/video/x11/SDL_x11events.s"
+	@echo "... src/video/x11/SDL_x11framebuffer.o"
+	@echo "... src/video/x11/SDL_x11framebuffer.i"
+	@echo "... src/video/x11/SDL_x11framebuffer.s"
+	@echo "... src/video/x11/SDL_x11keyboard.o"
+	@echo "... src/video/x11/SDL_x11keyboard.i"
+	@echo "... src/video/x11/SDL_x11keyboard.s"
+	@echo "... src/video/x11/SDL_x11messagebox.o"
+	@echo "... src/video/x11/SDL_x11messagebox.i"
+	@echo "... src/video/x11/SDL_x11messagebox.s"
+	@echo "... src/video/x11/SDL_x11modes.o"
+	@echo "... src/video/x11/SDL_x11modes.i"
+	@echo "... src/video/x11/SDL_x11modes.s"
+	@echo "... src/video/x11/SDL_x11mouse.o"
+	@echo "... src/video/x11/SDL_x11mouse.i"
+	@echo "... src/video/x11/SDL_x11mouse.s"
+	@echo "... src/video/x11/SDL_x11opengl.o"
+	@echo "... src/video/x11/SDL_x11opengl.i"
+	@echo "... src/video/x11/SDL_x11opengl.s"
+	@echo "... src/video/x11/SDL_x11opengles.o"
+	@echo "... src/video/x11/SDL_x11opengles.i"
+	@echo "... src/video/x11/SDL_x11opengles.s"
+	@echo "... src/video/x11/SDL_x11shape.o"
+	@echo "... src/video/x11/SDL_x11shape.i"
+	@echo "... src/video/x11/SDL_x11shape.s"
+	@echo "... src/video/x11/SDL_x11touch.o"
+	@echo "... src/video/x11/SDL_x11touch.i"
+	@echo "... src/video/x11/SDL_x11touch.s"
+	@echo "... src/video/x11/SDL_x11video.o"
+	@echo "... src/video/x11/SDL_x11video.i"
+	@echo "... src/video/x11/SDL_x11video.s"
+	@echo "... src/video/x11/SDL_x11vulkan.o"
+	@echo "... src/video/x11/SDL_x11vulkan.i"
+	@echo "... src/video/x11/SDL_x11vulkan.s"
+	@echo "... src/video/x11/SDL_x11window.o"
+	@echo "... src/video/x11/SDL_x11window.i"
+	@echo "... src/video/x11/SDL_x11window.s"
+	@echo "... src/video/x11/SDL_x11xinput2.o"
+	@echo "... src/video/x11/SDL_x11xinput2.i"
+	@echo "... src/video/x11/SDL_x11xinput2.s"
+	@echo "... src/video/x11/edid-parse.o"
+	@echo "... src/video/x11/edid-parse.i"
+	@echo "... src/video/x11/edid-parse.s"
+	@echo "... src/video/x11/imKStoUCS.o"
+	@echo "... src/video/x11/imKStoUCS.i"
+	@echo "... src/video/x11/imKStoUCS.s"
 	@echo "... src/video/yuv2rgb/yuv_rgb.o"
 	@echo "... src/video/yuv2rgb/yuv_rgb.i"
 	@echo "... src/video/yuv2rgb/yuv_rgb.s"

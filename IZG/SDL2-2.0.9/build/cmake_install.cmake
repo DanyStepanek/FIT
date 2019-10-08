@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/danny/FIT/IZG/install")
+  set(CMAKE_INSTALL_PREFIX "/home")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -200,14 +200,14 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/danny/FIT/IZG/install/share/aclocal/sdl2.m4")
+   "/home/share/aclocal/sdl2.m4")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/danny/FIT/IZG/install/share/aclocal" TYPE FILE FILES "/home/danny/FIT/IZG/SDL2-2.0.9/sdl2.m4")
+file(INSTALL DESTINATION "/home/share/aclocal" TYPE FILE FILES "/home/danny/FIT/IZG/SDL2-2.0.9/sdl2.m4")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
