@@ -39,17 +39,17 @@ int hostname_to_ip(char* hostname, char* ip){
 
   if((h = gethostbyname(hostname)) == NULL){
     cerr << "Get host IP failed." << endl;
-    exit(20);
+    return 20;
   }
 
   addr_list = (struct in_addr **)h->h_addr_list;
 
   if(addr_list[0] != NULL){
     strcpy(ip, inet_ntoa(*addr_list[0]));
-    return 0;
+    return 20;
   }
 
-  return 20;
+  return 0;
 }
 
 void dns_output(){
@@ -222,7 +222,7 @@ print(response.decode())
   dns->aa = 0; //Not Authoritative
   dns->tc = 0; //This message is not truncated
   dns->rd = 1; //Recursion Desired
-  dns->ra = 0; //Recursion not available! hey we dont have it (lol)
+  dns->ra = 0; //Recursion not available!
   dns->z = 0;
   dns->ad = 0;
   dns->cd = 0;
