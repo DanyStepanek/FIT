@@ -11,27 +11,6 @@
 
 using namespace std;
 
-struct dns_header{
-  unsigned short id; // identification number
-
-  unsigned char rd :1; // recursion desired
-  unsigned char tc :1; // truncated message
-  unsigned char aa :1; // authoritive answer
-  unsigned char opcode :4; // purpose of message
-  unsigned char qr :1; // query/response flag
-
-  unsigned char rcode :4; // response code
-  unsigned char cd :1; // checking disabled
-  unsigned char ad :1; // authenticated data
-  unsigned char z :1; // its z! reserved
-  unsigned char ra :1; // recursion available
-
-  unsigned short q_count; // number of question entries
-  unsigned short ans_count; // number of answer entries
-  unsigned short auth_count; // number of authority entries
-  unsigned short add_count; // number of resource entries
-};
-
 int hostname_to_ip(char* hostname, char* ip){
 
   struct hostent *h;
@@ -46,10 +25,10 @@ int hostname_to_ip(char* hostname, char* ip){
 
   if(addr_list[0] != NULL){
     strcpy(ip, inet_ntoa(*addr_list[0]));
-    return 20;
+    return 0;
   }
 
-  return 0;
+  return 20;
 }
 
 void dns_output(){
@@ -82,8 +61,8 @@ void whois_output(){
 int main(int argc, char** argv){
 
   int c = 0;
-  const int PORT = 43;
-
+  const int TCP_PORT = 43;
+  const int UDP_PORT = 53;
   bool q_flag = false;
   bool w_flag = false;
   bool d_flag = false;
@@ -92,6 +71,11 @@ int main(int argc, char** argv){
   string whois_server;
   //implicitne 1.1.1.1
   string dns_server = "1.1.1.1";
+
+  int clientSocket, portNum, nBytes;
+  char buffer[8192];
+  struct sockaddr_in serverAddr;
+  socklen_t addr_size;
 
 /***********************************************************/
 
@@ -150,97 +134,131 @@ int main(int argc, char** argv){
 
 /***********************************************************/
 
-/*
-s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(("whois.arin.net", 43))
-
-#convert string to bytes, socket need bytes
-s.send((sys.argv[1] + "\r\n").encode())
-
-#declares a bytes
-response = b""
-while True:
-    data = s.recv(4096)
-    response += data
-    if not data:
-        break
-s.close()
-
-#convert bytes to string
-print(response.decode())
-
-*/
-
-//  char hostname[ip_hostname.size + 1];
-//  strcpy(char_)
-
   char ip[16];
   char hostname[ip_hostname.size() + 1];
   strcpy(hostname, ip_hostname.c_str());
   if(hostname_to_ip(hostname, ip) == 0){
-    cout << ip << endl;
+    cout << "host ip: " << ip << endl;
   }
   else{
+    cerr << "hostname_to_ip(ip) failed\n";
     exit(20);
   }
 
   char dns_ip[16];
   char dns_hostname[dns_server.size() + 1];
   strcpy(dns_hostname, dns_server.c_str());
-  if(hostname_to_ip(dns_hostname, ip) == 0){
-    cout << ip << endl;
+  if(hostname_to_ip(dns_hostname, dns_ip) == 0){
+    cout << "dns ip: " << dns_ip << endl;
   }
   else{
+    cerr << "hostname_to_ip(dns_ip) failed\n";
     exit(20);
   }
 
   char whois_ip[16];
   char whois_hostname[whois_server.size() + 1];
   strcpy(whois_hostname, whois_server.c_str());
-  if(hostname_to_ip(whois_hostname, ip) == 0){
-    cout << ip << endl;
+  if(hostname_to_ip(whois_hostname, whois_ip) == 0){
+    cout << "whois ip: " << whois_ip << endl;
   }
   else{
+    cerr << "hostname_to_ip(whois_ip) failed\n";
     exit(20);
   }
 
-  unsigned char buf[65536];
-  int s = socket(AF_INET, SOCK_DGRAM, IPPROTO_UDP); //UDP packet for dns
-
-  struct sockaddr_in a;
-  struct sockaddr_in dest;
-
-  dest.sin_family = AF_INET;
-  dest.sin_port = htons(53);
-  dest.sin_addr.s_addr = inet_addr(dns_ip);
-
-  struct dns_header *dns = (struct dns_header *)&buf;
-
-  dns->id = (unsigned short) htons(getpid());
-  dns->qr = 0; //This is a query
-  dns->opcode = 0; //This is a standard query
-  dns->aa = 0; //Not Authoritative
-  dns->tc = 0; //This message is not truncated
-  dns->rd = 1; //Recursion Desired
-  dns->ra = 0; //Recursion not available!
-  dns->z = 0;
-  dns->ad = 0;
-  dns->cd = 0;
-  dns->rcode = 0;
-  dns->q_count = htons(1); //we have only 1 question
-  dns->ans_count = 0;
-  dns->auth_count = 0;
-  dns->add_count = 0;
-
-/***********************************************************/
 
 // https://gist.github.com/fffaraz/9d9170b57791c28ccda9255b48315168
 // http://www.nsc.ru/cgi-bin/www/unix_help/unix-man?gethostbyname+3
 // https://www.geeksforgeeks.org/convert-string-char-array-cpp/
 // https://wis.fit.vutbr.cz/FIT/st/course-sl.php?id=705161&item=75303&cpa=1
 
-  dns_output();
-  whois_output();
+  /***************** ==DNS== *******************************************************/
+
+  /*Create UDP socket*/
+  clientSocket = socket(AF_INET, SOCK_DGRAM, 0);
+
+  /*Configure settings in address struct*/
+  serverAddr.sin_family = AF_INET;
+  serverAddr.sin_port = htons(UDP_PORT);  //dns listen on port 53
+  serverAddr.sin_addr.s_addr = inet_addr(dns_ip);
+  memset(serverAddr.sin_zero, '\0', sizeof(serverAddr.sin_zero));
+
+  /*Initialize size variable to be used later on*/
+  addr_size = sizeof(serverAddr);
+
+  char dns_query[64];
+
+  strcpy(dns_query, ip);
+  strcat(dns_query, "\r\n");
+
+  nBytes = strlen(dns_query) + 1;
+
+  /*Send message to server*/
+  if(sendto(clientSocket, dns_query, nBytes, MSG_CONFIRM, (struct sockaddr *)&serverAddr, addr_size) == -1){
+    cerr << "DNS: sendto failed " << endl;
+    exit(-1);
+  }
+
+  cout << "DNS: socket send" << endl;
+
+  int n = 0;
+  unsigned int len;
+
+/*  while(n = recvfrom(clientSocket, (char *)buffer, strlen(buffer) -1, MSG_WAITALL,
+      (struct sockaddr *)&serverAddr, &len) > 0){
+
+      buffer[n] = '\0';
+      cout << "DNS: Received from server: " << buffer << endl;
+
+
+  }
+*/
+
+  close(clientSocket);
+/************************* ==WHOIS== ********************************************/
+
+  clientSocket = socket(AF_INET, SOCK_STREAM, 0);
+
+  serverAddr.sin_family = AF_INET;
+  serverAddr.sin_port = htons(TCP_PORT);  //whois listen on port 43
+  serverAddr.sin_addr.s_addr = inet_addr(whois_ip);
+  memset(serverAddr.sin_zero, '\0', sizeof(serverAddr.sin_zero));
+
+  addr_size = sizeof(serverAddr);
+
+  char whois_query[64];
+
+  strcpy(whois_query, ip);
+  strcat(whois_query, "\r\n");
+
+
+  nBytes = strlen(whois_query) + 1;
+
+  if (connect(clientSocket, (struct sockaddr *)&serverAddr, sizeof(serverAddr)) != 0){
+    cerr << "WHOIS: connect failed " << endl;
+    exit(-1);
+  }
+
+  cout << "WHOIS: connected" << endl;
+
+
+  if(send(clientSocket, whois_query, nBytes, 0) == -1){
+    cerr << "WHOIS: Socket sending failed. " << endl;
+    exit(-1);
+  }
+
+  cout << "=== WHOIS ===" << endl;
+  n = 0;
+  while(n = read(clientSocket, buffer, sizeof(buffer) - 1) > 0){
+    cout << "Received from server: " << buffer << endl;
+
+  }
+
+  close(clientSocket);
+
+//  dns_output();
+//  whois_output();
 
   return 0;
 }

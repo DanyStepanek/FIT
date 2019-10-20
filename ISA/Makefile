@@ -2,7 +2,7 @@ CXX=g++
 PRJ=isa-tazatel
 #
 PROGS=$(PRJ)
-CXXFLAGS= -pedantic -Wall
+CXXFLAGS= -std=c++11 -pedantic -Wall
 
 FILES= isa-tazatel.cpp
 
