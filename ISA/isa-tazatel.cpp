@@ -14,7 +14,7 @@ using namespace std;
 const int TCP_PORT = 43;
 const int UDP_PORT = 53;
 
-void get_dns(char *ip, char *dns_ip, int ip_type, int ip_dns_type){
+void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type){
 
   int n, nBytes;
   char buffer[8192];
@@ -24,14 +24,16 @@ void get_dns(char *ip, char *dns_ip, int ip_type, int ip_dns_type){
   struct timeval tm;
 
   /*Create UDP socket*/
-  clientSocket = socket(AF_INET, SOCK_DGRAM, 0);
+
 
   /*Configure settings in address struct*/
   if(ip_dns_type == 4){
+    clientSocket = socket(AF_INET, SOCK_DGRAM, 0);
     serverAddr.sin_family = AF_INET;
     inet_pton(AF_INET, dns_ip, &serverAddr.sin_addr);
   }
   else{
+    clientSocket = socket(AF_INET6, SOCK_DGRAM, 0);
     serverAddr.sin_family = AF_INET6;
     inet_pton(AF_INET6, dns_ip, &serverAddr.sin_addr);
   }
@@ -47,7 +49,11 @@ void get_dns(char *ip, char *dns_ip, int ip_type, int ip_dns_type){
 
   char dns_query[64];
 
-  strcpy(dns_query, ip);
+  strcpy(dns_query, hostname);
+  strcat(dns_query, "\r\n");
+  strcpy(dns_query, "0x0001");
+  strcat(dns_query, "\r\n");
+  strcpy(dns_query, "0x0001");
   strcat(dns_query, "\r\n");
 
   nBytes = strlen(dns_query) + 1;
@@ -60,9 +66,11 @@ void get_dns(char *ip, char *dns_ip, int ip_type, int ip_dns_type){
 
   cout << "=== DNS ===" << endl;
 
-  while((n = recv(clientSocket, (char *)buffer, strlen(buffer) -1, MSG_WAITALL)) > 0){
-    buffer[n] = '\0';
-    cout << "DNS: Received from server: " << buffer << endl;
+
+  while((n = recv(clientSocket, (char *)buffer, strlen(buffer) -1, MSG_WAITALL)) != 0){
+
+    cout << "n: " << n << endl;
+    cout << "DNS: Received from server: " << buffer[0] << endl;
   }
 
   close(clientSocket);
@@ -115,10 +123,8 @@ void get_whois(char* ip, char *whois_ip, int ip_type, int ip_whois_type){
 
   while((n = read(clientSocket, buffer, sizeof(buffer) - 1)) > 0){
     unsigned int i = 0;
-    unsigned int j = 0;
-    while(buffer[i] != '\0' && i < strlen(buffer) - j){
+    while(buffer[i] != '\0' && i < n){
       if(buffer[i] == '%' || buffer[i] == '#'){
-        j++;
         while(buffer[i] != '\n'){
           i++;
         }
@@ -129,7 +135,7 @@ void get_whois(char* ip, char *whois_ip, int ip_type, int ip_whois_type){
       i++;
     }
   }
-
+  cout << endl;
   close(clientSocket);
 
   return;
@@ -324,7 +330,7 @@ int main(int argc, char** argv){
 
 /***********************************************************/
 
-  get_dns(ip, dns_ip, ip_type, ip_dns_type);
+  get_dns(hostname, dns_ip, ip_type, ip_dns_type);
   get_whois(ip, whois_ip, ip_type, ip_whois_type);
 
   return 0;

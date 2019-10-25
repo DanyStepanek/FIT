@@ -1,0 +1,53 @@
+Host: www.seznam.cz
+IPv4 address: 77.75.75.176 (www.seznam.cz)
+host ip: 77.75.75.176
+Host: dns.google.com
+IPv4 address: 8.8.8.8 (dns.google.com)
+dns ip: 8.8.8.8
+Host: whois.ripe.net
+IPv4 address: 193.0.6.135 (whois.ripe.net)
+whois ip: 193.0.6.135
+=== DNS ===
+=== WHOIS ===
+n: 197
+
+n: 1299
+
+
+
+inetnum:        77.75.75.0 - 77.75.75.255
+netname:        SEZNAM-CZ
+descr:          Seznam.cz
+country:        CZ
+admin-c:        SZN5-RIPE
+tech-c:         SZN5-RIPE
+status:         ASSIGNED PA
+mnt-by:         SEZNAM-MNT
+created:        2007-06-20T11:44:33Z
+last-modified:  2007-06-20T11:44:33Z
+source:         RIPE
+
+role:           Seznam.cz IT department
+address:        Radlicka 3294/10 150 00 Prague 5 Czech Republic
+phone:          +420 602 126 570
+abuse-mailbox:  abuse@seznam.cz
+admin-c:        PZ172-RIPE
+tech-c:         SZN11-RIPE
+tech-c:         SZN10-RIPE
+nic-hdl:        SZN5-RIPE
+mnt-by:         SEZNAM-MNT
+created:        2007-05-06T15:50:27Z
+last-modified:  2015-07-03T13:19:00Z
+source:         RIPE 
+
+route:          77.75.75.0/24
+descr:          SEZNAM - II
+origin:         AS43037
+mnt-by:         SEZNAM-MNT
+created:        2014-04-29T13:54:56Z
+last-modified:  2014-04-29T13:54:56Z
+source:         RIPE
+
+
+
+
