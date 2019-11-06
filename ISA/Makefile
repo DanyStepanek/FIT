@@ -9,7 +9,7 @@ FILES= isa-tazatel.cpp
 all: $(PROGS)
 
 $(PRJ): $(FILES)
-	$(CXX)	$(CXXFLAGS)	-o	$@	$(FILES)	-lpcap
+	$(CXX)	$(CXXFLAGS)	-o	$@	$(FILES)	-lpcap	-lresolv
 
 clean:
 	rm -f	*.o	*.out	$(PROGS)

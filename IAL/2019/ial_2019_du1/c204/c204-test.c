@@ -141,6 +141,11 @@ int main (int argc, char* argv[]) {
   printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   convert_and_verify("A*(b/c)=", "Abc/*=");
   
+  printf("[TEST15] Complex expression conversion\n");
+  printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+  convert_and_verify("(A*0+b)*((c*(1+D))-(e/(3*f+g)))=", "A0*b+c1D+*e3f*g+/-*=");
+    
+
   printf("[TEST14] Parentheses change operator priority\n");
   printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
   convert_and_verify("A*(b-C)=", "AbC-*=");
