@@ -18,12 +18,21 @@ using namespace std;
 const int TCP_PORT = 43;
 const int UDP_PORT = 53;
 
+// ./isa-tazatel -q www.fit.vutbr.cz -w whois.ripe.net
+
+
 //https://docstore.mik.ua/orelly/networking_2ndEd/dns/ch15_02.htm?fbclid=IwAR0rcGQ2T1muWvRsFFbPtfMzq4rmeW2efUGbJEMyXO1KkoMXgjoGT5JJSZY
+
+int get_dns_response(unsigned char* buffer, char* dispbuf, int msg_size, int msg_type){
+
+
+  return 0;
+}
 
 void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_flag){
 
-  unsigned char buffer[8192];
-  char dispbuf[8192];
+  unsigned char buffer[4096];
+  char dispbuf[4096];
   ns_msg msg;
   ns_rr rr;
   int msg_size;
@@ -41,31 +50,35 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
   cout << "===DNS===" << endl;
 
 
-  if(!d_flag){
 
-    // NS RECORD
+  bool ns_failed = false;
 
-    res_init();
+  // NS RECORD
 
-    if(res_search(hostname, ns_c_in, ns_t_ns, buffer, sizeof(buffer)) == -1){
-      cerr << "RES_SEARCH: ERROR" << endl;
-      perror(hostname);
-    }
+  res_init();
 
-    if((query_len = res_mkquery(ns_o_query, hostname, ns_c_in, ns_t_ns, NULL, 0, NULL, buffer, sizeof(buffer))) == -1){
-      cerr << "RES_MKQUERY: ERROR" << endl;
-      perror(hostname);
-    }
+  if(res_search(hostname, ns_c_in, ns_t_ns, buffer, sizeof(buffer)) == -1){
+  //  cerr << "RES_SEARCH: ERROR" << endl;
+  //  perror(hostname);
+    ns_failed = true;
+  }
 
-    if((msg_size = res_query(hostname, ns_c_in, ns_t_ns, buffer, sizeof(buffer))) == -1){
-      cerr << "RES_QUERY: ERROR" << endl;
-      perror(hostname);
-    }
+  if((query_len = res_mkquery(ns_o_query, hostname, ns_c_in, ns_t_ns, NULL, 0, NULL, buffer, sizeof(buffer))) == -1){
+  //  cerr << "RES_MKQUERY: ERROR" << endl;
+  //  perror(hostname);
+    ns_failed = true;
+  }
+
+  if((msg_size = res_query(hostname, ns_c_in, ns_t_ns, buffer, sizeof(buffer))) == -1){
+  //  cerr << "RES_QUERY: ERROR" << endl;
+  //  perror(hostname);
+    ns_failed = true;
+  }
 
 
+  if(!ns_failed){
     if (ns_initparse(buffer, msg_size, &msg) < 0) {
        fprintf(stderr, "ns_initparse: %s\n", strerror(errno));
-
     }
 
     char* ns_list[msg_size];
@@ -108,31 +121,38 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
       cout << "\t" << ns_list[i] << endl;
     }
 
+  }
+
 /*************************************************************************/
 
-    // SOA RECORD
+  // SOA RECORD
 
-    res_init();
+  bool soa_failed = false;
 
-    if(res_search(hostname, ns_c_in, ns_t_soa, buffer, sizeof(buffer)) == -1){
-      cerr << "RES_SEARCH: ERROR" << endl;
-      perror(hostname);
-    }
+  res_init();
 
-    if((query_len = res_mkquery(ns_o_query, hostname, ns_c_in, ns_t_soa, NULL, 0, NULL, buffer, sizeof(buffer))) == -1){
-      cerr << "RES_MKQUERY: ERROR" << endl;
-      perror(hostname);
-    }
+  if(res_search(hostname, ns_c_in, ns_t_soa, buffer, sizeof(buffer)) == -1){
+  //  cerr << "RES_SEARCH: ERROR" << endl;
+  //  perror(hostname);
+    soa_failed = true;
+  }
+
+  if((query_len = res_mkquery(ns_o_query, hostname, ns_c_in, ns_t_soa, NULL, 0, NULL, buffer, sizeof(buffer))) == -1){
+  //  cerr << "RES_MKQUERY: ERROR" << endl;
+  //  perror(hostname);
+    soa_failed = true;
+  }
 
 
-    if((msg_size = res_query(hostname, ns_c_in, ns_t_soa, buffer, sizeof(buffer))) == -1){
-      cerr << "RES_QUERY: ERROR" << endl;
-      perror(hostname);
-    }
+  if((msg_size = res_query(hostname, ns_c_in, ns_t_soa, buffer, sizeof(buffer))) == -1){
+  //  cerr << "RES_QUERY: ERROR" << endl;
+  //  perror(hostname);
+    soa_failed = true;
+  }
 
+  if(!soa_failed){
     if (ns_initparse(buffer, msg_size, &msg) < 0) {
        fprintf(stderr, "ns_initparse: %s\n", strerror(errno));
-
     }
 
     char* soa_list[msg_size];
@@ -157,7 +177,6 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
 
       }
 
-
       if(soa_count == 0){
         soa_list[0] = soa;
         soa_count++;
@@ -180,96 +199,115 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
 
     }
 
-
     cout << "SOA:" << endl;
     for(int i = 0; i < soa_count; i++){
       cout << "\t" << soa_list[i] << endl;
     }
+  }
+
 
 /*******************************************************************************/
+
   // MX
+
+  bool mx_failed = false;
+
   res_init();
+
   if(res_search(hostname, ns_c_in, ns_t_mx, buffer, sizeof(buffer)) == -1){
-        cerr << "RES_SEARCH: ERROR" << endl;
-        perror(hostname);
+  //  cerr << "RES_SEARCH: ERROR" << endl;
+  //  perror(hostname);
+    mx_failed = true;
+  }
+  if((query_len = res_mkquery(ns_o_query, hostname, ns_c_in, ns_t_mx, NULL, 0, NULL, buffer, sizeof(buffer))) == -1){
+  //  cerr << "RES_MKQUERY: ERROR" << endl;
+  //  perror(hostname);
+    mx_failed = true;
+  }
+  if((msg_size = res_query(hostname, ns_c_in, ns_t_mx, buffer, sizeof(buffer))) == -1){
+  //  cerr << "RES_QUERY: ERROR" << endl;
+  //  perror(hostname);
+    mx_failed = true;
+  }
+
+  if(!mx_failed){
+    if (ns_initparse(buffer, msg_size, &msg) < 0) {
+      fprintf(stderr, "ns_initparse: %s\n", strerror(errno));
+    }
+
+    char* mx_list[msg_size];
+    char* mx_index;
+    char* after_mx;
+
+    int mx_count = 0;
+
+    bool mx_found = false;
+
+    for (int i = 0; i < msg_size; i++){
+      ns_parserr(&msg, ns_s_an, i, &rr);
+      ns_sprintrr(&msg, &rr, NULL, NULL, dispbuf, sizeof(dispbuf));
+
+      mx_index = strstr(dispbuf, "MX");
+
+      char* mx = strndup(mx_index + 5, strlen(mx_index));
+
+      if(mx_count == 0){
+        mx_list[0] = mx;
+        mx_count++;
       }
-      if((query_len = res_mkquery(ns_o_query, hostname, ns_c_in, ns_t_mx, NULL, 0, NULL, buffer, sizeof(buffer))) == -1){
-        cerr << "RES_MKQUERY: ERROR" << endl;
-        perror(hostname);
-      }
-      if((msg_size = res_query(hostname, ns_c_in, ns_t_mx, buffer, sizeof(buffer))) == -1){
-        cerr << "RES_QUERY: ERROR" << endl;
-        perror(hostname);
-      }
 
-      if (ns_initparse(buffer, msg_size, &msg) < 0) {
-         fprintf(stderr, "ns_initparse: %s\n", strerror(errno));
-      }
+      for(int j = 0; j < mx_count; j++){
+        if(strcasecmp(mx_list[j], mx) == 0){
+          mx_found = true;
 
-      char* mx_list[msg_size];
-      char* mx_index;
-      char* after_mx;
-
-      int mx_count = 0;
-
-      bool mx_found = false;
-
-      for (int i = 0; i < msg_size; i++){
-        ns_parserr(&msg, ns_s_an, i, &rr);
-        ns_sprintrr(&msg, &rr, NULL, NULL, dispbuf, sizeof(dispbuf));
-
-        mx_index = strstr(dispbuf, "MX");
-
-        char* mx = strndup(mx_index + 5, strlen(mx_index));
-
-        if(mx_count == 0){
-          mx_list[0] = mx;
-          mx_count++;
         }
-
-        for(int j = 0; j < mx_count; j++){
-          if(strcasecmp(mx_list[j], mx) == 0){
-            mx_found = true;
-
-          }
-        }
-
-        if(!mx_found){
-          mx_list[mx_count] = mx;
-          mx_count++;
-        }
-
-        mx_found = false;
-
-
       }
 
-
-      cout << "MX:" << endl;
-      for(int i = 0; i < mx_count; i++){
-        cout << "\t" << mx_list[i] << endl;
+      if(!mx_found){
+        mx_list[mx_count] = mx;
+        mx_count++;
       }
 
+      mx_found = false;
+
+    }
+
+
+    cout << "MX:" << endl;
+    for(int i = 0; i < mx_count; i++){
+      cout << "\t" << mx_list[i] << endl;
+    }
 
   }
 
+
+
+
+
 /*******************************************************************************/
     // A
-    res_init();
 
-    if(res_search(hostname, ns_c_in, ns_t_a, buffer, sizeof(buffer)) == -1){
-      cerr << "RES_SEARCH: ERROR" << endl;
-      perror(hostname);
-    }
-    if((query_len = res_mkquery(ns_o_query, hostname, ns_c_in, ns_t_a, NULL, 0, NULL, buffer, sizeof(buffer))) == -1){
-      cerr << "RES_MKQUERY: ERROR" << endl;
-      perror(hostname);
-    }
-    if((msg_size = res_query(hostname, ns_c_in, ns_t_a, buffer, sizeof(buffer))) == -1){
-      cerr << "RES_QUERY: ERROR" << endl;
-      perror(hostname);
-    }
+  bool a_failed = false;
 
+  res_init();
+
+  if(res_search(hostname, ns_c_in, ns_t_a, buffer, sizeof(buffer)) == -1){
+  //  cerr << "RES_SEARCH: ERROR" << endl;
+  //  perror(hostname);
+    a_failed = true;
+  }
+  if((query_len = res_mkquery(ns_o_query, hostname, ns_c_in, ns_t_a, NULL, 0, NULL, buffer, sizeof(buffer))) == -1){
+  //  cerr << "RES_MKQUERY: ERROR" << endl;
+  //  perror(hostname);
+    a_failed = true;
+  }
+  if((msg_size = res_query(hostname, ns_c_in, ns_t_a, buffer, sizeof(buffer))) == -1){
+  //  cerr << "RES_QUERY: ERROR" << endl;
+  //  perror(hostname);
+    a_failed = true;
+  }
+
+  if(!a_failed){
     if (ns_initparse(buffer, msg_size, &msg) < 0) {
        fprintf(stderr, "ns_initparse: %s\n", strerror(errno));
     }
@@ -279,7 +317,6 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
     char* after_a;
 
     int a_count = 0;
-
     bool a_found = false;
 
     for (int i = 0; i < msg_size; i++){
@@ -298,7 +335,6 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
       for(int j = 0; j < a_count; j++){
         if(strcasecmp(a_list[j], a) == 0){
           a_found = true;
-
         }
       }
 
@@ -309,32 +345,39 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
 
       a_found = false;
 
-
     }
-
 
     cout << "A:" << endl;
     for(int i = 0; i < a_count; i++){
       cout << "\t" << a_list[i] << endl;
     }
 
+  }
+
 /*******************************************************************************/
     // AAAA
-    res_init();
 
-    if(res_search(hostname, ns_c_in, ns_t_aaaa, buffer, sizeof(buffer)) == -1){
-      cerr << "RES_SEARCH: ERROR" << endl;
-      perror(hostname);
-    }
-    if((query_len = res_mkquery(ns_o_query, hostname, ns_c_in, ns_t_aaaa, NULL, 0, NULL, buffer, sizeof(buffer))) == -1){
-      cerr << "RES_MKQUERY: ERROR" << endl;
-      perror(hostname);
-    }
-    if((msg_size = res_query(hostname, ns_c_in, ns_t_aaaa, buffer, sizeof(buffer))) == -1){
-      cerr << "RES_QUERY: ERROR" << endl;
-      perror(hostname);
-    }
+  bool aaaa_failed = false;
 
+  res_init();
+
+  if(res_search(hostname, ns_c_in, ns_t_aaaa, buffer, sizeof(buffer)) == -1){
+  //  cerr << "RES_SEARCH: ERROR" << endl;
+  //  perror(hostname);
+    aaaa_failed = true;
+  }
+  if((query_len = res_mkquery(ns_o_query, hostname, ns_c_in, ns_t_aaaa, NULL, 0, NULL, buffer, sizeof(buffer))) == -1){
+  //  cerr << "RES_MKQUERY: ERROR" << endl;
+  //  perror(hostname);
+    aaaa_failed = true;
+  }
+  if((msg_size = res_query(hostname, ns_c_in, ns_t_aaaa, buffer, sizeof(buffer))) == -1){
+  //  cerr << "RES_QUERY: ERROR" << endl;
+//    perror(hostname);
+    aaaa_failed = true;
+  }
+
+  if(!aaaa_failed){
     if (ns_initparse(buffer, msg_size, &msg) < 0) {
        fprintf(stderr, "ns_initparse: %s\n", strerror(errno));
     }
@@ -344,7 +387,6 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
     char* after_aaaa;
 
     int aaaa_count = 0;
-
     bool aaaa_found = false;
 
     for (int i = 0; i < msg_size; i++){
@@ -374,32 +416,41 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
 
       aaaa_found = false;
 
-
     }
-
 
     cout << "AAAA:" << endl;
     for(int i = 0; i < aaaa_count; i++){
       cout << "\t" << aaaa_list[i] << endl;
     }
 
+  }
+
+
 /*******************************************************************************/
-    // CNAME
-    res_init();
 
-    if(res_search(hostname, ns_c_in, ns_t_cname, buffer, sizeof(buffer)) == -1){
-      cerr << "RES_SEARCH: ERROR" << endl;
-      perror(hostname);
-    }
-    if((query_len = res_mkquery(ns_o_query, hostname, ns_c_in, ns_t_cname, NULL, 0, NULL, buffer, sizeof(buffer))) == -1){
-      cerr << "RES_MKQUERY: ERROR" << endl;
-      perror(hostname);
-    }
-    if((msg_size = res_query(hostname, ns_c_in, ns_t_cname, buffer, sizeof(buffer))) == -1){
-      cerr << "RES_QUERY: ERROR" << endl;
-      perror(hostname);
-    }
+  // CNAME
 
+  bool cname_failed = false;
+
+  res_init();
+
+  if(res_search(hostname, ns_c_in, ns_t_cname, buffer, sizeof(buffer)) == -1){
+  //  cerr << "RES_SEARCH: ERROR" << endl;
+  //  perror(hostname);
+    cname_failed = true;
+  }
+  if((query_len = res_mkquery(ns_o_query, hostname, ns_c_in, ns_t_cname, NULL, 0, NULL, buffer, sizeof(buffer))) == -1){
+  //  cerr << "RES_MKQUERY: ERROR" << endl;
+  //  perror(hostname);
+    cname_failed = true;
+  }
+  if((msg_size = res_query(hostname, ns_c_in, ns_t_cname, buffer, sizeof(buffer))) == -1){
+  //  cerr << "RES_QUERY: ERROR" << endl;
+  //  perror(hostname);
+    cname_failed = true;
+  }
+
+  if(!cname_failed){
     if (ns_initparse(buffer, msg_size, &msg) < 0) {
        fprintf(stderr, "ns_initparse: %s\n", strerror(errno));
     }
@@ -409,7 +460,6 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
     char* after_cname;
 
     int cname_count = 0;
-
     bool cname_found = false;
 
     for (int i = 0; i < msg_size; i++){
@@ -417,7 +467,6 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
       ns_sprintrr(&msg, &rr, NULL, NULL, dispbuf, sizeof(dispbuf));
 
       cname_index = strstr(dispbuf, "CNAME");
-
       char* cname = strndup(cname_index + 5, strlen(cname_index));
 
       if(cname_count == 0){
@@ -428,7 +477,6 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
       for(int j = 0; j < cname_count; j++){
         if(strcasecmp(cname_list[j], cname) == 0){
           cname_found = true;
-
         }
       }
 
@@ -448,23 +496,33 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
       cout << "\t" << cname_list[i] << endl;
     }
 
+  }
+
 /*******************************************************************************/
-    // PTR
-    res_init();
 
-    if(res_search(hostname, ns_c_in, ns_t_ptr, buffer, sizeof(buffer)) == -1){
-      cerr << "RES_SEARCH: ERROR" << endl;
-      perror(hostname);
-    }
-    if((query_len = res_mkquery(ns_o_query, hostname, ns_c_in, ns_t_ptr, NULL, 0, NULL, buffer, sizeof(buffer))) == -1){
-      cerr << "RES_MKQUERY: ERROR" << endl;
-      perror(hostname);
-    }
-    if((msg_size = res_query(hostname, ns_c_in, ns_t_ptr, buffer, sizeof(buffer))) == -1){
-      cerr << "RES_QUERY: ERROR" << endl;
-      perror(hostname);
-    }
+  // PTR
 
+  bool ptr_failed = false;
+
+  res_init();
+
+  if(res_search(hostname, ns_c_in, ns_t_ptr, buffer, sizeof(buffer)) == -1){
+  //  cerr << "RES_SEARCH: ERROR" << endl;
+  //  perror(hostname);
+    ptr_failed = true;
+  }
+  if((query_len = res_mkquery(ns_o_query, hostname, ns_c_in, ns_t_ptr, NULL, 0, NULL, buffer, sizeof(buffer))) == -1){
+//    cerr << "RES_MKQUERY: ERROR" << endl;
+//    perror(hostname);
+    ptr_failed = true;
+  }
+  if((msg_size = res_query(hostname, ns_c_in, ns_t_ptr, buffer, sizeof(buffer))) == -1){
+//    cerr << "RES_QUERY: ERROR" << endl;
+//    perror(hostname);
+    ptr_failed = true;
+  }
+
+  if(!ptr_failed){
     if (ns_initparse(buffer, msg_size, &msg) < 0) {
        fprintf(stderr, "ns_initparse: %s\n", strerror(errno));
     }
@@ -490,28 +548,26 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
       }
 
       for(int j = 0; j < ptr_count; j++){
-        if(strcasecmp(aaaa_list[j], ptr) == 0){
+        if(strcasecmp(ptr_list[j], ptr) == 0){
           ptr_found = true;
-
         }
       }
 
       if(!ptr_found){
-        aaaa_list[ptr_count] = ptr;
-            ptr_count++;
+        ptr_list[ptr_count] = ptr;
+        ptr_count++;
       }
 
       ptr_found = false;
 
-
     }
-
 
     cout << "PTR:" << endl;
     for(int i = 0; i < ptr_count; i++){
       cout << "\t" << ptr_list[i] << endl;
     }
 
+  }
 
 
   return;
@@ -520,7 +576,7 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
 void get_whois(char* ip, char *whois_ip, int ip_type, int ip_whois_type){
 
   int n, nBytes;
-  char buffer[8192];
+  char buffer[4096];
   char whois_query[64];
 
   int clientSocket;
@@ -597,7 +653,7 @@ int hostname_to_ip(char* hostname, char* ip){
     return 20;
   }
 
-  printf("Host: %s\n", hostname);
+  printf("Host: %s\n", res->ai_canonname);
 
   while(res){
     inet_ntop(res->ai_family, res->ai_addr->sa_data, addrstr, 100);
@@ -630,32 +686,6 @@ int hostname_to_ip(char* hostname, char* ip){
 
 }
 
-void dns_output(){
-  cout << "=== DNS ===" << endl;
-  cout << "A: " << endl;
-  cout << "AAAA: " << endl;
-  cout << "SDA: " << endl;
-  cout << "admin email: " << endl;
-
-  return;
-}
-
-void whois_output(){
-  cout << "=== WHOIS ===" << endl;
-  cout << "inetnum: " << endl;
-  cout << "netname: " << endl;
-  cout << "descr: " << endl;
-  cout << "country: " << endl;
-  cout << "admin-c: " << endl;
-  cout << "address: " << endl;
-  cout << "address: " << endl;
-  cout << "address: " << endl;
-  cout << "address: " << endl;
-  cout << "phone: " << endl;
-  cout << "phone: " << endl;
-
-  return;
-}
 
 int main(int argc, char** argv){
 
@@ -747,6 +777,37 @@ int main(int argc, char** argv){
     exit(20);
   }
 
+  if(isdigit(hostname[0]) || hostname[0] == ':'){
+
+    struct sockaddr addr;     /* input */
+    memset(&addr, 0, sizeof(struct sockaddr));
+
+    char hbuf[128], sbuf[128];
+
+    cout << hostname << endl;
+
+    if(ip_type == 4){
+      addr.sa_family = AF_INET;
+      inet_pton(AF_INET, hostname, &addr.sa_data);
+    }
+    else if(ip_type == 6){
+      addr.sa_family = AF_INET6;
+      inet_pton(AF_INET6, hostname, &addr.sa_data);
+
+    }
+
+    cout << &addr.sa_data << endl;
+
+    if (getnameinfo(&addr, sizeof(addr), hbuf, sizeof(hbuf), sbuf,
+        sizeof(sbuf), NI_NUMERICHOST | NI_NUMERICSERV) != 0){
+          
+      cerr << "getnameinfo() failed." << endl;
+      exit(20);
+    }
+
+
+  }
+
 
 
   char whois_ip[64];
@@ -759,6 +820,7 @@ int main(int argc, char** argv){
     cerr << "hostname_to_ip(whois_ip) failed\n";
     exit(20);
   }
+
 
 /***********************************************************/
 
