@@ -1,0 +1,16 @@
+ISA TAZATEL v jazyku C/C++
+
+Program, který na vstupu specifikuje IP adresu (IPv4 i IPv6) či hostname. K danému vstupu pak vypíše všechny známé podrobnosti o vlastníkovi.
+
+Parametry:
+	-q <IP| hostname>, povinný argument
+	-w <IP| hostname>, povinný argument
+	-d <IP> nepovinný argument, přičemž implicitně se používá DNS resolver v operačním systému
+
+Ukázka spuštění: ./isa-tazatel -q www.fit.vutbr.cz -d dns.google.com -w whois.ripe.net
+
+Omezení: Dotazování DNS serveru podle -d argumentu není implementováno. Vždy se dotazuje resolver v operačním systému.
+
+Seznam souborů: isa-tazatel.cpp, Makefile, README, manual.pdf
+
+

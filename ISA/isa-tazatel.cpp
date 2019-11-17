@@ -17,8 +17,7 @@ using namespace std;
 const int TCP_PORT = 43;
 const int UDP_PORT = 53;
 
-// ./isa-tazatel -q www.fit.vutbr.cz -w whois.ripe.net
-
+//how to run ./isa-tazatel -q www.fit.vutbr.cz -w whois.ripe.net
 
 
 void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_flag){
@@ -148,7 +147,8 @@ void get_dns(char *hostname, char *dns_ip, int ip_type, int ip_dns_type, bool d_
       after_soa = strndup(soa_index + 4, strlen(soa_index));
       char soa[128];
 
-      for(int i = 0; after_soa[i] != ' '; i++){
+      // when find ....vutbr.cz('. ') then break
+      for(int i = 0; !(after_soa[i-1] == '.' && after_soa[i] == ' '); i++){
         soa[i] = after_soa[i];
         soa[i+1] = '\0';
 
@@ -573,7 +573,7 @@ void get_whois(char* ip, char *whois_ip, int ip_type, int ip_whois_type){
 
 int hostname_to_ip(char* hostname, char* ip){
 
-  struct addrinfo hints, *res;
+  struct addrinfo hints, *addr;
   char addrstr[100];
   void *ptr;
   int err;
@@ -583,26 +583,26 @@ int hostname_to_ip(char* hostname, char* ip){
   hints.ai_socktype = SOCK_STREAM;
   hints.ai_flags |= AI_CANONNAME;
 
-  if((err = getaddrinfo(hostname, NULL, &hints, &res)) != 0){
-    cerr << "Get host IP failed." << endl;
+  if((err = getaddrinfo(hostname, NULL, &hints, &addr)) != 0){
+    cerr << "Get host IP for: " << hostname << " failed." << endl;
     return 20;
   }
 
-  while(res){
-    inet_ntop(res->ai_family, res->ai_addr->sa_data, addrstr, 100);
+  while(addr){
+    inet_ntop(addr->ai_family, addr->ai_addr->sa_data, addrstr, 100);
 
-    switch(res->ai_family){
+    switch(addr->ai_family){
       case AF_INET:
-        ptr = &((struct sockaddr_in *)res->ai_addr)->sin_addr;
+        ptr = &((struct sockaddr_in *)addr->ai_addr)->sin_addr;
         break;
       case AF_INET6:
-        ptr = &((struct sockaddr_in6 *)res->ai_addr)->sin6_addr;
+        ptr = &((struct sockaddr_in6 *)addr->ai_addr)->sin6_addr;
         break;
     }
 
-    inet_ntop(res->ai_family, ptr, addrstr, 100);
+    inet_ntop(addr->ai_family, ptr, addrstr, 100);
     strcpy(ip, addrstr);
-    if(res->ai_family == PF_INET){
+    if(addr->ai_family == PF_INET){
       return 4;
     }
     else{
@@ -610,13 +610,48 @@ int hostname_to_ip(char* hostname, char* ip){
     }
 
 
-    res = res->ai_next;
+    addr = addr->ai_next;
   }
 
   return 20;
 
 }
 
+int ip_to_hostname(char* hostname, int ip_type){
+
+  struct sockaddr_in addr;
+  memset(&addr, 0, sizeof(struct sockaddr_in));
+
+  struct sockaddr_in6 addr6;
+  memset(&addr6, 0, sizeof(struct sockaddr_in6));
+
+  char hbuf[128];
+
+  //IPv4
+  if(ip_type == 4){
+    addr.sin_family = AF_INET;
+    inet_pton(AF_INET, hostname, &addr.sin_addr);
+
+    if (getnameinfo((struct sockaddr*)&addr, sizeof(addr), hbuf, sizeof(hbuf), NULL, 0, 0 ) != 0){
+      cerr << "getnameinfo() failed." << endl;
+      return 20;
+    }
+  }
+  //IPv6
+  else if(ip_type == 6){
+    addr6.sin6_family = AF_INET6;
+    inet_pton(AF_INET6, hostname, &addr6.sin6_addr);
+
+    if (getnameinfo((struct sockaddr*)&addr6, sizeof(addr6), hbuf, sizeof(hbuf), NULL, 0, 0 ) != 0){
+      cerr << "getnameinfo() failed." << endl;
+      return 20;
+    }
+  }
+
+  strcpy(hostname, hbuf);
+
+  return 0;
+}
 
 int main(int argc, char** argv){
 
@@ -704,43 +739,21 @@ int main(int argc, char** argv){
 
 // Get hostname from IP for DNS query
   if(isdigit(hostname[0]) || hostname[0] == ':'){
-
-    struct sockaddr_in addr;
-    memset(&addr, 0, sizeof(struct sockaddr_in));
-
-    struct sockaddr_in6 addr6;
-    memset(&addr6, 0, sizeof(struct sockaddr_in6));
-
-    char hbuf[128];
-
-    //IPv4
-    if(ip_type == 4){
-      addr.sin_family = AF_INET;
-      inet_pton(AF_INET, hostname, &addr.sin_addr);
-
-      if (getnameinfo((struct sockaddr*)&addr, sizeof(addr), hbuf, sizeof(hbuf), NULL, 0, 0 ) != 0){
-        cerr << "getnameinfo() failed." << endl;
+    if(ip_to_hostname(hostname, ip_type) == 20){
+        cerr << "ip_to_hostname failed." << endl;
         exit(20);
-      }
     }
-    //IPv6
-    else if(ip_type == 6){
-      addr6.sin6_family = AF_INET6;
-      inet_pton(AF_INET6, hostname, &addr6.sin6_addr);
-
-      if (getnameinfo((struct sockaddr*)&addr6, sizeof(addr6), hbuf, sizeof(hbuf), NULL, 0, 0 ) != 0){
-        cerr << "getnameinfo() failed." << endl;
-        exit(20);
-      }
-    }
-
-    strcpy(hostname, hbuf);
-
   }
 
   char whois_ip[64];
   char whois_hostname[whois_server.size() + 1];
   strcpy(whois_hostname, whois_server.c_str());
+
+  if((strstr(whois_hostname, "whois.")) == NULL){
+    cerr << "Invalid whois server: " << whois_hostname << endl;
+    exit(20);
+  }
+
   if((ip_whois_type = hostname_to_ip(whois_hostname, whois_ip)) == 20){
     cerr << "hostname_to_ip(whois_ip) failed\n";
     exit(20);
