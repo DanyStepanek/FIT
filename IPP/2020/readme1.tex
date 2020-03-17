@@ -1,0 +1,33 @@
+\documentclass[a4paper, 10pt]{article}
+
+\usepackage[left=2cm, text={17cm, 23cm}, top=2cm]{geometry}
+\usepackage[czech]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{alltt}
+\usepackage{times}
+
+\begin{document}
+
+\hspace{-5mm}Implementační dokumentace k 1. úloze do IPP 2019/2020\\
+Jméno a příjmení: Daniel Štěpánek\\
+Login: xstepa61\\
+\\
+\textbf{\Large{Postup implementace}}
+
+\section{Struktura programu}
+\qquad Program je objektově navržený do tří tříd \emph{StatP, Parser, Code}. StatP třída obsahuje implementaci rozšíření statp. Třída Parser obsahuje hlavní logiku zpracování jednotlivých instrukcí jazyka ippcode20. Z hlavní smyčky programu je volána metoda \emph{Instruction}, která zpracovává instrukce, viz \emph{Zpracováni instrukcí}. Třída Code je statická a obsahuje pouze vzory instrukcí ve tvaru: operační kód = (počet argumentů, typ arg1, typ arg2, typ arg3). Po zpracování celého vstupu je vypsán XML kód na standardní výstup.
+
+\section{Spuštění skriptu}
+\qquad Při spuštění skriptu je provedena kontrola vstupních parametrů. Pokud je vstupni parametr  --help, je vypsána nápověda ke skriptu a následné ukončení vykonávání. Jinak, v případě správné kombinace parametrů, program po řádcích načítá standardní vstup. Pomocí regulárního výrazu je zkontrolována povinná hlavička souboru, která musí odpovídat \uv{.ippcode20} (case insensitive).
+	
+\section{Průchod souborem}
+\qquad Soubor je procházen po řádcích. U každého je rozhodnuto, zda obsahuje instrukci, pouze komentář, nebo je prázdný a zda je validní. Komentáře a prázdné řádky jsou ignorovány.
+
+\section{Zpracování instrukcí}
+\qquad Nejprve je porovnán operační kód instrukce s klíči v poli instrukcí ve třídě Code, tedy zda operační kód existuje a je správně zapsán. Chybný operační kód vede na chybu 22. Pokud je operační kód správný, pomocí informací přiřazených operačnímu kódu v poli klíčových slov, se určí počet argumentů a typy jednotlivých argumentů (var, symb, label, type). Tyto informace jsou porovnány s načteným řádkem ze souboru. V případě,  že počet parametrů přesně odpovídá požadovanému počtu, jsou argumenty zpracovávány pomocí metody \emph{Arguments}. Argumenty jsou kontrolovány regulárnímy výrazy podle typu argumentu (var, symp, label, type). Pokud proběhne kontrola v pořádku, je vygenerován XML element a přidán do výstupního XML. Chybný argument nebo méně argumentů vede na chybu 23. V připadě, kdy je zjištěno více slov na řádku než je požadovaný počet, je zjištěno, zda se jedná o komentář, nebo o nesprávné argumenty. V případě nadbytečných argumentů program končí s chybou 23. 
+
+
+\section{Generování XML}
+\qquad Výstupní XML obsahuje povinnou hlavičku a hlavní element s názvem program, jenž obsahuje povinný atribut language. Kořenový element obsahuje generované elementy všech instrukcí v odpovídajícím XML formátu.
+\end{document}

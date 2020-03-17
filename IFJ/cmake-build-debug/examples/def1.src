@@ -1,0 +1,6 @@
+def a():
+  print('s\n')
+  if a:
+   print('a\n')
+ 
+print('konec\n')

@@ -1,0 +1,8 @@
+def a(b, s):
+ print('zacatek\n')
+ if b==2:
+  print('if\n')
+ else:
+  print('else\n')
+
+print('konec')

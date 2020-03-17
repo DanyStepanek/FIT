@@ -1,0 +1,3 @@
+JExamXML 1.01 - Java XML comparison tool
+Usage:
+java -jar examxml.jar <first-xml> <second-xml> [<delta.xml>] [-D|-M] [<option-file>]

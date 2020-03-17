@@ -1,0 +1,6 @@
+def a(s):
+ print('s\n')
+ pass
+
+def b():
+  a('a')

@@ -1,0 +1,17 @@
+a = 2
+b='s'
+if s:
+ def func():
+  print('func\n')
+  if a<3:
+   print('if a\n')
+   print('a\n')
+   if a>2:
+    print('if2\n')
+   else:
+    print('else\n')
+ print('konec\n')
+else:
+ print('posledni else\n')
+ 
+print('s\n')

@@ -1,0 +1,26 @@
+
+if 1 < 2:
+ print('n\n')
+ if s:
+  print('s\n')
+ else:
+  print('else\n')
+print('ifb\n')
+if b:
+ print('if2\n')
+ if 1:
+  print('if3\n')
+else:
+ print('else2\n')
+print('konec\n')
+print('tada\n')
+def a():
+ print('b\n')
+ while 1:
+  pass
+ print('powhile\n')
+ if 2 == 2:
+  print('b\n')
+ else:
+  print('else\n')
+print('predkoncem\n')
