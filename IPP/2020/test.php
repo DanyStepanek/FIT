@@ -32,7 +32,7 @@ ini_set('display_errors', 'stderr');
 
    public function clear_temp_files($file){
      //Delete all temp files
-     if(file_exists("$file.parrc")){
+  /*   if(file_exists("$file.parrc")){
        unlink("$file.parrc");
      }
      if(file_exists("$file.par")){
@@ -43,7 +43,7 @@ ini_set('display_errors', 'stderr');
      }
      if(file_exists("$file.int")){
        unlink("$file.int");
-     }
+     } */
    }
 
 
@@ -184,7 +184,7 @@ class InterpretTest extends Test{
       $path = $file;
       $file = strstr($file, ".src", true);
 
-      exec("python3.8 $interpret --source=$file.src < $file.in > $file.int", $out, $this->result);
+      exec("python3.8 $this->path --source=$file.src < $file.in > $file.int", $out, $this->result);
 
       $fp = fopen("$file.intrc", "w");
       fwrite($fp, $this->result);
@@ -263,7 +263,10 @@ class CompleteTest extends Test{
     $this->test_count += 1;
 
     exec("diff -q $file.rc $file.intrc", $temp, $test);
-    exec("diff -q $file.out $file.int", $temp, $out);
+    if(file_exists("$file.int")){
+      exec("diff -q $file.out $file.int", $temp, $out);
+    }
+    
 
     if($test == 0 && $out == 0){
       $html->testPassed($path);
@@ -405,7 +408,7 @@ function main($searching, $directory, $parser, $interpret, $jexamxml, $p_only, $
       exit(11);
     }
     $i_test = new InterpretTest();
-    $i_test->set_path($interpret);
+    $i_test->set_path($interpret, NULL);
     $i_test->set_counters();
     $i_test->exec($searching, $directory, $html);
     list($test_count, $test_passed, $test_failed) = $i_test->get_counters();
@@ -503,14 +506,17 @@ else{
  if(array_key_exists("jexamxml", $parameters)){
    $parameters_count += 1;
    $jexamxml = $parameters["jexamxml"];
-   if(!file_exists($jexamxml)){
-     exit(11);
-   }
+   if(!$i_only)
+    if(!file_exists($jexamxml)){
+      exit(11);
+    }
  }
  else{
-   $jexamxml = "/pub/courses/ipp/jexamxml/jexamxml.jar";
-   if(!file_exists($jexamxml)){
-     exit(11);
+   if(!$i_only){
+     $jexamxml = "/pub/courses/ipp/jexamxml/jexamxml.jar";
+     if(!file_exists($jexamxml)){
+       exit(11);
+     }
    }
  }
 
@@ -518,6 +524,10 @@ else{
    fwrite(STDERR, "Invalid parameters\n");
    return 10;
 
+ }
+
+ if($i_only){
+   $jexamxml = NULL;
  }
 
  main($searching, $directory, $parser, $interpret, $jexamxml, $p_only, $i_only);

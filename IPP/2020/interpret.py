@@ -10,6 +10,7 @@ import sys
 import re
 import getopt
 import xml.etree.ElementTree as ET
+from xml.sax.saxutils import unescape
 
 class InstructionDict():
 
@@ -124,8 +125,12 @@ class LabelDict():
             sys.stderr.write("Label is already defined.\n")
             exit(52)
 
+    def get_index(self, label):
+        return self.labels.get(label)
+
     def get_labels(self):
         return self.labels
+
 
 class Frame():
 
@@ -150,16 +155,32 @@ class Frame():
     def get_frame(self):
         return self.frame
 
+class Stack():
 
+    def __init__(self):
+        self.stack = list()
+
+    def _push(self, value):
+        self.stack.append(value)
+
+    def _pop(self):
+        try:
+            return self.stack.pop()
+        except:
+            sys.stderr.write("Stack is empty.\n")
+            exit(56)
 
 class Processor():
 
-    def __init__(self, GF, LF, TF, input_f, label_dict):
-        self.GF = GF
-        self.LF = LF
-        self.TF = TF
+    def __init__(self, input_f, label_dict):
+        self.GF = Frame()
+        self.LF = None
+        self.TF = None
         self.input_f = input_f
         self.label_dict = label_dict
+        self.data_stack = Stack()
+        self.call_stack = Stack()
+        self.frame_stack = Stack()
 
     def parse_var(self, var):
         return re.split('@', var, 2)
@@ -168,25 +189,45 @@ class Processor():
         if var[0] == 'GF':
             return self.GF.is_var_set(var[1])
         elif var[0] == 'LF':
-            return self.LF.is_var_set(var[1])
+            if self.LF != None:
+                return self.LF.is_var_set(var[1])
+            else:
+                return None
         elif var[0] == 'TF':
-            return self.TF.is_var_set(var[1])
+            if self.TF != None:
+                return self.TF.is_var_set(var[1])
+            else:
+                return None
 
     def get_var_value(self, var):
         if var[0] == 'GF':
             return self.GF.get_item(var[1])
         elif var[0] == 'LF':
-            return self.LF.get_item(var[1])
+            if self.LF != None:
+                return self.LF.get_item(var[1])
+            else:
+                return None
+
         elif var[0] == 'TF':
-            return self.TF.get_item(var[1])
+            if self.TF != None:
+                return self.TF.get_item(var[1])
+            else:
+                return None
 
     def set_var_value(self, var, symb):
         if var[0] == 'GF':
             self.GF.set_value(var[1], symb)
         elif var[0] == 'LF':
-            self.LF.set_value(var[1], symb)
+            if self.LF != None:
+                self.LF.set_value(var[1], symb)
+            else:
+                return None
+
         elif var[0] == 'TF':
-            self.TF.set_value(var[1], symb)
+            if self.TF != None:
+                self.TF.set_value(var[1], symb)
+            else:
+                return None
 
     def symb_switch(self, symb):
         s = symb.get("var")
@@ -197,7 +238,7 @@ class Processor():
 
     def get_symb(self, symb):
         s = self.symb_switch(symb)
-        if type(s) == list():
+        if isinstance(s, list):
             if self.check_var_in_frame(s):
                 return self.get_var_value(s)
         else:
@@ -248,7 +289,6 @@ class Processor():
 # Instruction set
 
     def _move(self, instruction):
-        print("move\n")
         var = instruction[2].get("var")
         self.set_var_value(['GF', 'abc'], {'int':'2'})
         var = self.parse_var(var)
@@ -256,20 +296,24 @@ class Processor():
             symb = self.get_symb(instruction[3])
             if symb == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             self.set_var_value(var, symb)
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _createframe(self):
-        pass
+        self.TF = Frame()
+
     def _pushframe(self):
-        pass
+        self.LF = self.TF
+        self.TF = None
+        self.frame_stack._push(self.LF)
+
     def _popframe(self):
-        pass
+        self.TF = self.frame_stack._pop()
+
     def _defvar(self, instruction):
-        print("defvar\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
@@ -278,36 +322,56 @@ class Processor():
 
         self.set_var_value(var, {'nil':'nil'})
 
-    def _call(self):
-        pass
+    def _call(self, instruction):
+        label = self.get_symb(instruction[2])
+        if label == None:
+            sys.stderr.write("Semantic error: Undefined variable.\n")
+            exit(54)
+        self.call_stack._push(instruction[0] + 1)
+        return self._jump(instruction)
+
     def _return(self):
-        pass
-    def _pushs(self):
-        pass
-    def _pops(self):
-        pass
+        return self.call_stack._pop()
+
+    def _pushs(self, instruction):
+        symb = self.get_symb(instruction[2])
+        if symb == None:
+            sys.stderr.write("Semantic error: Undefined variable.\n")
+            exit(54)
+
+        self.data_stack._push(symb)
+
+    def _pops(self, instruction):
+        var = instruction[2].get("var")
+        var = self.parse_var(var)
+        if self.check_var_in_frame(var):
+            symb = self.data_stack._pop()
+            self.set_var_value(var, symb)
+        else:
+            sys.stderr.write("Semantic error: Undefined variable.\n")
+            exit(54)
+
     def _add(self, instruction):
-        print("add\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb1 = self.get_symb(instruction[3])
             if symb1 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb1 = symb1.get("int")
             if symb1 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             symb2 = self.get_symb(instruction[4])
             if symb2 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb2 = symb2.get("int")
             if symb2 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             result = int(symb1) + int(symb2)
             symb = dict()
@@ -316,30 +380,29 @@ class Processor():
 
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _sub(self, instruction):
-        print("sub\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb1 = self.get_symb(instruction[3])
             if symb1 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb1 = symb1.get("int")
             if symb1 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             symb2 = self.get_symb(instruction[4])
             if symb2 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb2 = symb2.get("int")
             if symb2 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             result = int(symb1) - int(symb2)
             symb = dict()
@@ -348,30 +411,29 @@ class Processor():
 
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _mul(self, instruction):
-        print("mul\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb1 = self.get_symb(instruction[3])
             if symb1 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb1 = symb1.get("int")
             if symb1 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             symb2 = self.get_symb(instruction[4])
             if symb2 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb2 = symb2.get("int")
             if symb2 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             result = int(symb1) * int(symb2)
             symb = dict()
@@ -380,31 +442,30 @@ class Processor():
 
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _idiv(self, instruction):
-        print("idiv\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb1 = self.get_symb(instruction[3])
             if symb1 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb1 = symb1.get("int")
             if symb1 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             symb2 = self.get_symb(instruction[4])
             if symb2 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb2 = symb2.get("int")
             if symb2 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
-            if symb2 == 0:
+                exit(53)
+            if int(symb2) == 0:
                 sys.stderr.write("Zero division.\n")
                 exit(57)
 
@@ -415,22 +476,21 @@ class Processor():
 
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _lt(self, instruction):
-        print("lt\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb1 = self.get_symb(instruction[3])
             if symb1 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
 
             symb2 = self.get_symb(instruction[4])
             if symb2 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
 
             type1 = self.get_type(symb1)
             type2 = self.get_type(symb2)
@@ -451,22 +511,21 @@ class Processor():
                 exit(53)
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _gt(self, instruction):
-        print("gt\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb1 = self.get_symb(instruction[3])
             if symb1 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
 
             symb2 = self.get_symb(instruction[4])
             if symb2 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
 
             type1 = self.get_type(symb1)
             type2 = self.get_type(symb2)
@@ -487,22 +546,21 @@ class Processor():
                 exit(53)
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _eq(self, instruction):
-        print("eq\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb1 = self.get_symb(instruction[3])
             if symb1 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
 
             symb2 = self.get_symb(instruction[4])
             if symb2 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
 
             type1 = self.get_type(symb1)
             type2 = self.get_type(symb2)
@@ -518,35 +576,38 @@ class Processor():
                 symb = dict()
                 symb['bool'] = self.bool_to_str(str(result))
                 self.set_var_value(var, symb)
+            elif type1 == 'nil' or type2 == 'nil':
+                symb = dict()
+                symb['bool'] = 'false'
+                self.set_var_value(var, symb)
             else:
                 sys.stderr.write("Bad comparison.\n")
                 exit(53)
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _and(self, instruction):
-        print("and\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb1 = self.get_symb(instruction[3])
             if symb1 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb1 = symb1.get("bool")
             if symb1 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             symb2 = self.get_symb(instruction[4])
             if symb2 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb2 = symb2.get("bool")
             if symb2 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             symb1 = self.str_to_bool(symb1)
             symb2 = self.str_to_bool(symb2)
@@ -556,30 +617,29 @@ class Processor():
             self.set_var_value(var, d_symb)
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _or(self, instruction):
-        print("or\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb1 = self.get_symb(instruction[3])
             if symb1 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb1 = symb1.get("bool")
             if symb1 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             symb2 = self.get_symb(instruction[4])
             if symb2 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb2 = symb2.get("bool")
             if symb2 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             symb1 = self.str_to_bool(symb1)
             symb2 = self.str_to_bool(symb2)
@@ -589,21 +649,20 @@ class Processor():
             self.set_var_value(var, d_symb)
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _not(self, instruction):
-        print("not\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb = self.get_symb(instruction[3])
             if symb == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb = symb.get("bool")
             if symb == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             symb = self.str_to_bool(symb)
             symb = not symb
@@ -612,21 +671,20 @@ class Processor():
             self.set_var_value(var, d_symb)
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _int2char(self, instruction):
-        print("int2char\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb = self.get_symb(instruction[3])
             if symb == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb = symb.get("int")
             if symb == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             if int(symb) < 0 or int(symb) > 1114111:
                 sys.stderr.write("Semantic error: Wrong value of argument (out of range).\n")
@@ -638,30 +696,29 @@ class Processor():
             self.set_var_value(var, d_symb)
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _stri2int(self, instruction):
-        print("stri2int\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb1 = self.get_symb(instruction[3])
             if symb1 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb1 = symb1.get("string")
             if symb1 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             symb2 = self.get_symb(instruction[4])
             if symb2 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb2 = symb2.get("int")
             if symb2 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             len_of_symb1 = len(symb1)
             index = int(symb2)
@@ -676,21 +733,20 @@ class Processor():
 
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _read(self, instruction):
-        print("read\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb = self.get_symb(instruction[3])
             if symb == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb = symb.get("type")
             if symb == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             try:
                 file = open(self.input_f)
@@ -716,14 +772,13 @@ class Processor():
 
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _write(self, instruction):
-        print("write\n")
         symb = self.get_symb(instruction[2])
         if symb == None:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
         type = ""
         value = ""
         for type, value in symb.items():
@@ -733,32 +788,35 @@ class Processor():
         elif type == 'nil':
             value = ''
 
-        #nahradi escape sekvence validnimi bilymi znaky
-        value = re.sub(r"\\([0-9][0-9][0-9])", lambda sign: chr(int(sign.group(1))), value)
+        if type == 'string':
+            #unescape XML special signs(&lt;, &gt;, ...)
+            value = unescape(value)
+            #nahradi escape sekvence validnimi bilymi znaky
+            value = re.sub(r"\\([0-9][0-9][0-9])", lambda sign: chr(int(sign.group(1))), value)
+
         print(value, end = '')
 
     def _concat(self, instruction):
-        print("concat\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb1 = self.get_symb(instruction[3])
             if symb1 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb1 = symb1.get("string")
             if symb1 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             symb2 = self.get_symb(instruction[4])
             if symb2 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb2 = symb2.get("string")
             if symb2 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             symb = "%s%s"%(symb1, symb2)
             symb_d = dict()
@@ -767,21 +825,20 @@ class Processor():
 
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _strlen(self, instruction):
-        print("strlen\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb1 = self.get_symb(instruction[3])
             if symb1 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb1 = symb1.get("string")
             if symb1 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             length = len(symb1)
             symb_d = dict()
@@ -789,30 +846,29 @@ class Processor():
             self.set_var_value(var, symb_d)
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _getchar(self, instruction):
-        print("getchar\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb1 = self.get_symb(instruction[3])
             if symb1 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb1 = symb1.get("string")
             if symb1 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             symb2 = self.get_symb(instruction[4])
             if symb2 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb2 = symb2.get("int")
             if symb2 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             len_of_symb1 = len(symb1)
             index = int(symb2)
@@ -827,10 +883,9 @@ class Processor():
 
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _setchar(self, instruction):
-        print("setchar\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
@@ -843,20 +898,20 @@ class Processor():
             symb1 = self.get_symb(instruction[3])
             if symb1 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb1 = symb1.get("int")
             if symb1 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             symb2 = self.get_symb(instruction[4])
             if symb2 == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
             symb2 = symb2.get("string")
             if symb2 == None:
                 sys.stderr.write("Semantic error: Wrong type of argument.\n")
-                exit(55)
+                exit(53)
 
             len_of_var_v = len(var_v)
             index = int(symb1)
@@ -875,17 +930,16 @@ class Processor():
 
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _type(self, instruction):
-        print("type\n")
         var = instruction[2].get("var")
         var = self.parse_var(var)
         if self.check_var_in_frame(var):
             symb = self.get_symb(instruction[3])
             if symb == None:
                 sys.stderr.write("Semantic error: Undefined variable.\n")
-                exit(55)
+                exit(54)
 
             type = self.get_type(symb)
             d_symb = dict()
@@ -893,37 +947,106 @@ class Processor():
             self.set_var_value(var, d_symb)
         else:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
     def _label(self, instruction):
-        print("label\n")
         label = self.get_symb(instruction[2])
         if label == None:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
         label = label.get("label")
         if label == None:
             sys.stderr.write("Semantic error: Wrong type of argument.\n")
-            exit(55)
+            exit(53)
 
         self.label_dict.insert_label(label, instruction[0])
 
     def _jump(self, instruction):
-        pass
+        label = self.get_symb(instruction[2])
+        if label == None:
+            sys.stderr.write("Semantic error: Undefined variable.\n")
+            exit(54)
+        label = label.get("label")
+        if label == None:
+            sys.stderr.write("Semantic error: Wrong type of argument.\n")
+            exit(53)
+
+        index = self.label_dict.get_index(label)
+        if index == None:
+            sys.stderr.write("Semantic error: label does not exist.\n")
+            exit(52)
+
+        return index
+
     def _jumpifeq(self, instruction):
-        pass
+        symb1 = self.get_symb(instruction[3])
+        if symb1 == None:
+            sys.stderr.write("Semantic error: Undefined variable.\n")
+            exit(54)
+
+        symb2 = self.get_symb(instruction[4])
+        if symb2 == None:
+            sys.stderr.write("Semantic error: Undefined variable.\n")
+            exit(54)
+
+        type1 = self.get_type(symb1)
+        type2 = self.get_type(symb2)
+
+        for v in symb1.values():
+            symb1 = v
+
+        for v in symb2.values():
+            symb2 = v
+
+        if type1 == type2:
+            if self.cmp(symb1, symb2, type1, 'eq'):
+                self._jump(instruction)
+        elif type1 == 'nil' or type2 == 'nil':
+            if self.cmp(symb1, symb2, type1, 'eq'):
+                self._jump(instruction)
+        else:
+            sys.stderr.write("Bad comparison.\n")
+            exit(53)
+
     def _jumpifneq(self, instruction):
-        pass
+        symb1 = self.get_symb(instruction[3])
+        if symb1 == None:
+            sys.stderr.write("Semantic error: Undefined variable.\n")
+            exit(54)
+
+        symb2 = self.get_symb(instruction[4])
+        if symb2 == None:
+            sys.stderr.write("Semantic error: Undefined variable.\n")
+            exit(54)
+
+        type1 = self.get_type(symb1)
+        type2 = self.get_type(symb2)
+
+        for v in symb1.values():
+            symb1 = v
+
+        for v in symb2.values():
+            symb2 = v
+
+        if type1 == type2:
+            if not self.cmp(symb1, symb2, type1, 'eq'):
+                self._jump(instruction)
+        elif type1 == 'nil' or type2 == 'nil':
+            if not self.cmp(symb1, symb2, type1, 'eq'):
+                self._jump(instruction)
+        else:
+            sys.stderr.write("Bad comparison.\n")
+            exit(53)
+
     def _exit(self, instruction):
-        print("exit\n")
         symb = self.get_symb(instruction[2])
         if symb == None:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
         symb = symb.get("int")
         if symb == None:
             sys.stderr.write("Semantic error: Wrong type of argument.\n")
-            exit(55)
+            exit(53)
 
         code = int(symb)
         if code >= 0 and code <= 49:
@@ -933,11 +1056,10 @@ class Processor():
             exit(57)
 
     def _dprint(self, instruction):
-        print("dprint\n")
         symb = self.get_symb(instruction[2])
         if symb == None:
             sys.stderr.write("Semantic error: Undefined variable.\n")
-            exit(55)
+            exit(54)
 
         for v in symb.values():
             sys.stderr.write(v)
@@ -960,26 +1082,28 @@ class Processor():
         sys.stderr.write("\n")
 
         sys.stderr.write("Local frame:\n")
-        for key, value in self.LF.get_frame().items():
-            sys.stderr.write(key + " : ")
-            for k, v in value.items():
-                sys.stderr.write(k + " : ")
-                sys.stderr.write(v)
+        if self.LF != None:
+            for key, value in self.LF.get_frame().items():
+                sys.stderr.write(key + " : ")
+                for k, v in value.items():
+                    sys.stderr.write(k + " : ")
+                    sys.stderr.write(v)
+                sys.stderr.write("\n")
             sys.stderr.write("\n")
-        sys.stderr.write("\n")
 
         sys.stderr.write("Temporary frame:\n")
-        for key, value in self.TF.get_frame().items():
-            sys.stderr.write(key + " : ")
-            for k, v in value.items():
-                sys.stderr.write(k + " : ")
-                sys.stderr.write(v)
+        if self.TF != None:
+            for key, value in self.TF.get_frame().items():
+                sys.stderr.write(key + " : ")
+                for k, v in value.items():
+                    sys.stderr.write(k + " : ")
+                    sys.stderr.write(v)
+                sys.stderr.write("\n")
             sys.stderr.write("\n")
-        sys.stderr.write("\n")
 
         sys.stderr.write("Used labels:\n")
-        for k, v in self.label_dict.get_labels():
-            sys.stderr.write(k + " : " + v + "\n")
+        for k, v in self.label_dict.get_labels().items():
+            sys.stderr.write(k + "\n")
         sys.stderr.write("---------------------\n")
 
 
@@ -988,12 +1112,9 @@ class Interpret():
     def __init__(self, source_f, input_f):
         self.source_f = source_f
         self.input_f = input_f
-        self.GF = Frame()
-        self.LF = Frame()
-        self.TF = Frame()
         self.label_dict = LabelDict()
         self.instruction_dict = InstructionDict()
-        self.processor = Processor(self.GF, self.LF, self.TF, self.input_f, self.label_dict)
+        self.processor = Processor(self.input_f, self.label_dict)
 
     def main(self):
         parser = ParseXML()
@@ -1014,13 +1135,13 @@ class Interpret():
             elif 'DEFVAR' == op_code:
                 self.processor._defvar(instruction)
             elif 'CALL' == op_code:
-                self.processor._call()
+                return self.processor._call(instruction)
             elif 'RETURN' == op_code:
-                self.processor._return()
+                return self.processor._return()
             elif 'PUSHS' == op_code:
-                self.processor._pushs()
+                self.processor._pushs(instruction)
             elif 'POPS' == op_code:
-                self.processor._pops()
+                self.processor._pops(instruction)
             elif 'ADD' == op_code:
                 self.processor._add(instruction)
             elif 'SUB' == op_code:
@@ -1074,10 +1195,17 @@ class Interpret():
             elif 'BREAK' == op_code:
                 self.processor._break(instruction)
 
+    def save_all_labels(self, instructions):
+        for instruction in instructions.values():
+            if instruction[1] == 'LABEL':
+                self.processor._label(instruction)
+
     def get_instruction(self, instructions, order):
         return instructions[order]
 
     def runtime(self, instructions):
+        self.save_all_labels(instructions)
+
         instruction_list = list(instructions.values())
         index = 0
         while index < len(instruction_list):
@@ -1125,6 +1253,10 @@ class Interpret():
                 if pattern == "None":
                     sys.stderr.write("Wrong type of argument\n")
                     exit(32)
+
+                #create empty string
+                if instruction[2][i].attrib.get("type") == 'string' and instruction[2][i].text == None:
+                    instruction[2][i].text = str("")
 
                 check = re.search(pattern, instruction[2][i].text)
                 if check == None:
