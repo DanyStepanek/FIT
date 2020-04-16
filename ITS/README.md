@@ -10,9 +10,9 @@
 
 ### Testované funkce
 **Vstupní podmínky platné pro všechny scénáře** \
- 	- Přístup do administrátorské sekce
-	- Testovací prostředí: /home/users
-	- Minimální počet uživatelských skupin: 2
+ - Přístup do administrátorské sekce
+ - Testovací prostředí: /home/users
+ - Minimální počet uživatelských skupin: 2
 
 **Přidání uživatelů** \
   Scénáře: add_user.feature
