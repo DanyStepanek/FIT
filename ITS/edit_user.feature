@@ -21,7 +21,7 @@ Scenario: Change user group
 
 Scenario: Change users <column> to invalid <column>
   When click 'edit' button
-  And change email to invalid <column>
+  And change <column> to invalid <column>
   And save changes
   Then users informations are not changed
 
@@ -31,7 +31,7 @@ Examples: Type_of_information
   | nick             |
   | password         |
 
-Scenario: Change users password but with incorrect confirm password
+Scenario: Change users password and type incorrect confirm password
   When click 'edit' button
   And change password
   And fill column confirm password incorrect
