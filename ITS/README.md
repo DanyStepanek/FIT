@@ -9,7 +9,7 @@
   Reference: http://docs.opencart.com/en-gb/introduction/  
 
 ### Testované funkce
-**Vstupní podmínky platné pro všechny scénáře** \
+**Vstupní podmínky platné pro všechny scénáře**
  - Přístup do administrátorské sekce
  - Testovací prostředí: /home/users
  - Minimální počet uživatelských skupin: 2
