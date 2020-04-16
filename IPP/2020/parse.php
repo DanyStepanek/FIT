@@ -256,7 +256,7 @@ class Parser{
         }
 				if($output_arr == []){
 					//string@special_characters or alphanumeric characters or special escape sequences \[0-9][0-9][0-9]
-					preg_match('/(string)@((\w*[\<\>\&\'\"\/\-\§\,\;\)\(\=]*[áéěíýóúůžščřďťňÁÉĚÍÝÓÚŮŽŠČŘĎŤŇ]*(\\\[0-9][0-9][0-9])*\w*)*)$/u', $this->word_arr[$i], $output_arr);
+					preg_match('/(string)@((\w*[\@\<\>\&\'\"\/\-\§\,\;\)\(\=]*[áéěíýóúůžščřďťňÁÉĚÍÝÓÚŮŽŠČŘĎŤŇ]*(\\\[0-9][0-9][0-9])*\w*)*)$/u', $this->word_arr[$i], $output_arr);
           $type = "string";
         }
 				if($output_arr == []){

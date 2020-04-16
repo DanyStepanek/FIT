@@ -1,6 +1,7 @@
 <?php
 /* IPP test file
- * @author Daniel Stepanek xstepa61@stud.fit.vutbr.cz
+ * @author: Daniel Stepanek
+ * @email: xstepa61@stud.fit.vutbr.cz
  */
 
 ini_set('display_errors', 'stderr');
@@ -32,7 +33,7 @@ ini_set('display_errors', 'stderr');
 
    public function clear_temp_files($file){
      //Delete all temp files
-  /*   if(file_exists("$file.parrc")){
+     if(file_exists("$file.parrc")){
        unlink("$file.parrc");
      }
      if(file_exists("$file.par")){
@@ -43,7 +44,7 @@ ini_set('display_errors', 'stderr');
      }
      if(file_exists("$file.int")){
        unlink("$file.int");
-     } */
+     }
    }
 
 
@@ -158,7 +159,7 @@ class ParserTest extends Test{
     $out = 0;
     $this->test_count += 1;
 
-    exec("diff -q $file.rc $file.parrc", $temp, $test);
+    exec("diff -q -b $file.rc $file.parrc", $temp, $test);
     if($this->result == 0){
       exec("java -jar $this->jexamxml $file.out $file.par diffs.xml /D /pub/courses/ipp/jexamxml/options
             NAVRATOVA_HODNOTA='$?'", $temp, $out);
@@ -201,7 +202,7 @@ class InterpretTest extends Test{
     $out = 0;
     $this->test_count += 1;
 
-    exec("diff -q $file.rc $file.intrc", $temp, $test);
+    exec("diff -q -b $file.rc $file.intrc", $temp, $test);
     exec("diff -q $file.out $file.int", $temp, $out);
 
     if($test == 0 && $out == 0){
@@ -262,11 +263,11 @@ class CompleteTest extends Test{
     $out = 0;
     $this->test_count += 1;
 
-    exec("diff -q $file.rc $file.intrc", $temp, $test);
+    exec("diff -q -b $file.rc $file.intrc", $temp, $test);
     if(file_exists("$file.int")){
       exec("diff -q $file.out $file.int", $temp, $out);
     }
-    
+
 
     if($test == 0 && $out == 0){
       $html->testPassed($path);

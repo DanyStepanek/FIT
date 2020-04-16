@@ -1,0 +1,55 @@
+\documentclass[a4paper, 11pt]{article}
+
+\usepackage[czech]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[left=2cm, top=3cm, text={17cm, 24cm}]{geometry}
+\usepackage{times}
+\usepackage[unicode]{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage{url}
+\DeclareUrlCommand\url{\def\UrlLeft{<}\def\UrlRight{>} \urlstyle{tt}}
+\hypersetup{colorlinks = true, hypertexnames = false}
+
+\begin{document}
+
+	\begin{titlepage}
+		\begin{center}
+			\Huge
+			\textsc{Vysoké učení technické v~Brně} \\
+			\huge
+			\textsc{Fakulta informačních technologií} \\
+			\vspace{\stretch{0.382}}
+			\LARGE
+			Typografie a~publikování\,--\,4.~projekt \\
+			\Huge
+			Bibliografické citace
+			\vspace{\stretch{0.618}}
+		\end{center}
+
+{\LARGE \today \hfill Daniel Štěpánek (xstepa61)}
+	\end{titlepage}
+
+\section{Co to je \LaTeX}
+\LaTeX \ je balík maker programu \TeX \ jež v~roce 1994 vytvořil Leslie Lamport. \LaTeX \ je založen na sázecím systému \TeX, který v~roce 1983 vytvořil Donald E. Knuth za účelem zlepšení úrovně typografie a~také eliminace některých chyb při sázení \cite{Kopkac2004}\cite{Simecek2013}. Nespornou výhodou \LaTeX u je také to, že ho lze používat zadarmo.
+
+\section{Co \LaTeX \ dokáže}
+Hlavní výhodou používání \LaTeX u pro sázení textu je výsledná kvalita sazby dokumentů, nezávislost na operačním systému, flexibilita použití a~podpora pro různé specializované oblasti jako např. sázení matematických rovnic a~odborného textu.
+
+
+\subsection{Struktura dokumentu}
+Dokument v~{\LaTeX}u je rozdělen na dvě části. První část (preambule) obsahuje globální nastavení dokumentu.
+Druhá část už obsahuje vlastní text viz \cite{Rybicka2003}.
+
+
+\section{Kde hledat další informace}
+Informací o~\LaTeX u, \TeX u a~typografii samotné je na internetu nepřeberné množství. Lze také nalézt serialové publikace\cite{MackiewiczJ2003Wtws} a~různé články\cite{DemaineErikD.2015FwfA}\cite{BangWong2011PovT}, zabývající se touto tématikou. Po zvládnutí základů je samozřejmě možné pokračovat dál a~objevovat pokročilé možnosti tohoto nástroje \cite{Svamberg2001}\cite{Martinek2010}.
+
+\subsection{Odborné práce}
+Na téma typografie a~samotný \LaTeX \ také vzniklo mnoho odborných prací. Několik z~nich dokonce na naší fakultě viz \cite{Sokol2012} \cite{Simek2009}. 
+
+\newpage
+\bibliographystyle{czechiso}
+\renewcommand{\refname}{Literatura}
+\bibliography{proj4}
+
+\end{document}
