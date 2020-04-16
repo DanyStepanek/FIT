@@ -12,9 +12,10 @@ http://docs.opencart.com/en-gb/introduction/
 
 ### Testované funkce
 
-**Vstupní podmínky platné pro všechny scénáře** - Přístup do
-administrátorské sekce - Testovací prostředí: /home/users - Minimální
-počet uživatelských skupin: 2
+**Vstupní podmínky platné pro všechny scénáře** 
+- Přístup do administrátorské sekce 
+- Testovací prostředí: /home/users 
+- Minimální počet uživatelských skupin: 2
 
 **Přidání uživatelů**  
 Scénáře: add\_user.feature 
@@ -36,5 +37,4 @@ Scénáře: edit\_user.feature
 - Změna informací (validní informace):
 informace změněny 
 - Změna skupiny uživatelů uživatele: skupina změněna 
--
-Změna informací (nevalidní informace): informace nezměněny
+- Změna informací (nevalidní informace): informace nezměněny
