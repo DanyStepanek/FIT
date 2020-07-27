@@ -1,0 +1,17 @@
+
+ZETA: Sniffer paketů
+
+Autor: Daniel Štěpánek
+Email: xstepa61@stud.fit.vutbr.cz						
+
+Popis: Síťový analyzátor v C/C++, který na určitém síťovém rozhraní zachytává a filtruje pakety.
+
+Soubory: ipk-sniffer.cpp, ipk-sniffer.hpp, Makefile, README, manual.pdf
+
+Příklad spuštění:  ./ipk-sniffer -i rozhraní [-p ­­port] [--tcp|-t] [--udp|-u] [-n num] 
+
+Implementace: Implementováno v C/C++11, s využitím knihovny libpcap a strukturami v knihovnách netinet.
+
+Omezení: Zachytávání pouze paketů IPv4.  
+
+!!! Upozornění: Nutno spustit jako root (příkaz sudo)!!!

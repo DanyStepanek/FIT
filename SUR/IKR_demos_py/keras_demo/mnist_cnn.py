@@ -80,10 +80,11 @@ print('Test accuracy:', score[1])
 p_test=model.predict(x_test, batch_size=128)
 p_test=np.argmax(p_test, axis=1)
 p_test[:25].reshape(5,5)
-
+print(p_test)
 
 weights=model.get_weights()
 weights=weights[0]
 for i in range(32):
   plt.subplot(4,8,i+1)
   plt.imshow(weights[:,:,0,i], cmap='gray')
+plt.show()

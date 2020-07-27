@@ -1,0 +1,6 @@
+\babel@toc {czech}{}
+\beamer@sectionintoc {1}{Definice}{3}{0}{1}
+\beamer@sectionintoc {2}{Z\IeC {\'a}kladn\IeC {\'\i } typy graf\IeC {\r u}}{4}{0}{2}
+\beamer@sectionintoc {3}{Uk\IeC {\'a}zka k\IeC {\'o}du}{5}{0}{3}
+\beamer@sectionintoc {4}{P\IeC {\v r}\IeC {\'\i }klad}{6}{0}{4}
+\beamer@sectionintoc {5}{Vlastnosti algoritmu}{7}{0}{5}
