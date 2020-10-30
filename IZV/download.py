@@ -1,5 +1,5 @@
 
-import requests, os, zipfile, sys, csv, gzip, pickle, datetime
+import requests, os, zipfile, re, sys, csv, gzip, pickle, datetime
 #from bs4 import BeautifulSoup
 import numpy as np
 
@@ -134,23 +134,37 @@ class DataDownloader():
       tj. odpovídá hodnotě ​region​. Pro každýsloupec zvolte ​vhodný datový typ​ (t.j.
      snažte se vyhnout textovým řetězcům,vyřešte desetinnou čárku atp.).
     """
-    def retype_row_data(self, row):
-        new_row = np.array([None] * len(row))
-        for i in range(len(row)):
-            if i in (3, 51, 52, 54, 58, 59, 62):
-                new_row[i] = row[i]
-            elif i in (47, 48, 49, 50):
-                try:
-                    new_row[i] = np.double(row[i])
-                except:
-                    new_row[i] = row[i]
-            else:
-                try:
-                    new_row[i] = np.int_(row[i])
-                except:
-                    new_row[i] = row[i]
+    def retype_col_data(self, arr):
+        dt = ['int', 'int', 'int', 'datetime64', 'int', 'int', 'int', 'int',
+              'int', 'int', 'int', 'int', 'int', 'int', 'int', 'int',
+              'int', 'int', 'int', 'int', 'int', 'int', 'int', 'int',
+              'int', 'int', 'int', 'int', 'int', 'int', 'int', 'int',
+              'int', 'int', 'int', 'int', 'int', 'int', 'int', 'int',
+              'int', 'int', 'int', 'int', 'int', 'float64', 'float64', 'float64',
+              'float64', 'float64', 'float64', 'object', 'object', 'int', 'object',
+              'object', 'object', 'float64', 'object', 'object', 'int', 'int', 'object',
+              'int', 'object']
 
-        return new_row
+        new_arr = [None] * len(arr)
+
+        for i in range(len(dt)):
+            col_to_object = arr[i].astype('object')
+            col_to_object[col_to_object==''] = '-1'
+            col_to_object[col_to_object=='XX'] = '-1'
+            col_to_object[col_to_object=='A:'] = '-1'
+            col_to_object[col_to_object=='B:'] = '-1'
+            col_to_object[col_to_object=='D:'] = '-1'
+            col_to_object[col_to_object=='E:'] = '-1'
+            col_to_object[col_to_object=='F:'] = '-1'
+            col_to_object[col_to_object=='G:'] = '-1'
+            col_to_object[col_to_object=='L:'] = '-1'
+            if dt[i] == 'float64':
+                dot_numbers = np.array([num.replace(',','.') for num in col_to_object])
+                col_to_object = dot_numbers
+
+            new_arr[i] = col_to_object.astype(dt[i])
+
+        return np.array(new_arr)
 
     def parse_region_data(self, region):
         #check if data are downloaded
@@ -162,7 +176,6 @@ class DataDownloader():
             raise ValueError("Region not recognized!")
 
         file = "{}.csv".format(self.region_code[region])
-
         parsed_data = [self.header, []]
         list_of_rows = []
 
@@ -172,17 +185,18 @@ class DataDownloader():
             with zipfile.ZipFile(path, 'r') as zf:
                 zf.extract(file, self.folder)
             #open csv file and parse data
-            with open('{}/{}'.format(self.folder, file), encoding = "ISO-8859-2", newline='') as csvfile:
+            with open('{}/{}'.format(self.folder, file), encoding = "windows-1250", newline='') as csvfile:
                 reader = csv.reader(csvfile, delimiter=';', quotechar='"')
-                if len(list_of_rows) == 0:
-                    list_of_rows = [ self.retype_row_data(row + [region]) for row in reader ]
-                else:
-                    np.append(list_of_rows, [ self.retype_row_data(row + [region]) for row in reader ], axis=0)
+                data = [tuple(row + [region]) for row in reader]
+                list_of_rows += data
 
-            #delete extracted csv file
-            os.remove("{}/{}".format(self.folder, file))
+        list_of_rows = np.transpose(np.array(list_of_rows))
 
-        parsed_data[1] = list( np.transpose(list_of_rows) )
+
+        #delete extracted csv file
+        os.remove("{}/{}".format(self.folder, file))
+
+        parsed_data[1] = list(self.retype_col_data(list_of_rows))
 
         return parsed_data
 
@@ -208,18 +222,19 @@ class DataDownloader():
             regions = self.region_code.keys()
 
         complete_data = [self.header, []]
-
+        list_of_data = []
         for region in regions:
             cache_file = self.cache_filename.format(region)
             #return data from memory
             if region in self.parsed_regions.keys():
-                data = parsed_regions[region]
+                data = self.parsed_regions[region]
             #get data from cache
             elif cache_file in os.listdir(self.folder):
                 #unpack gzip and load data
                 with gzip.open('{}/{}'.format(self.folder, cache_file), 'rb') as cache:
                     p = pickle.Unpickler(cache)
                     data = p.load()
+                self.parsed_regions[region] = data
             else: #parse (download) data, store to cache and return them
                 #create gzip with pickle data
                 p_data = self.parse_region_data(region)
@@ -230,18 +245,24 @@ class DataDownloader():
                     p.fast = True
                     p.dump(data)
 
-            #concatenate data of all regions
+        #concatenate all data 
+        for reg in self.parsed_regions.values():
             if len(complete_data[1]) == 0:
-                complete_data[1] = data
+                complete_data[1] = reg
             else:
-                np.append(complete_data[1], data)
+                complete_data[1] = np.concatenate((complete_data[1], reg), axis=1)
 
         return complete_data
 
 
 if __name__=="__main__":
     downloader = DataDownloader()
-    downloader.get_list(['PHA','OLK', 'ZLK'])
-
+    regions = ['ZLK', 'JHM', 'OLK']
+    data = downloader.get_list(regions)
+    print('Data pro kraje: {}, {}, {}'.format(regions[0], regions[1], regions[2]))
+    print('Pocet zaznamu: {}'.format(len(data[1][0])))
+    print('Pocet sloupcu: {}'.format(len(data[0])))
+    print('Nazvy sloupcu:')
+    print(*data[0], sep=', ')
 
 print("--- %s seconds ---" % (time.time() - start_time))
