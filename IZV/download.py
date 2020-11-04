@@ -1,6 +1,6 @@
 
 import requests, os, zipfile, re, sys, csv, gzip, pickle, datetime
-#from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup
 import numpy as np
 
 import time
@@ -38,6 +38,10 @@ class DataDownloader():
                            "ZLK":"15",
                            "VYS":"16",
                           }
+        """
+            Popisy polozek
+            https://www.policie.cz/soubor/polozky-formulare-hlavicky-souboru-xlsx.aspx
+        """
         self.header = ['p1',	'p36', 'p37', 'p2a', 'weekday(p2a)', 'p2b',	'p6', 'p7', 'p8',
         	       'p9', 'p10',	'p11', 'p12', 'p13a', 'p13b', 'p13c', 'p14', 'p15',
                    'p16', 'p17', 'p18', 'p19', 'p20', 'p21', 'p22', 'p23', 'p24', 'p27',
@@ -46,19 +50,45 @@ class DataDownloader():
                    'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'n', 'o', 'p', 'q', 'r',
                    's', 't', 'p5a', 'region']
 
-        self.data_to_download = ['datagis2016.zip', 'datagis-rok-2017.zip',
-                            'datagis-rok-2018.zip', 'datagis-rok-2019.zip',
-                             'datagis-09-2020.zip']
+        self.data_to_download = []
 
         os.makedirs(folder, exist_ok=True)
         self.folder = os.path.abspath(folder)
+
+
+    def get_data_to_download(self, response):
+
+        soup = BeautifulSoup(response.text, 'html.parser')
+        a_data = soup.find_all('a', class_="btn btn-sm btn-primary")
+        if len(a_data) < 1:
+            sys.stderr.write('Downloaded data are not valid.\n')
+            exit(-1)
+
+        for link in a_data:
+            href = link.get('href')
+            path =  re.match(r'data\/(datagis\d{4}.zip)', href)
+            if path != None:
+                self.data_to_download.append(path.group(1))
+            else:
+                path =  re.match(r'data\/(datagis-rok-\d{4}.zip)', href)
+                if path != None:
+                    self.data_to_download.append(path.group(1))
+
+        last_data_of_actual_year = a_data[-1]
+        href = last_data_of_actual_year.get('href')
+        link = re.match(r'data\/(datagis-\d{2}-2020.zip)', href)
+        if link != None:
+            self.data_to_download.append(link.group(1))
+        else:
+            sys.stderr.write('Downloaded data are not valid.\n')
+            exit(-1)
 
 
     """
     funkce stáhne do datové složky ​folder​  všechny soubory s daty z adresy ​url
     """
     def download_data(self):
-        """
+
         cookies = {
             's_pers': '%20c19%3Dsd%253Aproduct%253Ajournal%253Aarticle%7C1586696682765%3B%20v68%3D1586694878778%7C1586696682817%3B%20v8%3D1586694882868%7C1681302882868%3B%20v8_s%3DFirst%2520Visit%7C1586696682868%3B',
             'AMCV_4D6368F454EC41940A4C98A6%40AdobeOrg': '-432600572%7CMCIDTS%7C18365%7CMCMID%7C43823912540983368122529753333098666222%7CMCAID%7CNONE%7CMCOPTOUT-1586702082s%7CNONE%7CvVersion%7C4.5.2',
@@ -81,11 +111,7 @@ class DataDownloader():
             }
 
         response = requests.get(self.url, headers=headers, cookies=cookies)
-
-        soup = BeautifulSoup(response.text, 'html.parser')
-    #    soup.find_all('a', class_="btn btn-sm btn-primary")
-        """
-
+        self.get_data_to_download(response)
 
         for data in self.data_to_download:
             #download data from server
@@ -245,7 +271,7 @@ class DataDownloader():
                     p.fast = True
                     p.dump(data)
 
-        #concatenate all data 
+        #concatenate all data
         for reg in self.parsed_regions.values():
             if len(complete_data[1]) == 0:
                 complete_data[1] = reg
@@ -255,10 +281,10 @@ class DataDownloader():
         return complete_data
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     downloader = DataDownloader()
     regions = ['ZLK', 'JHM', 'OLK']
-    data = downloader.get_list(regions)
+    data = downloader.get_list()
     print('Data pro kraje: {}, {}, {}'.format(regions[0], regions[1], regions[2]))
     print('Pocet zaznamu: {}'.format(len(data[1][0])))
     print('Pocet sloupcu: {}'.format(len(data[0])))

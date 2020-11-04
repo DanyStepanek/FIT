@@ -1,8 +1,24 @@
 from download import DataDownloader
 import numpy as np
 import matplotlib
+import argparse
+import os
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
+
+def save_graph_to_file(fig_location, fig):
+    dir = os.path.dirname(fig_location)
+    file = os.path.basename(fig_location)
+    file_ext = file.split('.')[1]
+
+    fcb = matplotlib.backends.backend_agg.FigureCanvasBase(fig)
+    supported_file_types = fcb.get_supported_filetypes()
+    if file_ext in supported_file_types.keys():
+        os.makedirs(dir, exist_ok=True)
+        fig.savefig('{}/{}'.format(dir, file))
+    else:
+        raise ValueError('File type ({}) is not supported.'.format(file_ext))
+
 
 
 def get_data_for_years(data_source):
@@ -72,7 +88,7 @@ def plot_stat(data_source, fig_location=None, show_figure=False):
     xlabel = 'Kraje'
     ylabel = 'Pocet nehod'
     yscale = 'linear'
-    yticks = [1000, 5000, 10000, 15000, 20000, 25000, 30000]
+    yticks = [0, 5000, 10000, 15000, 20000, 25000, 30000]
     font = {'size' : 8, 'family' : 'Times New Roman', 'rotation' : 0, 'color' : 'black'}
 
     rects = ax1.bar(region_names, y_2016_values, width, color=color)
@@ -155,9 +171,9 @@ def plot_stat(data_source, fig_location=None, show_figure=False):
 
     autolabel(ax5, rects, indexed_order)
 
-    #save to file
+    #save graph to file
     if fig_location:
-        pass
+        save_graph_to_file(fig_location, fig)
 
     #plot graph
     if show_figure:
@@ -165,6 +181,12 @@ def plot_stat(data_source, fig_location=None, show_figure=False):
 
 
 
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--fig_location')
+    parser.add_argument('--show_figure', action='store_true')
 
-data_source = DataDownloader().get_list()
-plot_stat(data_source, show_figure=True)
+    args = vars(parser.parse_args())
+
+    data_source = DataDownloader().get_list()
+    plot_stat(data_source, show_figure=args['show_figure'], fig_location=args['fig_location'])
