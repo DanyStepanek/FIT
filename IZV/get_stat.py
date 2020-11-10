@@ -3,7 +3,7 @@ import numpy as np
 import matplotlib
 import argparse
 import os
-matplotlib.use('TkAgg')
+matplotlib.use('tkAgg')
 import matplotlib.pyplot as plt
 
 def save_graph_to_file(fig_location, fig):
@@ -45,14 +45,14 @@ def autolabel(ax, rects, order):
         height = rect.get_height()
         ax.annotate('{}'.format(height),
                     xy=(rect.get_x() + rect.get_width() / 2, 0),
-                    xytext=(0, 0),  # 3 points vertical offset
+                    xytext=(0, 0),
                     textcoords="offset points",
                     ha='center', va='bottom', fontsize=7, color='white')
 
         """Attach a text label above each bar in *rects*, displaying its order."""
         ax.annotate('{}.'.format(index + 1),
                     xy=(rect.get_x() + rect.get_width() / 2, height),
-                    xytext=(0, 0),  # 3 points vertical offset
+                    xytext=(0, 0),
                     textcoords="offset points",
                     ha='center', va='bottom', fontsize=9, color='black')
 
@@ -64,7 +64,7 @@ def plot_stat(data_source, fig_location=None, show_figure=False):
     years = list(years_data.keys())
     regions = list(years_data.values())
 
-    fig, (ax1, ax2, ax3, ax4, ax5) = plt.subplots(nrows=5, ncols=1,
+    fig, axs = plt.subplots(nrows=5, ncols=1,
                                     constrained_layout=True, figsize=(9, 9))
     fig.suptitle('Statistika nehod v letech 2016-2020')
 
@@ -80,7 +80,7 @@ def plot_stat(data_source, fig_location=None, show_figure=False):
     y_2019_values = list(y_2019.values())
     y_2020_values = list(y_2020.values())
 
-
+    #region names are same for all years
     region_names = list(y_2016.keys())
 
     width = 0.6
@@ -91,85 +91,60 @@ def plot_stat(data_source, fig_location=None, show_figure=False):
     yticks = [0, 5000, 10000, 15000, 20000, 25000, 30000]
     font = {'size' : 8, 'family' : 'Times New Roman', 'rotation' : 0, 'color' : 'black'}
 
-    rects = ax1.bar(region_names, y_2016_values, width, color=color)
-    ax1.set_xlabel(xlabel)
-    ax1.set_ylabel(ylabel)
-    ax1.set_yscale(yscale)
+    ax1 = axs[0]
+    rects = ax1.bar(region_names, y_2016_values, width=width, color=color)
     ax1.set_yticks([ val for val in range(0, max(y_2016_values) + 5000, 5000)])
-    ax1.set_yticklabels(yticks, rotation=font['rotation'], fontsize=font['size'])
-    ax1.grid(axis='y', linestyle='-', linewidth='0.2', color='grey')
-    ax1.spines["top"].set_visible(False)
-    ax1.spines["right"].set_visible(False)
     ax1.set_title('2016')
 
     sorted_values = sorted(y_2016_values, reverse=True)
     indexed_order = [sorted_values.index(i) for i in y_2016_values]
-
     autolabel(ax1, rects, indexed_order)
 
-    rects = ax2.bar(region_names, y_2017_values, width, color=color)
-    ax2.set_xlabel(xlabel)
-    ax2.set_ylabel(ylabel)
-    ax2.set_yscale(yscale)
+    ax2 = axs[1]
+    rects = ax2.bar(region_names, y_2017_values, width=width, color=color)
     ax2.set_yticks([ val for val in range(0, max(y_2017_values) + 5000, 5000)])
-    ax2.set_yticklabels(yticks, rotation=font['rotation'], fontsize=font['size'])
-    ax2.grid(axis='y', linestyle='-', linewidth='0.2', color='grey')
-    ax2.spines["top"].set_visible(False)
-    ax2.spines["right"].set_visible(False)
     ax2.set_title('2017')
 
     sorted_values = sorted(y_2017_values, reverse=True)
     indexed_order = [sorted_values.index(i) for i in y_2017_values]
-
     autolabel(ax2, rects, indexed_order)
 
-    rects = ax3.bar(region_names, y_2018_values, width, color=color)
-    ax3.set_xlabel(xlabel)
-    ax3.set_ylabel(ylabel)
-    ax3.set_yscale(yscale)
+    ax3 = axs[2]
+    rects = ax3.bar(region_names, y_2018_values, width=width, color=color)
     ax3.set_yticks([ val for val in range(0, max(y_2018_values) + 5000, 5000)])
-    ax3.set_yticklabels(yticks, rotation=font['rotation'], fontsize=font['size'])
-    ax3.grid(axis='y', linestyle='-', linewidth='0.2', color='grey')
-    ax3.spines["top"].set_visible(False)
-    ax3.spines["right"].set_visible(False)
     ax3.set_title('2018')
 
     sorted_values = sorted(y_2018_values, reverse=True)
     indexed_order = [sorted_values.index(i) for i in y_2018_values]
-
     autolabel(ax3, rects, indexed_order)
 
-    rects = ax4.bar(region_names, y_2019_values, width, color=color)
-    ax4.set_xlabel(xlabel)
-    ax4.set_ylabel(ylabel)
-    ax4.set_yscale(yscale)
+    ax4 = axs[3]
+    rects = ax4.bar(region_names, y_2019_values, width=width, color=color)
     ax4.set_yticks([ val for val in range(0, max(y_2019_values) + 5000, 5000)])
-    ax4.set_yticklabels(yticks, rotation=font['rotation'], fontsize=font['size'])
-    ax4.grid(axis='y', linestyle='-', linewidth='0.2', color='grey')
-    ax4.spines["top"].set_visible(False)
-    ax4.spines["right"].set_visible(False)
     ax4.set_title('2019')
 
     sorted_values = sorted(y_2019_values, reverse=True)
     indexed_order = [sorted_values.index(i) for i in y_2019_values]
-
     autolabel(ax4, rects, indexed_order)
 
-    rects = ax5.bar(region_names, y_2020_values, width, color=color)
-    ax5.set_xlabel(xlabel)
-    ax5.set_ylabel(ylabel)
-    ax5.set_yscale(yscale)
+    ax5 = axs[4]
+    rects = ax5.bar(region_names, y_2020_values, width=width, color=color)
     ax5.set_yticks([ val for val in range(0, max(y_2020_values) + 5000, 5000)])
-    ax5.set_yticklabels(yticks, rotation=font['rotation'], fontsize=font['size'])
-    ax5.grid(axis='y', linestyle='-', linewidth='0.2', color='grey')
-    ax5.spines["top"].set_visible(False)
-    ax5.spines["right"].set_visible(False)
     ax5.set_title('2020')
 
     sorted_values = sorted(y_2020_values, reverse=True)
     indexed_order = [ sorted_values.index(i) for i in y_2020_values]
-
     autolabel(ax5, rects, indexed_order)
+
+    for ax in axs:
+        ax.set_xlabel(xlabel)
+        ax.set_ylabel(ylabel)
+        ax.set_yscale(yscale)
+        ax.set_yticklabels(yticks, rotation=font['rotation'], fontsize=font['size'])
+        ax.grid(axis='y', linestyle='-', linewidth='0.2', color='grey')
+        ax.spines["top"].set_visible(False)
+        ax.spines["right"].set_visible(False)
+        ax.set_xlim(-1,len(region_names))
 
     #save graph to file
     if fig_location:
@@ -188,5 +163,5 @@ if __name__ == '__main__':
 
     args = vars(parser.parse_args())
 
-    data_source = DataDownloader().get_list()
+    data_source = DataDownloader().get_list(['ZLK', 'JHM', 'OLK'])
     plot_stat(data_source, show_figure=args['show_figure'], fig_location=args['fig_location'])

@@ -3,21 +3,8 @@ import requests, os, zipfile, re, sys, csv, gzip, pickle, datetime
 from bs4 import BeautifulSoup
 import numpy as np
 
-import time
-start_time = time.time()
-
 class DataDownloader():
-    """
-    inicializátor - obsahuje volitelné parametry:
-    ○url​ - ukazuje, z jaké adresy se data načítají. Defaultně bude nastavený navýše uvedenou URL.
-    ○folder​ - říká, kam se mají dočasná data ukládat. Tato složka nemusí nazačátku existovat!
-    ○cache_filename​ - jméno souboru ve specifikované složce, které říká, kam
-    se soubor s již zpracovanými daty z funkce ​get_list​ bude ukládat a odkud
-    se budou data brát pro další zpracování a nebylo nutné neustále stahovatdata přímo z webu.
-     Složené závorky (formátovací řetězec) bude nahrazený
-     tříznakovým kódem (viz tabulka níže) příslušného kraje. Pro jednoduchost
-     podporujte pouze formát “pickle” s kompresí gzip.
-    """
+
     def __init__(self, url="https://ehw.fit.vutbr.cz/izv/", folder="data", cache_filename="data_{}.pkl.gz"):
         self.url = url
         self.folder = folder
@@ -39,10 +26,10 @@ class DataDownloader():
                            "VYS":"16",
                           }
         """
-            Popisy polozek
+            header items description
             https://www.policie.cz/soubor/polozky-formulare-hlavicky-souboru-xlsx.aspx
         """
-        self.header = ['p1',	'p36', 'p37', 'p2a', 'weekday(p2a)', 'p2b',	'p6', 'p7', 'p8',
+        self.header = ['p1', 'p36', 'p37', 'p2a', 'weekday(p2a)', 'p2b', 'p6', 'p7', 'p8',
         	       'p9', 'p10',	'p11', 'p12', 'p13a', 'p13b', 'p13c', 'p14', 'p15',
                    'p16', 'p17', 'p18', 'p19', 'p20', 'p21', 'p22', 'p23', 'p24', 'p27',
                    'p28', 'p34', 'p35', 'p39', 'p44', 'p45a', 'p47', 'p48a', 'p49',
@@ -51,12 +38,15 @@ class DataDownloader():
                    's', 't', 'p5a', 'region']
 
         self.data_to_download = []
+        self.downloaded_zip_files = []
 
         os.makedirs(folder, exist_ok=True)
         self.folder = os.path.abspath(folder)
 
-
-    def get_data_to_download(self, response):
+    """
+    Find last zip files with data of each year
+    """
+    def find_data_to_download(self, response):
 
         soup = BeautifulSoup(response.text, 'html.parser')
         a_data = soup.find_all('a', class_="btn btn-sm btn-primary")
@@ -84,18 +74,8 @@ class DataDownloader():
             exit(-1)
 
 
-    """
-    funkce stáhne do datové složky ​folder​  všechny soubory s daty z adresy ​url
-    """
-    def download_data(self):
 
-        cookies = {
-            's_pers': '%20c19%3Dsd%253Aproduct%253Ajournal%253Aarticle%7C1586696682765%3B%20v68%3D1586694878778%7C1586696682817%3B%20v8%3D1586694882868%7C1681302882868%3B%20v8_s%3DFirst%2520Visit%7C1586696682868%3B',
-            'AMCV_4D6368F454EC41940A4C98A6%40AdobeOrg': '-432600572%7CMCIDTS%7C18365%7CMCMID%7C43823912540983368122529753333098666222%7CMCAID%7CNONE%7CMCOPTOUT-1586702082s%7CNONE%7CvVersion%7C4.5.2',
-            'amplitude_id_9f6c0bb8b82021496164c672a7dc98d6_edmvutbr.cz': 'eyJkZXZpY2VJZCI6IjFhNmY3ZDhmLWZlY2MtNGMyNS05MDVhLTYxMTgxYTBjYTQ5MlIiLCJ1c2VySWQiOm51bGwsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTU4NjY5NDgyNDUxNiwibGFzdEV2ZW50VGltZSI6MTU4NjY5NTEwMzQ5NSwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6Miwic2VxdWVuY2VOdW1iZXIiOjJ9',
-            'utag_main': 'v_id:01716e68a53a000b5594be750f7402073004206b00bd0$_sn:1$_ss:1$_st:1586697084027$ses_id:1586695284027%3Bexp-session$_pn:1%3Bexp-session$vapi_domain:vutbr.cz',
-            'AMCV_8E929CC25A1FB2B30A495C97%40AdobeOrg': '1687686476%7CMCIDTS%7C18365%7CMCMID%7C42217145750122169307859303432771442788%7CMCAID%7CNONE%7CMCOPTOUT-1586702484s%7CNONE%7CvVersion%7C3.0.0',
-            }
+    def download_data(self):
 
         headers = {
             'Connection': 'keep-alive',
@@ -108,12 +88,12 @@ class DataDownloader():
             'Sec-Fetch-User': '?1',
             'Sec-Fetch-Dest': 'document',
             'Accept-Language': 'cs-CZ,cs;q=0.9',
-            }
+        }
 
-        response = requests.get(self.url, headers=headers, cookies=cookies)
-        self.get_data_to_download(response)
+        response = requests.get(self.url, headers=headers)
+        self.find_data_to_download(response)
 
-        for data in self.data_to_download:
+        for data in set(self.data_to_download) - set(self.downloaded_zip_files):
             #download data from server
             url = "{}/data/{}".format(self.url, data)
             response = requests.get(url, stream=True)
@@ -124,42 +104,9 @@ class DataDownloader():
             with open(file_abs_path, 'wb') as fd:
                 fd.write(response.content)
 
+            if data not in self.downloaded_zip_files:
+                self.downloaded_zip_files.append(data)
 
-    #not used
-    def region_to_code(self, region):
-        region_code = {"PHA":"00",
-                       "STC":"01",
-                       "JHC":"02",
-                       "PLK":"03",
-                       "ULK":"04",
-                       "HKK":"05",
-                       "JHM":"06",
-                       "MSK":"07",
-                       "KVK":"19",
-                       "LBK":"18",
-                       "PAK":"17",
-                       "OLK":"14",
-                       "ZLK":"15",
-                       "VYS":"16",
-                      }
-        if region in region_code.keys():
-            return region_code[region]
-        else:
-            raise ValueError("Region not recognized!")
-
-
-    """
-    pokud nejsou data pro daný kraj stažená, stáhne je do datové složky ​folder​.
-    Potéje pro daný region specifikovaný tříznakovým kódem (viz tabulka níže) ​vždy
-    vyparsuje do následujícího formátu dvojice (​tuple​),
-     kde první položka je seznam(​list​) řetězců a druhá položka bude seznam (​list​) NumPy polí,
-      schematicky:tuple(list[str], list[np.ndarray])
-     Seznam řetězců odpovídá názvům jednotlivých datových sloupců, NumPy polebudou obsahovat data.
-     Platí, že délka obou seznamů je stejná, ​shape ​všechNumPy polí je stejný.  Při parsování
-     přidejte nový sloupec “region”, který bude obsahovat tříznaký kód patřičného kraje,
-      tj. odpovídá hodnotě ​region​. Pro každýsloupec zvolte ​vhodný datový typ​ (t.j.
-     snažte se vyhnout textovým řetězcům,vyřešte desetinnou čárku atp.).
-    """
     def retype_col_data(self, arr):
         dt = ['int', 'int', 'int', 'datetime64', 'int', 'int', 'int', 'int',
               'int', 'int', 'int', 'int', 'int', 'int', 'int', 'int',
@@ -175,15 +122,17 @@ class DataDownloader():
 
         for i in range(len(dt)):
             col_to_object = arr[i].astype('object')
-            col_to_object[col_to_object==''] = '-1'
-            col_to_object[col_to_object=='XX'] = '-1'
-            col_to_object[col_to_object=='A:'] = '-1'
-            col_to_object[col_to_object=='B:'] = '-1'
-            col_to_object[col_to_object=='D:'] = '-1'
-            col_to_object[col_to_object=='E:'] = '-1'
-            col_to_object[col_to_object=='F:'] = '-1'
-            col_to_object[col_to_object=='G:'] = '-1'
-            col_to_object[col_to_object=='L:'] = '-1'
+            if dt[i] != 'object':
+                col_to_object[col_to_object==''] = '-1'
+                col_to_object[col_to_object=='XX'] = '-1'
+                col_to_object[col_to_object=='A:'] = '-1'
+                col_to_object[col_to_object=='B:'] = '-1'
+                col_to_object[col_to_object=='D:'] = '-1'
+                col_to_object[col_to_object=='E:'] = '-1'
+                col_to_object[col_to_object=='F:'] = '-1'
+                col_to_object[col_to_object=='G:'] = '-1'
+                col_to_object[col_to_object=='L:'] = '-1'
+
             if dt[i] == 'float64':
                 dot_numbers = np.array([num.replace(',','.') for num in col_to_object])
                 col_to_object = dot_numbers
@@ -192,11 +141,24 @@ class DataDownloader():
 
         return np.array(new_arr)
 
-    def parse_region_data(self, region):
+    def parse_region_data(self, region, data_downloaded=False):
         #check if data are downloaded
-        downloaded_zip_files = [f for f in os.listdir(self.folder) if f.endswith('.zip')]
-        if set(downloaded_zip_files) != set(self.data_to_download):
-            self.download_data()
+        if not data_downloaded:
+            zip_files_in_folder = set([f for f in os.listdir(self.folder) if f.endswith('.zip')])
+            years = ['2016', '2017', '2018', '2019', '2020']
+            for file in zip_files_in_folder:
+                match = re.match(r'datagis(.{0}|-rok-|-\d{2}-)(20\d{2})', file)
+                if match == None:
+                    continue
+                else:
+                    saved_year = match.group(2)
+                    if saved_year in years:
+                        years.remove(saved_year)
+                        self.downloaded_zip_files.append(file)
+
+            #if some year is not downloaded
+            if years:
+                self.download_data()
 
         if region not in self.region_code.keys():
             raise ValueError("Region not recognized!")
@@ -205,7 +167,7 @@ class DataDownloader():
         parsed_data = [self.header, []]
         list_of_rows = []
 
-        for zip_file in self.data_to_download:
+        for zip_file in self.downloaded_zip_files:
             path = "{}/{}".format(self.folder, zip_file)
             #open zip and extract csv file with data of region
             with zipfile.ZipFile(path, 'r') as zf:
@@ -224,31 +186,18 @@ class DataDownloader():
 
         parsed_data[1] = list(self.retype_col_data(list_of_rows))
 
-        return parsed_data
+        # return ([header], [data])
+        return tuple(parsed_data)
 
-    """
-    Vrací zpracovaná data pro vybrané kraje (regiony).
-    Argument ​regions ​specifikujeseznam (list) požadovaných krajů jejich třípísmennými kódy.
-     Pokud seznam neníuveden (je použito None), zpracují se všechny kraje včetně Prahy.
-    Výstupem funkceje dvojice ve stejném formátu,
-     jako návratová hodnota funkce parse_region_data​.
 
-     Pro každý kraj získá data s využitím funkce ​parse_region_data ​tak,
-      že se budou výsledky uchovávat v paměti (v nějakém atributu instance třídy)
-       a ukládat dopomocného cache souboru pomocí následujícího schématu:
-       ○pokud už je výsledek načtený v paměti (tj. dostupný ve vámi zvolenématributu), vrátí tuto
-        dočasnou kopii
-       ○pokud není uložený v paměti, ale je již zpracovaný v cache souboru,
-        taknačte výsledek z cache, uloží jej do atributu a vrátí.
-       ○jinak se zavolá funkce ​parse_region_data, výsledek volání seuloží do cache,
-        poté do paměti a výsledek vrátí
-    """
     def get_list(self, regions=None):
+        #if regions are not specified, get data for all regions
         if regions == None:
             regions = self.region_code.keys()
 
-        complete_data = [self.header, []]
-        list_of_data = []
+        #in 1st calling of 'parse_region_data' check if data are downloaded, then switched to True
+        data_downloaded = False
+
         for region in regions:
             cache_file = self.cache_filename.format(region)
             #return data from memory
@@ -263,7 +212,8 @@ class DataDownloader():
                 self.parsed_regions[region] = data
             else: #parse (download) data, store to cache and return them
                 #create gzip with pickle data
-                p_data = self.parse_region_data(region)
+                p_data = self.parse_region_data(region, data_downloaded)
+                data_downloaded = True
                 data = p_data[1]
                 self.parsed_regions[region] = data
                 with gzip.open('{}/{}'.format(self.folder, cache_file), 'wb') as cache:
@@ -271,24 +221,25 @@ class DataDownloader():
                     p.fast = True
                     p.dump(data)
 
+
         #concatenate all data
+        complete_data = [self.header, []]
         for reg in self.parsed_regions.values():
             if len(complete_data[1]) == 0:
                 complete_data[1] = reg
             else:
                 complete_data[1] = np.concatenate((complete_data[1], reg), axis=1)
 
-        return complete_data
+        return tuple(complete_data)
 
 
 if __name__ == "__main__":
     downloader = DataDownloader()
-    regions = ['ZLK', 'JHM', 'OLK']
-    data = downloader.get_list()
+    regions = ['ZLK', 'JHM', 'HKK']
+    data = downloader.get_list(regions)
+
     print('Data pro kraje: {}, {}, {}'.format(regions[0], regions[1], regions[2]))
     print('Pocet zaznamu: {}'.format(len(data[1][0])))
     print('Pocet sloupcu: {}'.format(len(data[0])))
     print('Nazvy sloupcu:')
     print(*data[0], sep=', ')
-
-print("--- %s seconds ---" % (time.time() - start_time))
