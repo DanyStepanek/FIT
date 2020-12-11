@@ -40,7 +40,7 @@ def get_data_for_years(data_source):
 
 #https://matplotlib.org/3.1.1/gallery/lines_bars_and_markers/barchart.html
 def autolabel(ax, rects, order):
-    """Attach a text label in each bar in *rects*, displaying its height."""
+    #Attach a text label in each bar in *rects*, displaying its height.
     for rect, index in zip(rects, order):
         height = rect.get_height()
         ax.annotate('{}'.format(height),
@@ -49,7 +49,7 @@ def autolabel(ax, rects, order):
                     textcoords="offset points",
                     ha='center', va='bottom', fontsize=7, color='white')
 
-        """Attach a text label above each bar in *rects*, displaying its order."""
+        #Attach a text label above each bar in *rects*, displaying its order.
         ax.annotate('{}.'.format(index + 1),
                     xy=(rect.get_x() + rect.get_width() / 2, height),
                     xytext=(0, 0),
