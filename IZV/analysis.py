@@ -82,14 +82,23 @@ def plot_conseq(df: pd.DataFrame, fig_location: str = None,
     conseq_to_plot = conseq_to_plot.reset_index()
 
     palette = "winter"
-    ax0 = sns.barplot(ax=axs[0], x="region", y="count", data=conseq_to_plot, palette=palette,
+    ax0 = sns.barplot(ax=axs[0], x="region", y="light", data=conseq_to_plot, palette=palette,
                 order=conseq_to_plot.sort_values('count', ascending=False).region)
-    ax1 = sns.barplot(ax=axs[1], x="region", y="light", data=conseq_to_plot, palette=palette,
+    ax1 = sns.barplot(ax=axs[1], x="region", y="serious", data=conseq_to_plot, palette=palette,
                 order=conseq_to_plot.sort_values('count', ascending=False).region)
-    ax2 = sns.barplot(ax=axs[2], x="region", y="serious", data=conseq_to_plot, palette=palette,
+    ax2 = sns.barplot(ax=axs[2], x="region", y="death", data=conseq_to_plot, palette=palette,
                 order=conseq_to_plot.sort_values('count', ascending=False).region)
-    ax3 = sns.barplot(ax=axs[3], x="region", y="death", data=conseq_to_plot, palette=palette,
+    ax3 = sns.barplot(ax=axs[3], x="region", y="count", data=conseq_to_plot, palette=palette,
                 order=conseq_to_plot.sort_values('count', ascending=False).region)
+
+    ax0.set_ylabel('Lehka zraneni')
+    ax1.set_ylabel('Vazna zraneni')
+    ax2.set_ylabel('Umrti')
+    ax3.set_ylabel('Celkovy pocet nehod')
+
+    for ax in axs:
+        ax.set_xlabel('Kraje')
+
 
     annotate_barplot(ax0)
     annotate_barplot(ax1)
@@ -196,7 +205,7 @@ def plot_surface(df: pd.DataFrame, fig_location: str = None,
     g.fig.subplots_adjust(top=0.9, bottom=0.1)
     g.fig.suptitle('Stav vozovky v jednotlivých měsících')
     g.fig.subplots_adjust(wspace=0.01, hspace=0.1)
-    g.set_axis_labels("Mesic", "Pocet nehod")
+    g.set_axis_labels("Rok", "Pocet nehod")
     g.set_titles("{col_name}")
 
     #https://stackoverflow.com/questions/43727278/how-to-set-readable-xticks-in-seaborns-facetgrid
