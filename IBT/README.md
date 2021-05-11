@@ -23,7 +23,9 @@ Hierarchy:
   latex/ - LaTeX source code \
   src/ - scripts \
   data/ - data obtained in the experiment \
+  ITT/ - semestral project
   plakat.pdf - thesis poster 
+  
 
 
 How to run: 
