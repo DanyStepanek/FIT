@@ -36,7 +36,15 @@ For data processing + statistics run: './src/processing_nk.py'.
 Implementation info:
 --------------------
 Implementation language: Python 3.8.5 \
-Libraries: Pandas, NeuroKit2, matplotlib, numpy, seaborn, scipy, scikit-learn (./src/requirements.txt) \
+Libraries: Pandas, NeuroKit2 [1], matplotlib, numpy, seaborn, scipy, scikit-learn (./src/requirements.txt) \
 To install libraries run: './src/requirements.sh' 
 
 For more info about scripts see: './src/README.md' 
+
+References:
+-----------
+[1] - Makowski, D., Pham, T., Lau, Z. J., Brammer, J. C., Lespinasse, F., Pham, H.,
+Schölzel, C., & Chen, S. A. (2021). NeuroKit2: A Python toolbox for neurophysiological signal processing.
+Behavior Research Methods. https://doi.org/10.3758/s13428-020-01516-y
+
+
